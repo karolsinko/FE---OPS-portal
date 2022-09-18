@@ -12,13 +12,13 @@
       <div class='card'>
         <div class='card-header'>
           <i class="bi bi-eyedropper"></i><h1>Evidencia vakcíny</h1>
-          <button class="btn btn--action"(click)="chodSpat()"><span>Späť</span></button>
+          <button class="btn btn--action" (click)="chodSpat()"><span>Späť</span></button>
         </div>
 
         <div class='card-body'>
 
           <app-vakcina-formular [vakcina]="vakcinaNaUpravu"
-                                (pridajVakcinu)="pridaj($event)"
+                                (pridajVakcinu)="pridaj(  $event)"
                                 (upravVakcinu)="uprav($event)">
           </app-vakcina-formular>
 

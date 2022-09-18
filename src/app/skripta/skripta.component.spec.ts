@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StepperTableComponent } from './stepper-table.component';
+import { SkriptaComponent } from './skripta.component';
 
-describe('StepperTableComponent', () => {
-  let component: StepperTableComponent;
-  let fixture: ComponentFixture<StepperTableComponent>;
+describe('SkriptaComponent', () => {
+  let component: SkriptaComponent;
+  let fixture: ComponentFixture<SkriptaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StepperTableComponent ]
+      declarations: [ SkriptaComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StepperTableComponent);
+    fixture = TestBed.createComponent(SkriptaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
