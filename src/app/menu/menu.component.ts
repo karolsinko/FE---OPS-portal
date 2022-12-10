@@ -23,12 +23,6 @@ export class MenuComponent {
       this.router.navigate(['/skripta']);
     }else if(m=== MENU.CVICENIA){
       this.router.navigate(['/cvicenia']);
-       /* }else if(m=== MENU.OCKOVANOST){
-        this.router.navigate(['/ockovanost']);
-           }else if(m=== MENU.OSOBA){
-            this.router.navigate(['/osoba']);
-                  }else if(m=== MENU.VAKCINA){
-                  this.router.navigate(['/vakcina']);*/
     }
   }
 
