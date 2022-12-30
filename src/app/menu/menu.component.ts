@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router';
 
-enum MENU { /*OSOBA, VAKCINA,OCKOVANOST,*/ HOME, QUIZ,SKRIPTA, CVICENIA}
+enum MENU { HOME, QUIZ,SKRIPTA, CVICENIA}
 
 @Component({
   selector: 'app-menu',
