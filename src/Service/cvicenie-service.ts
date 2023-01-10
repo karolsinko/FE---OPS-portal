@@ -7,7 +7,7 @@ import {Injectable} from "@angular/core";
   providedIn: 'root'
 })
 export class CvicenieService{
-  private apiUrl = 'http://localhost:8080/api/cvicenie';
+  private apiUrl = 'http://localhost:8080/api/cvicenia';
 
   constructor(private http: HttpClient) { }
 

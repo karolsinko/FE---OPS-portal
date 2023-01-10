@@ -13,10 +13,6 @@
       <tr *ngFor="let o of ulohy">
         <td>{{ o.id }}</td>
         <td>{{ o.uloha }}</td>
-        <td>
-          <button class="btn btn--action" (click)="uprav(o.id)"><span class="uprav">Uprav</span></button>
-          <button class="btn btn--action" (click)="zmaz(o.id)"><span class="vymaz">Vymaž</span></button>
-        </td>
       </tr>
       </tbody>
     </table>

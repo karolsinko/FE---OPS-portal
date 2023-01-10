@@ -11,7 +11,7 @@ import {Router} from "@angular/router";
 export class CviceniaStrankaComponent implements OnInit {
 
   ulohy: zoznamUloh[] = [];
-
+  cvicenie?: cvicenie;
   constructor(private router: Router, private cvicenieService: CvicenieService) { }
 
   ngOnInit(): void {

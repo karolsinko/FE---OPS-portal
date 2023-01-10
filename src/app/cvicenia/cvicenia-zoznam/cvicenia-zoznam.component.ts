@@ -15,17 +15,4 @@ export class CviceniaZoznamComponent implements OnInit {
   @Input()
   ulohy: zoznamUloh[] = [];
 
-  @Output()
-  upravUlohu: EventEmitter<number> = new EventEmitter<number>();
-
-  @Output()
-  vymazUlohu: EventEmitter<number> = new EventEmitter<number>();
-
-  uprav(ulohaId?: number): void {
-    this.upravUlohu.emit(ulohaId);
-  }
-
-  zmaz(ulohaId?: number): void {
-    this.vymazUlohu.emit(ulohaId);
-  }
 }
