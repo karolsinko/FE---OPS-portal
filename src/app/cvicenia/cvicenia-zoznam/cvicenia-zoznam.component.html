@@ -1,0 +1,25 @@
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  <title></title>
+</head>
+<div class="wrapper">
+  <section>
+    <table class="table">
+      <tr>
+        <th>Číslo úlohy: </th>
+        <th>Úloha: </th>
+      </tr>
+      <tbody>
+      <tr *ngFor="let o of ulohy">
+        <td>{{ o.id }}</td>
+        <td>{{ o.uloha }}</td>
+        <td>
+          <button class="btn btn--action" (click)="uprav(o.id)"><span class="uprav">Uprav</span></button>
+          <button class="btn btn--action" (click)="zmaz(o.id)"><span class="vymaz">Vymaž</span></button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </section>
+</div>
