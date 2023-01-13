@@ -13,9 +13,41 @@
       <tr *ngFor="let o of ulohy">
         <td>{{ o.id }}</td>
         <td>{{ o.uloha }}</td>
+
       </tr>
       </tbody>
     </table>
+      <div class="stepper-container">
+        <button class="step-btn prev-btn" (click)="previousStep()"></button>
+        <div class="step-indicator-container">
+          <div *ngFor="let step of step; let i = index" [hidden]="i !== currentStepIndex">
+            <h2>{{ step.title }}</h2>
+            <p>{{ step.content }}</p>
+          </div>
+          <!--
+          <div class="step-indicator" [ngClass]="{'active': step === 1}">
+            <div [ngClass]="getCurrentStepContent()" class="step-content">
+              <h2>Step 1</h2>
+              <p>Step 1 content goes here</p>
+            </div>
+          </div>
+          <div class="step-indicator" [ngClass]="{'active': step === 2}">
+            <div [ngClass]="getCurrentStepContent()" class="step-content">
+              <h2>Step 2</h2>
+              <p>Step 2 content goes here</p>
+            </div>
+          </div>
+          <div class="step-indicator" [ngClass]="{'active': step === 3}">
+            <div [ngClass]="getCurrentStepContent()" class="step-content">
+              <h2>Step 3</h2>
+              <p>Step 3 content goes here</p>
+            </div>
+          </div>
+          -->
+        </div>
+        <button class="step-btn next-btn" (click)="nextStep()"></button>
+        </div>
+
 
   </section>
 </div>

@@ -287,3 +287,58 @@ input:hover{
 .center {
   text-align: center;
 }
+
+
+
+/*   STEPPER
+-----------------------------------------
+ */
+.stepper-container {
+  display: flex;
+  align-items: center;
+}
+
+.step-btn {
+  border: none;
+  background-color: white;
+  width: 50px;
+  height: 50px;
+}
+
+.prev-btn {
+  background-image: url('/assets/previous.svg');
+}
+
+.next-btn {
+  background-image: url('/assets/next.svg');
+}
+
+.step-indicator-container {
+  display: flex;
+  align-items: center;
+  margin: 0 16px;
+}
+
+.step-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #D8D8D8;
+  margin-right: 8px;
+}
+
+.step-indicator.active {
+  background-color: #4CAF50;
+}
+
+.step-content {
+  display: none;
+}
+.step-content {
+  visibility: hidden;
+}
+
+.step-content.active {
+  display: block;
+  visibility: visible;
+}
