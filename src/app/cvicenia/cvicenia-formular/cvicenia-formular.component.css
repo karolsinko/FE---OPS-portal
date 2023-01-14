@@ -51,20 +51,21 @@ p:hover {
  --------------------------------------------
 */
 button{
+  border: black 1px solid;
   display: block;
   font-weight: 700;
   font-size: 18px;
-  width: auto;
+  width: 320px;
   padding: 10px;
   border-radius: 1.5rem;
-  background-color: black;
+  background-color: #353084;
   transition: all .5s ease 0s;
   float: right;
 }
 button:hover{
   box-shadow: 0 3px white;
 }
-span{
+span, i{
   display: inline-block;
   color:white;
   position: relative;
@@ -81,6 +82,10 @@ span::before{
   left: 1.5rem;
   opacity: 0;
   transition: all .1s ease 0s;
+}
+
+button:hover span{
+  padding-left: 2rem;
 }
 
 button:hover span:before{
