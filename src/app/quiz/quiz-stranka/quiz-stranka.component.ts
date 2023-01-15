@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-skripta',
-  templateUrl: './skripta.component.html',
-  styleUrls: ['./skripta.component.css']
+  selector: 'app-quiz-stranka',
+  templateUrl: './quiz-stranka.component.html',
+  styleUrls: ['./quiz-stranka.component.css']
 })
-export class SkriptaComponent implements OnInit {
+export class QuizStrankaComponent implements OnInit {
 
   constructor(private router: Router) { }
 
@@ -15,5 +15,4 @@ export class SkriptaComponent implements OnInit {
   }
   ngOnInit(): void {
   }
-
 }

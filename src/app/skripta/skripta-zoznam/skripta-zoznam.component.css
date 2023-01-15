@@ -4,34 +4,36 @@
 table{
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  text-align: justify;
 }
 td{
-  border-bottom: #F5F5F5 1px solid;
   width: 150px;
   color: white;
 }
 th{
-  width: 150px;
+  width: 500px;
   color: white;
-  -webkit-transition: color 2s;
-  transition: color 2s;
 }
 th:hover {
-  color: #D6C4EC;
+  color: navajowhite;
+}
+section{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 /* TEXTY
  --------------------------------------------
 */
 h1{
   text-align: center;
-  color: navajowhite;
+  color: white;
   display: inline;
   letter-spacing: 3px;
 }
 
 h1:hover {
-  color: white;
+  color: #443ea2;
 }
 
 p{
@@ -40,12 +42,10 @@ p{
   display:inline;
   letter-spacing: 3px;
   margin-bottom: 10px;
-  -webkit-transition: color 2s;
-  transition: color 2s;
 }
 
-p:hover {
-  color: white;
+p:hover, h2:hover, h1:hover {
+  color: #D6C4EC;
 }
 
 /* TLACIDLA
@@ -55,28 +55,35 @@ button{
   display: block;
   font-weight: 700;
   font-size: 18px;
-  width: 100px;
+  width: 175px;
   padding: 5px;
   border-radius: 1.5rem;
   background-color: black;
-  transition: all .5s ease 0s;
-  box-shadow: 0 3px navajowhite;
+  transition: all .3s ease 0s;
+  box-shadow: 0 3px #443ea2;
   float: right;
 }
-button:hover{
-  box-shadow: 0 3px white;
+button:hover span{
+  padding-left: 1rem;
+}
 
+button:hover span:before{
+  left: 0;
+  opacity: 1;
+}
+
+button:active {
+  transform: translateY(5px);
 }
 span{
   display: inline-block;
-  color:navajowhite;
+  color:white;
   position: relative;
   transition: all .5s ease;
 }
 span::before{
   font-family: "Font Awesome 5 Free";
-  color: navajowhite;
-  content: '\f015';
+  color: #443ea2;
   font-weight: 900;
   font-size: 20px;
   display: inline-block;
@@ -85,10 +92,6 @@ span::before{
   left: 1.5rem;
   opacity: 0;
   transition: all .1s ease 0s;
-}
-
-button:hover span{
-  padding-left: 2rem;
 }
 
 button:hover span:before{
@@ -131,10 +134,11 @@ section {
 }
 
 body {
-  background: #D6C4EC;
+  background: #ffffff;
   color: #FFF;
   text-align: center;
   margin: 0;
+  position: center;
 }
 
 header,
@@ -199,6 +203,7 @@ input:hover{
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 1.25rem;
+
 }
 
 .card-header {
@@ -280,15 +285,48 @@ input:hover{
 -----------------------------------------
  */
 .bi-person{
-  color: navajowhite;
+  color: white;
   float:left;
   font-size: 50px;
   margin-top: -12px;
 }
 .bi-person:hover{
-  color:white;
+  color:navajowhite;
+}
+
+.center {
+  text-align: center;
 }
 
 
 
+/*   STEPPER
+-----------------------------------------
+ */
+.stepper-container {
+  display: block;
+  align-items: center;
+}
 
+.step-btn {
+  background-color: #353084;
+  color: white;
+  cursor: pointer;
+}
+
+.step-indicator-container {
+  align-items: center;
+  margin: 0 16px;
+}
+
+.step-content {
+  display: none;
+}
+.step-content {
+  visibility: hidden;
+}
+
+.step-content.active {
+  display: block;
+  visibility: visible;
+}

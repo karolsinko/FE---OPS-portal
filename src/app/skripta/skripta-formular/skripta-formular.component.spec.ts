@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SkriptaComponent } from './skripta.component';
+import { SkriptaFormularComponent } from './skripta-formular.component';
 
-describe('SkriptaComponent', () => {
-  let component: SkriptaComponent;
-  let fixture: ComponentFixture<SkriptaComponent>;
+describe('SkriptaFormularComponent', () => {
+  let component: SkriptaFormularComponent;
+  let fixture: ComponentFixture<SkriptaFormularComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SkriptaComponent ]
+      declarations: [ SkriptaFormularComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SkriptaComponent);
+    fixture = TestBed.createComponent(SkriptaFormularComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

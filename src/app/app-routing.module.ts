@@ -1,9 +1,9 @@
 import {RouterModule, Routes} from "@angular/router";
 import {NgModule} from "@angular/core";
 import {MenuComponent} from './menu/menu.component';
-import {QuizComponent} from "./quiz/quiz.component";
-import {SkriptaComponent} from "./skripta/skripta.component";
 import {CviceniaStrankaComponent} from "./cvicenia/cvicenia-stranka/cvicenia-stranka.component"
+import {SkriptaStrankaComponent} from "./skripta/skripta-stranka/skripta-stranka.component";
+import {QuizStrankaComponent} from "./quiz/quiz-stranka/quiz-stranka.component";
 
 const routes: Routes = [
   {
@@ -12,11 +12,11 @@ const routes: Routes = [
   },
   {
     path: 'quiz',
-    component: QuizComponent
+    component: QuizStrankaComponent
   },
   {
     path: 'skripta',
-    component: SkriptaComponent
+    component: SkriptaStrankaComponent
   },
   {
     path: 'cvicenia',
