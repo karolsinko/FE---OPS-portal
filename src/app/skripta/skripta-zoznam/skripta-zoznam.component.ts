@@ -18,25 +18,25 @@ export class SkriptaZoznamComponent implements OnInit {
   ulohy: zoznamUloh[] = [];
 
   step = [
-    { title: '1. hodina',
+    {
       content: '     1)\n' +
-        '            mkdir ford audi  // vytvori 2 "main" priecinky\n' +
-        '            mkdir -p bmw/M3 bmw/X5 // vytvori 2 pod priecinky pod bmw\n' +
-        '            cd ford\n' +
-        '            mkdir mustang focus\n' +
-        '            cd audi\n' +
-        '            mkdir R8\n',
-      content1:'    2)'+
-      '  cd ~>'+
-      '    mkdir oblecenie'+
-      '  mkdir nike adidas 4F'+
-      '  cd ..'+
-      '  cd nike'+
-      '  mkdir tenisky mikiny'+
-      '  cd ..'+
-      '  mkdir tricka nohavice'+
-      '  cd ..'+
-      ' mkdir zimne_bundy'
+        '            mkdir ford audi |' +
+        '            mkdir -p bmw/M3 bmw/X5 |' +
+        '            cd ford |' +
+        '            mkdir mustang focus |' +
+        '            cd audi |' +
+        '            mkdir R8 |',
+      content1:'2)'+
+      '  cd ~ |'+
+      '  mkdir oblecenie |'+
+      '  mkdir nike adidas 4F |'+
+      '  cd .. |'+
+      '  cd nike |'+
+      '  mkdir tenisky mikiny |'+
+      '  cd .. |'+
+      '  mkdir tricka nohavice |'+
+      '  cd .. |'+
+      ' mkdir zimne_bundy |'
     },
     { title: 'Úloha 2', content: 'Step 2 content goes here' },
     { title: 'Úloha 3', content: 'Step 3 content goes here' }
@@ -46,14 +46,28 @@ export class SkriptaZoznamComponent implements OnInit {
   previousStep() {
     if (this.currentStepIndex > 0) {
       this.currentStepIndex--;
+      this.updateStepIndicator();
     }
   }
 
   nextStep() {
     if (this.currentStepIndex < this.step.length - 1) {
       this.currentStepIndex++;
+      this.updateStepIndicator();
     }
   }
+
+  updateStepIndicator() {
+    const stepIndicatorEls = document.querySelectorAll(".step-indicator");
+    stepIndicatorEls.forEach((el, index) => {
+      if (index === this.currentStepIndex) {
+        el.classList.add("active");
+      } else {
+        el.classList.remove("active");
+      }
+    });
+  }
+
 
   ngOnInit(): void {
   }

@@ -304,7 +304,7 @@ input:hover{
 -----------------------------------------
  */
 .stepper-container {
-  display: flex;
+  display: block;
   align-items: center;
 }
 
@@ -315,13 +315,14 @@ input:hover{
 }
 
 .step-indicator-container {
-  align-items: center;
   margin: 0 16px;
+  display: flex;
+  align-content: center;
 }
 
 .step-indicator {
-  width: 8px;
-  height: 8px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background-color: #D8D8D8;
   margin-right: 8px;

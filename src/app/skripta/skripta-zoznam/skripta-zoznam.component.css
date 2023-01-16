@@ -315,8 +315,21 @@ input:hover{
 }
 
 .step-indicator-container {
-  align-items: center;
   margin: 0 16px;
+  display: flex;
+  align-content: center;
+}
+
+.step-indicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #D8D8D8;
+  margin-right: 8px;
+}
+
+.step-indicator.active {
+  background-color: #4CAF50;
 }
 
 .step-content {
