@@ -64,7 +64,7 @@ button{
   float: right;
 }
 button:hover span{
-  padding-left: 1rem;
+  padding-left: 3rem;
 }
 
 button:hover span:before{
@@ -73,7 +73,7 @@ button:hover span:before{
 }
 
 button:active {
-  transform: translateY(5px);
+  transform: translateY(10px);
 }
 span{
   display: inline-block;
@@ -91,7 +91,7 @@ span::before{
   top: 0px;
   left: 1.5rem;
   opacity: 0;
-  transition: all .1s ease 0s;
+  transition: all .5s ease 0s;
 }
 
 button:hover span:before{
@@ -284,20 +284,6 @@ input:hover{
 /*   IKONY
 -----------------------------------------
  */
-.bi-person{
-  color: white;
-  float:left;
-  font-size: 50px;
-  margin-top: -12px;
-}
-.bi-person:hover{
-  color:navajowhite;
-}
-
-.center {
-  text-align: center;
-}
-
 
 
 /*   STEPPER
@@ -312,6 +298,13 @@ input:hover{
   background-color: #353084;
   color: white;
   cursor: pointer;
+}
+
+.step-btn-1 {
+  background-color: #353084;
+  color: white;
+  cursor: pointer;
+  width: 250px;
 }
 
 .step-indicator-container {
@@ -329,7 +322,7 @@ input:hover{
 }
 
 .step-indicator.active {
-  background-color: #4CAF50;
+  background-color: #353084;
 }
 
 .step-content {

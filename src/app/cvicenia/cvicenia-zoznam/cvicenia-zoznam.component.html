@@ -7,26 +7,34 @@
     <table class="table">
       <tr><p>Príklad: {{currentStepIndex+1}}</p></tr>
       <div class="stepper-container">
-        <div class="stepper-content">
-          <ng-container *ngFor="let step of step; let i = index">
+          <ng-container *ngFor="let uloha of uloha; let i = index">
             <div *ngIf="currentStepIndex === i">
               <th>
-              Vstup: {{step.input}}
-              </th><th>
-              Úloha: {{step.content}}
+              Vstup:<br> {{uloha.input}}
+              </th>
+              <th>
+              Úloha:<br> {{uloha.content}}
             </th>
             </div>
+              <th><div *ngIf="currentStepIndex === i">
+              <div [hidden]="!showElement" >
+                Výsledok:<br> {{uloha.vysledok}}
+              </div>
+              </div>
+              </th>
           </ng-container>
-        </div>
       </div>
     </table>
     <div class="stepper-buttons-container">
       <button class="step-btn next-btn" (click)="nextStep()"><i class="bi bi-arrow-right-circle"></i><span>Dopredu</span></button>
       <button class="step-btn prev-btn" (click)="previousStep()"><i class="bi bi-arrow-left-circle"></i><span>Dozadu</span></button>
+      <div class="stepper-buttons-container">
+        <button class="step-btn-1 " (click)="showSolution()" ><i class="bi bi-toggle-on"></i><span>Nevieš výsledok?</span></button>
+      </div>
     </div>
   </div>
 </section>
 <div class="step-indicator-container">
-  <div *ngFor="let step of step; let i = index" (click)="currentStepIndex = i" class="step-indicator" [ngClass]="{'active': currentStepIndex === i}">
+  <div *ngFor="let uloha of uloha; let i = index" (click)="currentStepIndex = i" class="step-indicator" [ngClass]="{'active': currentStepIndex === i}">
   </div>
 </div>
