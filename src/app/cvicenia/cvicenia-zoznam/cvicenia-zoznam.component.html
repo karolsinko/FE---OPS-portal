@@ -16,12 +16,14 @@
               Úloha:<br> {{uloha.content}}
             </th>
             </div>
-              <th><div *ngIf="currentStepIndex === i">
+              <div *ngIf="currentStepIndex === i">
+                <th>
               <div [hidden]="!showElement" >
                 Výsledok:<br> {{uloha.vysledok}}
               </div>
+                </th>
               </div>
-              </th>
+
           </ng-container>
       </div>
     </table>

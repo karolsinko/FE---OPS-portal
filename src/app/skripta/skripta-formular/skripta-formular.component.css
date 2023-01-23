@@ -7,18 +7,20 @@ table{
   text-align: justify;
 }
 td{
-  border-bottom: #F5F5F5 1px solid;
   width: 150px;
   color: white;
 }
 th{
-  width: 150px;
+  width: 500px;
   color: white;
-  -webkit-transition: color 2s;
-  transition: color 2s;
 }
 th:hover {
-  color: #D6C4EC;
+  color: navajowhite;
+}
+section{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 /* TEXTY
  --------------------------------------------
@@ -40,12 +42,10 @@ p{
   display:inline;
   letter-spacing: 3px;
   margin-bottom: 10px;
-  -webkit-transition: color 2s;
-  transition: color 2s;
 }
 
-p:hover {
-  color: white;
+p:hover, h2:hover, h1:hover {
+  color: #D6C4EC;
 }
 
 /* TLACIDLA
@@ -55,18 +55,27 @@ button{
   display: block;
   font-weight: 700;
   font-size: 18px;
-  width: auto;
-  padding: 10px;
+  width: 175px;
+  padding: 5px;
   border-radius: 1.5rem;
-  background-color: #443ea2;
-  transition: all .5s ease 0s;
+  background-color: black;
+  transition: all .3s ease 0s;
+  box-shadow: 0 3px #443ea2;
   float: right;
-  border: black solid 1px;
 }
-button:hover{
-  box-shadow: 0 3px white;
+button:hover span{
+  padding-left: 1rem;
 }
-span, i{
+
+button:hover span:before{
+  left: 0;
+  opacity: 1;
+}
+
+button:active {
+  transform: translateY(5px);
+}
+span{
   display: inline-block;
   color:white;
   position: relative;
@@ -282,24 +291,55 @@ input:hover{
   margin-top: -12px;
 }
 .bi-person:hover{
-  color:#443ea2;
+  color:navajowhite;
 }
 
 .center {
   text-align: center;
 }
-button:hover span{
-  padding-left: 2rem;
+
+
+
+/*   STEPPER
+-----------------------------------------
+ */
+.stepper-container {
+  display: block;
+  align-items: center;
 }
 
-button:hover span:before{
-  left: 0;
-  opacity: 1;
+.step-btn {
+  background-color: #353084;
+  color: white;
+  cursor: pointer;
 }
 
-button:active {
-  transform: translateY(5px);
+.step-indicator-container {
+  margin: 0 16px;
+  display: flex;
+  align-content: center;
 }
-.container {
-  display: flex; /* or inline-flex */
+
+.step-indicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #D8D8D8;
+  margin-right: 8px;
+}
+
+.step-indicator.active {
+  background-color: #353084;
+}
+
+.step-content {
+  display: none;
+}
+.step-content {
+  visibility: hidden;
+}
+
+.step-content.active {
+  display: block;
+  visibility: visible;
 }

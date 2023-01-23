@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
+import {zoznamUloh} from "../../models/cvicenie.model";
 
 @Component({
   selector: 'app-skripta-formular',
@@ -8,10 +9,31 @@ import {Router} from "@angular/router";
 })
 export class SkriptaFormularComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  step = [];
+
+  currentStepIndex = 0;
+
+  constructor(private router: Router) {
+
+  }
+
+  @Input()
+  ulohy: zoznamUloh[] = [];
 
   chodSpat(): void {
     this.router.navigate(['']);
+  }
+
+  previousStep() {
+    if (this.currentStepIndex > 0) {
+      this.currentStepIndex--;
+    }
+  }
+
+  nextStep() {
+    if (this.currentStepIndex < this.step.length - 1) {
+      this.currentStepIndex++;
+    }
   }
 
   ngOnInit(): void {

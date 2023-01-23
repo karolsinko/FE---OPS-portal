@@ -5,9 +5,8 @@
 <div class="wrapper">
   <div class ="container">
     <table class="table">
+      <tr><p>základné príkazy: z {{currentStepIndex+1}}. hodiny</p></tr>
       <th>
-          <h1>základné príkazy:</h1>
-          <p><br>
             ls - obsah priečinku<br>
             ls -l<br>
             ls -la<br>
@@ -21,10 +20,10 @@
             whoami - kto ste<br>
             mkdir - make directory<br>
             rmdir - remove directory<br>
-          </p>
-      </th><th>
-          <h1>Vysvetlivky:</h1><br>
-          <p>
+
+      </th>
+      <tr><p>Vysvetlivky: z {{currentStepIndex+1}}. hodiny</p></tr>
+      <th>
             d = directory<br>
             - = klasicky subor<br>
             l = link -> cesta kde sa subor nachadza<br>
@@ -34,8 +33,7 @@
             1. rwx -> vlastník<br>
             2. rwx -> skupina vlastníkov<br>
             3. rwx -> ostatní<br>
-          </p>
-    </th>
+      </th>
     </table>
   </div>
 </div>
