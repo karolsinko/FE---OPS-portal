@@ -15,8 +15,20 @@ export class CvicenieService{
     return this.http.get<zoznamCviceni[]>(`${this.apiUrl}`);
   }
 
-  getCvicenie(id : number): Observable<cvicenie> {
+  getCviceniePodlaId(id : number): Observable<cvicenie> {
     return this.http.get<cvicenie>(`${this.apiUrl}/${id}`);
+  }
+
+  createCvicenie(cvicenie: cvicenie): Observable<cvicenie> {
+    return this.http.post<cvicenie>(`${this.apiUrl}`, cvicenie);
+  }
+
+  updateCvicenie(id: number, cvicenie : cvicenie): Observable<cvicenie>{
+    return this.http.put<cvicenie>(`${this.apiUrl}/${id}`, cvicenie);
+  }
+
+  deleteCvicenie(id: number): Observable<void>{
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
 
 }

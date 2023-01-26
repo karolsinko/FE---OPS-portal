@@ -15,7 +15,19 @@ export class QuizService{
     return this.http.get<zoznamQuizov[]>(`${this.apiUrl}`);
   }
 
-  getQuiz(id : number): Observable<quiz> {
+  getQuizPodlaId(id : number): Observable<quiz> {
     return this.http.get<quiz>(`${this.apiUrl}/${id}`);
+  }
+
+  createQuiz(quiz: quiz): Observable<quiz> {
+    return this.http.post<quiz>(`${this.apiUrl}`, quiz);
+  }
+
+  updateQuiz(id: number, quiz : quiz): Observable<quiz>{
+    return this.http.put<quiz>(`${this.apiUrl}/${id}`, quiz);
+  }
+
+  deleteQuiz(id: number): Observable<void>{
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
 }
