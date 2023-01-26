@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {zoznamUloh} from "../../models/cvicenie.model";
+import {zoznamCviceni} from "../../models/cvicenie.model";
 
 @Component({
   selector: 'app-cvicenia-zoznam',
@@ -14,7 +14,7 @@ export class CviceniaZoznamComponent implements OnInit {
   }
 
   @Input()
-  ulohy: zoznamUloh[] = [];
+  cvicenie: zoznamCviceni[] = [];
 
   uloha = [
     { input: 'Pokúste sa úlohu splniť čo najoptimalnejšou formou (optimálne riešenie je možné vytvoriť z jedného riadka")',

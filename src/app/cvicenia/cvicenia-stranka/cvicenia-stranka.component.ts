@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {cvicenie, zoznamUloh} from "../../models/cvicenie.model";
+import {cvicenie, zoznamCviceni} from "../../models/cvicenie.model";
 import {CvicenieService} from "../../../Service/cvicenie-service";
 import {Router} from "@angular/router";
 
@@ -10,8 +10,8 @@ import {Router} from "@angular/router";
 })
 export class CviceniaStrankaComponent implements OnInit {
 
-  ulohy: zoznamUloh[] = [];
-  cvicenie?: cvicenie;
+  cvicenie: zoznamCviceni[] = [];
+
   constructor(private router: Router, private cvicenieService: CvicenieService) { }
 
   ngOnInit(): void {
@@ -21,7 +21,7 @@ export class CviceniaStrankaComponent implements OnInit {
   obnovitUlohy(): void {
     this.cvicenieService.getCvicenia().subscribe(data => {
       console.log('Prislo: ', data);
-      this.ulohy = data;
+      this.cvicenie = data;
     });
   }
 

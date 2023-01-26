@@ -11,15 +11,15 @@ export class cvicenie{
   }
 }
 
-export class zoznamUloh{
+export class zoznamCviceni{
 
   id?: number;
   content: string;
   input: string;
 
-  constructor(uloha: zoznamUloh) {
-    this.id = uloha.id;
-    this.content = uloha.content;
-    this.input = uloha.input;
+  constructor(cvicenie: zoznamCviceni) {
+    this.id = cvicenie.id;
+    this.content = cvicenie.content;
+    this.input = cvicenie.input;
   }
 }

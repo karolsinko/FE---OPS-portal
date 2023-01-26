@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {zoznamUloh} from "../../models/cvicenie.model";
+import {zoznamCviceni} from "../../models/cvicenie.model";
 
 @Component({
   selector: 'app-skripta-formular',
@@ -18,7 +18,7 @@ export class SkriptaFormularComponent implements OnInit {
   }
 
   @Input()
-  ulohy: zoznamUloh[] = [];
+  cvicenie: zoznamCviceni[] = [];
 
   chodSpat(): void {
     this.router.navigate(['']);

@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {zoznamUloh} from "../../models/cvicenie.model";
+import {zoznamCviceni} from "../../models/cvicenie.model";
 
 @Component({
   selector: 'app-skripta-zoznam',
@@ -15,7 +15,7 @@ export class SkriptaZoznamComponent implements OnInit {
   }
 
   @Input()
-  ulohy: zoznamUloh[] = [];
+  cvicenia: zoznamCviceni[] = [];
 
   step = [
     {
