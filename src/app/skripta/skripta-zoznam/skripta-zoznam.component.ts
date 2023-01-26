@@ -38,8 +38,8 @@ export class SkriptaZoznamComponent implements OnInit {
       '  cd .. |'+
       ' mkdir zimne_bundy |'
     },
-    { title: 'Úloha 2', content: 'Step 2 content goes here' },
-    { title: 'Úloha 3', content: 'Step 3 content goes here' }
+    { title: 'Úloha 2', content: 'Tu bude druha uloha' },
+    { title: 'Úloha 3', content: 'Tu bude tretia uloha' }
   ];
 
 

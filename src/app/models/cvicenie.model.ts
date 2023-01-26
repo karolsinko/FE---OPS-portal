@@ -1,22 +1,25 @@
 export class cvicenie{
 
   id?: number;
-  uloha: string;
+  content: string;
+  input: string;
 
-  constructor(id: number, uloha: string) {
+  constructor(id: number, content: string, input: string) {
     this.id = id;
-    this.uloha = uloha;
+    this.content = content;
+    this.input = input;
   }
 }
 
 export class zoznamUloh{
 
   id?: number;
-  uloha: string;
+  content: string;
+  input: string;
 
   constructor(uloha: zoznamUloh) {
     this.id = uloha.id;
-    this.uloha = uloha.uloha;
+    this.content = uloha.content;
+    this.input = uloha.input;
   }
-
 }
