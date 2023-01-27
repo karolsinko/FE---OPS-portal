@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router';
 
-enum MENU {   HOME, QUIZ,SKRIPTA, CVICENIA}
+enum MENU {   HOME, QUIZ,SKRIPTA, CVICENIA, FAQ}
 
 @Component({
   selector: 'app-menu',
@@ -23,7 +23,9 @@ export class MenuComponent {
       this.router.navigate(['/skripta']);
     }else if(m=== MENU.CVICENIA){
       this.router.navigate(['/cvicenia']);
-    }
+    }else if(m=== MENU.FAQ){
+      this.router.navigate(['/FAQ']);
+}
   }
 
 }

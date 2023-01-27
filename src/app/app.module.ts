@@ -24,6 +24,7 @@ import { SkriptaZoznamComponent } from './skripta/skripta-zoznam/skripta-zoznam.
 import { QuizFormularComponent } from './quiz/quiz-formular/quiz-formular.component';
 import { QuizStrankaComponent } from './quiz/quiz-stranka/quiz-stranka.component';
 import { QuizZoznamComponent } from './quiz/quiz-zoznam/quiz-zoznam.component';
+import { FAQStrankaComponent } from './FAQ/faq-stranka/faq-stranka.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { QuizZoznamComponent } from './quiz/quiz-zoznam/quiz-zoznam.component';
     QuizFormularComponent,
     QuizStrankaComponent,
     QuizZoznamComponent,
+    FAQStrankaComponent,
 
   ],
   imports: [
