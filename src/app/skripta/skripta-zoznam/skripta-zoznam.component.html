@@ -5,6 +5,14 @@
 <section>
   <div class="wrapper">
     <table class="table">
+      <div *ngFor="let skripta of skripta; let i = index">
+        <th>
+          Uloha: {{skripta.content}}<br>
+          Uloha1: {{skripta.content1}}<br>
+          Vysvetlivky: {{skripta.explain}}<br>
+          Príkazy: {{skripta.commands}}
+        </th>
+      </div>
       <tr><p>Hodina: {{currentStepIndex+1}}, príklady ktoré by ste mali chápať po danej hodine</p></tr>
       <div class="stepper-container">
         <div class="stepper-content">

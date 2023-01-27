@@ -5,6 +5,13 @@
 <section>
   <div class="wrapper">
     <table class="table">
+      <div *ngFor="let cvicenie of cvicenie; let i = index">
+        <th>
+        Vstup: {{cvicenie.input}}<br>
+        Uloha: {{cvicenie.content}}<br>
+        Vysledok: {{cvicenie.solution}}
+        </th>
+      </div>
       <tr><p>Príklad: {{currentStepIndex+1}}</p></tr>
       <div class="stepper-container">
           <ng-container *ngFor="let uloha of uloha; let i = index">
