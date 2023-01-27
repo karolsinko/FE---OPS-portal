@@ -2,38 +2,37 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
   <title></title>
 </head>
-<div class="wrapper">
-  <div class ="container">
+<section>
+  <div class="wrapper">
     <table class="table">
-      <tr><p>základné príkazy: z {{currentStepIndex+1}}. hodiny</p></tr>
-      <th>
-            ls - obsah priečinku<br>
-            ls -l<br>
-            ls -la<br>
-            ls -lR<br>
-            cd - change directory<br>
-            cd .. - change directory do rodicovskeho subora<br>
-            cd / - change directory na root<br>
-            cd ~ - z root na domovsky priecinok<br>
-            cd ~MENO - dostat sa do cudzieho priecinku<br>
-            pwd - print working directory<br>
-            whoami - kto ste<br>
-            mkdir - make directory<br>
-            rmdir - remove directory<br>
-
-      </th>
-      <tr><p>Vysvetlivky: z {{currentStepIndex+1}}. hodiny</p></tr>
-      <th>
-            d = directory<br>
-            - = klasicky subor<br>
-            l = link -> cesta kde sa subor nachadza<br>
-
-            napr. -> d rwx rwx rwx<br>
-
-            1. rwx -> vlastník<br>
-            2. rwx -> skupina vlastníkov<br>
-            3. rwx -> ostatní<br>
-      </th>
+      <div class="stepper-container">
+        <div class="stepper-content">
+          <tr><p>Vysvetlivky: z {{currentStepIndex+1}}. hodiny</p></tr>
+          <ng-container *ngFor="let skripta of skripta; let i = index">
+            <div *ngIf="currentStepIndex === i">
+              <th>
+                Vysvetlivky: {{skripta.explain}}
+              </th>
+            </div>
+          </ng-container>
+          <tr><p>základné príkazy: z {{currentStepIndex+1}}. hodiny</p></tr>
+          <ng-container *ngFor="let skripta of skripta; let i = index">
+            <div *ngIf="currentStepIndex === i">
+              <th>
+                Príkazy: {{skripta.commands}}
+              </th>
+            </div>
+          </ng-container>
+        </div>
+      </div>
     </table>
+    <div class="stepper-buttons-container">
+      <button class="step-btn next-btn" (click)="nextStep()"><i class="bi bi-arrow-right-circle"></i><span>Dopredu</span></button>
+      <button class="step-btn prev-btn" (click)="previousStep()"><i class="bi bi-arrow-left-circle"></i><span>Dozadu</span></button>
+    </div>
+  </div>
+</section>
+<div class="step-indicator-container">
+  <div *ngFor="let skripta of skripta; let i = index" (click)="currentStepIndex = i" class="step-indicator" [ngClass]="{'active': currentStepIndex === i}">
   </div>
 </div>

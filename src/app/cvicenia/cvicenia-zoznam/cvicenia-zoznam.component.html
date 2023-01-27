@@ -5,28 +5,21 @@
 <section>
   <div class="wrapper">
     <table class="table">
-      <div *ngFor="let cvicenie of cvicenie; let i = index">
-        <th>
-        Vstup: {{cvicenie.input}}<br>
-        Uloha: {{cvicenie.content}}<br>
-        Vysledok: {{cvicenie.solution}}
-        </th>
-      </div>
       <tr><p>Príklad: {{currentStepIndex+1}}</p></tr>
       <div class="stepper-container">
-          <ng-container *ngFor="let uloha of uloha; let i = index">
+          <ng-container *ngFor="let cvicenie of cvicenie; let i = index">
             <div *ngIf="currentStepIndex === i">
               <th>
-              Vstup:<br> {{uloha.input}}
+              Vstup:<br> {{cvicenie.input}}
               </th>
               <th>
-              Úloha:<br> {{uloha.content}}
+              Úloha:<br> {{cvicenie.content}}
             </th>
             </div>
               <div *ngIf="currentStepIndex === i">
                 <th>
               <div [hidden]="!showElement" >
-                Výsledok:<br> {{uloha.vysledok}}
+                Výsledok:<br> {{cvicenie.solution}}
               </div>
                 </th>
               </div>
@@ -44,6 +37,6 @@
   </div>
 </section>
 <div class="step-indicator-container">
-  <div *ngFor="let uloha of uloha; let i = index" (click)="currentStepIndex = i" class="step-indicator" [ngClass]="{'active': currentStepIndex === i}">
+  <div *ngFor="let cvicenie of cvicenie; let i = index" (click)="currentStepIndex = i" class="step-indicator" [ngClass]="{'active': currentStepIndex === i}">
   </div>
 </div>

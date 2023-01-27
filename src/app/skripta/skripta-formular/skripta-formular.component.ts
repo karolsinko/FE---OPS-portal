@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {zoznamCviceni} from "../../models/cvicenie.model";
+import {zoznamSkript} from "../../models/skripta.model";
 
 @Component({
   selector: 'app-skripta-formular',
@@ -9,8 +10,6 @@ import {zoznamCviceni} from "../../models/cvicenie.model";
 })
 export class SkriptaFormularComponent implements OnInit {
 
-  step = [];
-
   currentStepIndex = 0;
 
   constructor(private router: Router) {
@@ -18,7 +17,7 @@ export class SkriptaFormularComponent implements OnInit {
   }
 
   @Input()
-  cvicenie: zoznamCviceni[] = [];
+  skripta: zoznamSkript[] = [];
 
   chodSpat(): void {
     this.router.navigate(['']);
@@ -27,13 +26,26 @@ export class SkriptaFormularComponent implements OnInit {
   previousStep() {
     if (this.currentStepIndex > 0) {
       this.currentStepIndex--;
+      this.updateStepIndicator();
     }
   }
 
   nextStep() {
-    if (this.currentStepIndex < this.step.length - 1) {
+    if (this.currentStepIndex < this.skripta.length - 1) {
       this.currentStepIndex++;
+      this.updateStepIndicator();
     }
+  }
+
+  updateStepIndicator() {
+    const stepIndicatorEls = document.querySelectorAll(".step-indicator");
+    stepIndicatorEls.forEach((el, index) => {
+      if (index === this.currentStepIndex) {
+        el.classList.add("active");
+      } else {
+        el.classList.remove("active");
+      }
+    });
   }
 
   ngOnInit(): void {

@@ -5,23 +5,16 @@
 <section>
   <div class="wrapper">
     <table class="table">
-      <div *ngFor="let skripta of skripta; let i = index">
-        <th>
-          Uloha: {{skripta.content}}<br>
-          Uloha1: {{skripta.content1}}<br>
-          Vysvetlivky: {{skripta.explain}}<br>
-          Príkazy: {{skripta.commands}}
-        </th>
-      </div>
       <tr><p>Hodina: {{currentStepIndex+1}}, príklady ktoré by ste mali chápať po danej hodine</p></tr>
       <div class="stepper-container">
         <div class="stepper-content">
-          <ng-container *ngFor="let step of step; let i = index">
+          <ng-container *ngFor="let skripta of skripta; let i = index">
             <div *ngIf="currentStepIndex === i">
               <th>
-              {{step.content}}
-              </th><th>
-              {{step.content1}}
+                Uloha: {{skripta.content}}
+              </th>
+              <th>
+                Uloha1: {{skripta.content1}}
               </th>
             </div>
           </ng-container>
@@ -35,6 +28,6 @@
   </div>
 </section>
 <div class="step-indicator-container">
-  <div *ngFor="let step of step; let i = index" (click)="currentStepIndex = i" class="step-indicator" [ngClass]="{'active': currentStepIndex === i}">
+  <div *ngFor="let skripta of skripta; let i = index" (click)="currentStepIndex = i" class="step-indicator" [ngClass]="{'active': currentStepIndex === i}">
   </div>
 </div>

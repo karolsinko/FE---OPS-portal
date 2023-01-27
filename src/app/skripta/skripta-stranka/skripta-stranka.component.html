@@ -14,7 +14,9 @@
           <button class="btn btn--action"(click)="chodSpat()"><i class="bi bi-house-door"></i><span> | Späť</span></button>
         </div>
         <div class='card-body'>
-          <app-skripta-formular>
+          <app-skripta-formular
+            [skripta]="skripta"
+          >
 
           </app-skripta-formular>
           <app-skripta-zoznam

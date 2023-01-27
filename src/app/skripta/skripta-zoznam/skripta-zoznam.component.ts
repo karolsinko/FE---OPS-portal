@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {zoznamCviceni} from "../../models/cvicenie.model";
 import {zoznamSkript} from "../../models/skripta.model";
 
 @Component({
@@ -18,32 +17,6 @@ export class SkriptaZoznamComponent implements OnInit {
   @Input()
   skripta: zoznamSkript[] = [];
 
-  step = [
-    {
-      content: '     1)\n' +
-        '            mkdir ford audi |' +
-        '            mkdir -p bmw/M3 bmw/X5 |' +
-        '            cd ford |' +
-        '            mkdir mustang focus |' +
-        '            cd audi |' +
-        '            mkdir R8 |',
-      content1:'2)'+
-      '  cd ~ |'+
-      '  mkdir oblecenie |'+
-      '  mkdir nike adidas 4F |'+
-      '  cd .. |'+
-      '  cd nike |'+
-      '  mkdir tenisky mikiny |'+
-      '  cd .. |'+
-      '  mkdir tricka nohavice |'+
-      '  cd .. |'+
-      ' mkdir zimne_bundy |'
-    },
-    { title: 'Úloha 2', content: 'Tu bude druha uloha' },
-    { title: 'Úloha 3', content: 'Tu bude tretia uloha' }
-  ];
-
-
   previousStep() {
     if (this.currentStepIndex > 0) {
       this.currentStepIndex--;
@@ -52,7 +25,7 @@ export class SkriptaZoznamComponent implements OnInit {
   }
 
   nextStep() {
-    if (this.currentStepIndex < this.step.length - 1) {
+    if (this.currentStepIndex < this.skripta.length - 1) {
       this.currentStepIndex++;
       this.updateStepIndicator();
     }
