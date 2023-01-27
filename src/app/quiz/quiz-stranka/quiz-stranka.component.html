@@ -12,10 +12,17 @@
       <div class='card'>
         <div class='card-header'>
           <i class="bi bi-person"></i><h1>Quiz pre výučbu</h1>
-          <button class="btn btn--action"(click)="chodSpat()"><i class="bi bi-house-door"></i><span> | Späť</span></button>
+          <button class="btn btn--action" (click)="chodSpat()"><i class="bi bi-house-door"></i><span> | Späť</span></button>
         </div>
         <div class='card-body'>
+          <app-quiz-formular>
 
+          </app-quiz-formular>
+          <app-quiz-zoznam
+          [quiz]="quiz"
+          >
+
+          </app-quiz-zoznam>
         </div>
       </div>
     </div>

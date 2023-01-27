@@ -1,1 +1,15 @@
-<p>quiz-zoznam works!</p>
+<section>
+  <div class="wrapper">
+<table class="table">
+  <div *ngFor="let quiz of quiz; let i = index">
+    <th>
+      Možnosť1: {{quiz.option1}}<br>
+      Možnosť2: {{quiz.option2}}<br>
+      Možnosť3: {{quiz.option3}}<br>
+      Otázka: {{quiz.question}}<br>
+      Riešenie: {{quiz.solution}}
+    </th>
+  </div>
+</table>
+  </div>
+</section>
