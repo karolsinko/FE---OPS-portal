@@ -1,6 +1,6 @@
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {cvicenie, zoznamCviceni} from "../app/models/cvicenie.model";
+import {cvicenie, zoznamCviceni, zoznamCviceniLinux} from "../app/models/cvicenie.model";
 import {Injectable} from "@angular/core";
 
 @Injectable({
@@ -10,10 +10,6 @@ export class CvicenieService{
   private apiUrl = 'http://localhost:8080/api/cvicenia';
 
   constructor(private http: HttpClient) { }
-
-  getCviceniePodlaJazyku(language: string,id : number): Observable<cvicenie> {
-    return this.http.get<cvicenie>(`${this.apiUrl}/${language}/${id}`);
-  }
 
   getCvicenia(): Observable<zoznamCviceni[]> {
     return this.http.get<zoznamCviceni[]>(`${this.apiUrl}`);

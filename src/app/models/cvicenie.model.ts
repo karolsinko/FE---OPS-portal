@@ -31,3 +31,20 @@ export class zoznamCviceni{
     this.language = cvicenie.language;
   }
 }
+
+export class zoznamCviceniLinux{
+
+  id?: number;
+  content: string;
+  input: string;
+  solution: string;
+  language: string;
+
+  constructor(cvicenie: zoznamCviceniLinux) {
+    this.id = cvicenie.id;
+    this.content = cvicenie.content;
+    this.input = cvicenie.input;
+    this.solution = cvicenie.solution;
+    this.language = cvicenie.language;
+  }
+}

@@ -1,8 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {zoznamCviceni} from "../../../models/cvicenie.model";
+import {cvicenie, zoznamCviceni, zoznamCviceniLinux} from "../../../models/cvicenie.model";
 import {Router} from "@angular/router";
 import {CvicenieService} from "../../../../Service/cvicenie-service";
-import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-linux-stranka',
@@ -11,7 +10,7 @@ import {HttpClient} from "@angular/common/http";
 })
 export class LinuxStrankaComponent implements OnInit {
 
-  cvicenie: zoznamCviceni[] = [];
+  cvicenie: zoznamCviceniLinux[] = [];
 
   constructor(private router: Router, private cvicenieService: CvicenieService) { }
 
