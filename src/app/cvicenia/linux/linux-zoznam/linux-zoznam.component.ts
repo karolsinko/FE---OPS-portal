@@ -1,22 +1,28 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {zoznamCviceni} from "../../models/cvicenie.model";
-import {HttpClient} from "@angular/common/http";
+import {zoznamCviceni} from "../../../models/cvicenie.model";
+import {Router} from "@angular/router";
+import {CvicenieService} from "../../../../Service/cvicenie-service";
 
 @Component({
-  selector: 'app-cvicenia-zoznam',
-  templateUrl: './cvicenia-zoznam.component.html',
-  styleUrls: ['./cvicenia-zoznam.component.css']
+  selector: 'app-linux-zoznam',
+  templateUrl: './linux-zoznam.component.html',
+  styleUrls: ['./linux-zoznam.component.css']
 })
-
-export class CviceniaZoznamComponent implements OnInit {
-  currentStepIndex = 0;
-
-    constructor(private http: HttpClient) {
-
-  }
+export class LinuxZoznamComponent implements OnInit {
 
   @Input()
   cvicenie: zoznamCviceni[] = [];
+
+  constructor(private router: Router, private cvicenieService: CvicenieService) { }
+
+  ngOnInit(): void {
+  }
+
+  chodSpat(): void {
+    this.router.navigate(['/cvicenia']);
+  }
+
+  currentStepIndex = 0;
 
   previousStep() {
     if (this.currentStepIndex > 0) {
@@ -42,15 +48,10 @@ export class CviceniaZoznamComponent implements OnInit {
       }
     });
   }
-
   showElement = false
 
   showSolution(){
     this.showElement = !this.showElement;
   }
-
-  ngOnInit(): void {
-  }
-
 
 }

@@ -11,6 +11,10 @@ export class CvicenieService{
 
   constructor(private http: HttpClient) { }
 
+  getCviceniePodlaJazyku(language: string,id : number): Observable<cvicenie> {
+    return this.http.get<cvicenie>(`${this.apiUrl}/${language}/${id}`);
+  }
+
   getCvicenia(): Observable<zoznamCviceni[]> {
     return this.http.get<zoznamCviceni[]>(`${this.apiUrl}`);
   }

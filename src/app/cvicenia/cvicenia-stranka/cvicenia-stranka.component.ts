@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {cvicenie, zoznamCviceni} from "../../models/cvicenie.model";
+import {zoznamCviceni} from "../../models/cvicenie.model";
 import {CvicenieService} from "../../../Service/cvicenie-service";
 import {Router} from "@angular/router";
 

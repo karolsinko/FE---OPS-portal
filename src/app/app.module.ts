@@ -29,6 +29,12 @@ import {MatCardModule} from "@angular/material/card";
 import { LinuxStrankaComponent } from './cvicenia/linux/linux-stranka/linux-stranka.component';
 import { CStrankaComponent } from './cvicenia/c/c-stranka/c-stranka.component';
 import { BashStrankaComponent } from './cvicenia/bash/bash-stranka/bash-stranka.component';
+import { LinuxFormularComponent } from './cvicenia/linux/linux-formular/linux-formular.component';
+import { LinuxZoznamComponent } from './cvicenia/linux/linux-zoznam/linux-zoznam.component';
+import { CFormularComponent } from './cvicenia/c/c-formular/c-formular.component';
+import { CZoznamComponent } from './cvicenia/c/c-zoznam/c-zoznam.component';
+import { BashFormularComponent } from './cvicenia/bash/bash-formular/bash-formular.component';
+import { BashZoznamComponent } from './cvicenia/bash/bash-zoznam/bash-zoznam.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +56,12 @@ import { BashStrankaComponent } from './cvicenia/bash/bash-stranka/bash-stranka.
     LinuxStrankaComponent,
     CStrankaComponent,
     BashStrankaComponent,
+    LinuxFormularComponent,
+    LinuxZoznamComponent,
+    CFormularComponent,
+    CZoznamComponent,
+    BashFormularComponent,
+    BashZoznamComponent,
   ],
   imports: [
     BrowserModule,

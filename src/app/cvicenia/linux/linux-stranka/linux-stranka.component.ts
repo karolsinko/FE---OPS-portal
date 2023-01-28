@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {zoznamCviceni} from "../../../models/cvicenie.model";
 import {Router} from "@angular/router";
 import {CvicenieService} from "../../../../Service/cvicenie-service";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-linux-stranka',
@@ -15,6 +16,14 @@ export class LinuxStrankaComponent implements OnInit {
   constructor(private router: Router, private cvicenieService: CvicenieService) { }
 
   ngOnInit(): void {
+    this.obnovitUlohy();
+  }
+
+  obnovitUlohy(): void {
+    this.cvicenieService.getCvicenia().subscribe(data => {
+      console.log('Prislo: ', data);
+      this.cvicenie = data;
+    });
   }
 
   chodSpat(): void {

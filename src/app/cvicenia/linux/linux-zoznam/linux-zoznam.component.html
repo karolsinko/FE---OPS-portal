@@ -7,23 +7,25 @@
     <table class="table">
       <tr><p>Príklad: {{currentStepIndex+1}}</p></tr>
       <div class="stepper-container">
-          <ng-container *ngFor="let cvicenie of cvicenie; let i = index">
-            <div *ngIf="currentStepIndex === i">
-              <th>
+        <ng-container *ngFor="let cvicenie of cvicenie; let i = index">
+          <div *ngIf="currentStepIndex === i">
+            <div *ngIf="cvicenie.language === 'linux'">
+            <th>
               Vstup:<br> {{cvicenie.input}}
-              </th>
-              <th>
+            </th>
+            <th>
               Úloha:<br> {{cvicenie.content}}
             </th>
-            </div>
-              <div *ngIf="currentStepIndex === i">
-                <th>
+          </div>
+          <div *ngIf="currentStepIndex === i">
+            <th>
               <div [hidden]="!showElement" >
                 Výsledok:<br> {{cvicenie.solution}}
               </div>
-                </th>
-              </div>
-          </ng-container>
+            </th>
+          </div>
+          </div>
+        </ng-container>
       </div>
     </table>
     <div class="stepper-buttons-container">
