@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {zoznamCviceni} from "../../models/cvicenie.model";
 import {zoznamSkript} from "../../models/skripta.model";
 
 @Component({

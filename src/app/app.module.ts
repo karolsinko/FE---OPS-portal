@@ -25,6 +25,10 @@ import { QuizFormularComponent } from './quiz/quiz-formular/quiz-formular.compon
 import { QuizStrankaComponent } from './quiz/quiz-stranka/quiz-stranka.component';
 import { QuizZoznamComponent } from './quiz/quiz-zoznam/quiz-zoznam.component';
 import { FAQStrankaComponent } from './FAQ/faq-stranka/faq-stranka.component';
+import {MatCardModule} from "@angular/material/card";
+import { LinuxStrankaComponent } from './cvicenia/linux/linux-stranka/linux-stranka.component';
+import { CStrankaComponent } from './cvicenia/c/c-stranka/c-stranka.component';
+import { BashStrankaComponent } from './cvicenia/bash/bash-stranka/bash-stranka.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +47,9 @@ import { FAQStrankaComponent } from './FAQ/faq-stranka/faq-stranka.component';
     QuizStrankaComponent,
     QuizZoznamComponent,
     FAQStrankaComponent,
-
+    LinuxStrankaComponent,
+    CStrankaComponent,
+    BashStrankaComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,7 +65,8 @@ import { FAQStrankaComponent } from './FAQ/faq-stranka/faq-stranka.component';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

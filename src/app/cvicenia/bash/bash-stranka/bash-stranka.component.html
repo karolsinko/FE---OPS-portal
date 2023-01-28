@@ -10,17 +10,12 @@
     <div class='container'>
       <div class='card'>
         <div class='card-header'>
-          <i class="bi bi-person"></i><h1>Cvičenia pre výučbu</h1>
+          <i class="bi bi-person"></i><h1>Cvičenia pre Bash</h1>
           <button class="btn btn--action"(click)="chodSpat()"><i class="bi bi-house-door"></i><span> | Späť</span></button>
-          <button class="btn btn--action"(click)="PrikladyC()"><i class="bi bi-house-door"></i><span> | C</span></button>
-          <button class="btn btn--action"(click)="PrikladyBash()"><i class="bi bi-house-door"></i><span> | Bash</span></button>
-          <button class="btn btn--action"(click)="PrikladyLinux()"><i class="bi bi-house-door"></i><span> | Linux</span></button>
         </div>
         <div class='card-body'>
           <app-cvicenia-formular>
-            <app-c-stranka></app-c-stranka>
-            <app-linux-stranka></app-linux-stranka>
-            <app-bash-stranka></app-bash-stranka>
+
           </app-cvicenia-formular>
           <app-cvicenia-zoznam
             [cvicenie]="cvicenie">
