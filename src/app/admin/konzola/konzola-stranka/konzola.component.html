@@ -15,8 +15,20 @@
           <button class="btn btn--action" (click)="chodSpat()"><i class="bi bi-house-door"></i><span> | Späť</span></button>
           <button (click)="logout()"><i class="bi bi-arrow-bar-left"></i><span> | Logout</span></button>
         </div>
+        <app-menu-konzola></app-menu-konzola>
         <div class='card-body'>
+          <app-konzola-formular
+            [cvicenieLinux]="cvicenieNaUpravu"
+            (pridajLinuxCvicenie)="pridaj($event)"
+            (upravLinuxCvicenie)="uprav($event)">
 
+          </app-konzola-formular>
+          <app-konzola-zoznam
+            [cvicenieLinux]="cvicenieLinux"
+            (upravLinuxCvicenie)="upravZoZoznamu($event)"
+            (vymazLinuxCvicenie)="zmazZoZoznamu($event)">
+
+          </app-konzola-zoznam>
         </div>
       </div>
     </div>

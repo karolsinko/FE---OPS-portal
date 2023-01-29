@@ -36,7 +36,10 @@ import { CZoznamComponent } from './cvicenia/c/c-zoznam/c-zoznam.component';
 import { BashFormularComponent } from './cvicenia/bash/bash-formular/bash-formular.component';
 import { BashZoznamComponent } from './cvicenia/bash/bash-zoznam/bash-zoznam.component';
 import { AdminComponent } from './admin/admin.component';
-import { KonzolaComponent } from './admin/konzola/konzola.component';
+import { KonzolaComponent } from './admin/konzola/konzola-stranka/konzola.component';
+import { KonzolaFormularComponent } from './admin/konzola/konzola-formular/konzola-formular.component';
+import { KonzolaZoznamComponent } from './admin/konzola/konzola-zoznam/konzola-zoznam.component';
+import { MenuKonzolaComponent } from './menu/menu-konzola/menu-konzola.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +69,9 @@ import { KonzolaComponent } from './admin/konzola/konzola.component';
     BashZoznamComponent,
     AdminComponent,
     KonzolaComponent,
+    KonzolaFormularComponent,
+    KonzolaZoznamComponent,
+    MenuKonzolaComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {cvicenie, zoznamCviceni, zoznamCviceniLinux} from "../app/models/cvicenie.model";
+import {cvicenie, zoznamCviceniLinux} from "../app/models/cvicenie.model";
 import {Injectable} from "@angular/core";
 
 @Injectable({
@@ -19,11 +19,11 @@ export class cvicenieLinuxService{
     return this.http.get<zoznamCviceniLinux>(`${this.apiUrl}/${id}`);
   }
 
-  createCvicenie(zoznamCviceniLinux: zoznamCviceniLinux): Observable<cvicenie> {
-    return this.http.post<zoznamCviceniLinux>(`${this.apiUrl}`, cvicenie);
+  createCvicenie(zoznamCviceniLinux: zoznamCviceniLinux): Observable<zoznamCviceniLinux> {
+    return this.http.post<zoznamCviceniLinux>(`${this.apiUrl}`, zoznamCviceniLinux);
   }
 
-  updateCvicenie(id: number, zoznamCviceniLinux : zoznamCviceniLinux): Observable<cvicenie>{
+  updateCvicenie(id: number, zoznamCviceniLinux : zoznamCviceniLinux): Observable<zoznamCviceniLinux>{
     return this.http.put<zoznamCviceniLinux>(`${this.apiUrl}/${id}`, zoznamCviceniLinux);
   }
 
