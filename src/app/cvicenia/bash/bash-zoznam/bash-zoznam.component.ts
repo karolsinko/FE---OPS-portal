@@ -12,7 +12,7 @@ export class BashZoznamComponent implements OnInit {
   @Input()
   cvicenie: zoznamCviceniBash[] = [];
 
-  constructor(private router: Router, private CvicenieBashService: cvicenieBashService) { }
+  constructor(private router: Router, private cvicenieBashService: cvicenieBashService) { }
 
   ngOnInit(): void {
   }

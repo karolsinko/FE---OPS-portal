@@ -5,10 +5,10 @@
 <section>
   <div class="wrapper">
     <table class="table">
-      <tr><p>Príklad: {{currentStepIndex+1}}</p></tr>
+      <tr><p>Príklad: {{currentStepIndex+1}} pre jazyk C</p></tr>
       <div class="stepper-container">
         <ng-container *ngFor="let zoznamCviceniC of cvicenie; let i = index">
-          <div *ngIf="currentStepIndex === i && zoznamCviceniC.language === 'c'">
+          <div *ngIf="currentStepIndex === i">
             <th>
               Vstup:<br> {{zoznamCviceniC.input}}
             </th>

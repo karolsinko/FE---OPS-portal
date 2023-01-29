@@ -8,7 +8,6 @@ import {Router} from "@angular/router";
 })
 export class CviceniaFormularComponent implements OnInit {
 
-  /* myScriptElement: HTMLScriptElement;*/
   compilerC: HTMLIFrameElement;
   compilerBash: HTMLIFrameElement;
   compilerLinux: HTMLIFrameElement;
@@ -28,10 +27,6 @@ export class CviceniaFormularComponent implements OnInit {
     this.compilerLinux.src = "https://bellard.org/jslinux/vm.html?cpu=riscv64&url=buildroot-riscv64.cfg&mem=256";
     this.compilerLinux.height = "700";
     this.compilerLinux.width = "auto";
-  }
-
-  chodSpat(): void {
-    this.router.navigate(['']);
   }
 
   pridajCompilerC(): void {
@@ -60,6 +55,4 @@ export class CviceniaFormularComponent implements OnInit {
   ngOnInit(): void{
 
   }
-
-
 }

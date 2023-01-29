@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-bash-formular',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BashFormularComponent implements OnInit {
 
-  constructor() { }
+  compilerBash: HTMLIFrameElement;
 
-  ngOnInit(): void {
+  constructor(private router: Router) {
+    this.compilerBash = document.createElement("iframe");
+    this.compilerBash.src = "https://paiza.io/projects/e/lGDP8OLLGPWOYsHkXjjwmg?theme=twilight";
+    this.compilerBash.height = "500";
+    this.compilerBash.width = "auto";
   }
 
+  pridajCompilerBash(): void {
+    document.getElementById("here")?.appendChild(this.compilerBash);
+  }
+
+  odstranCompilerBash(): void{
+    document.getElementById("here")?.removeChild(this.compilerBash);
+  }
+
+  ngOnInit(): void{
+
+  }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-c-formular',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CFormularComponent implements OnInit {
 
-  constructor() { }
+  compilerC: HTMLIFrameElement;
 
-  ngOnInit(): void {
+  constructor(private router: Router) {
+    this.compilerC = document.createElement("iframe");
+    this.compilerC.src = "https://paiza.io/projects/e/y4_khhZvaf4VAfBGlPCuIQ?theme=twilight";
+    this.compilerC.height = "500";
+    this.compilerC.width = "auto";
   }
 
+  pridajCompilerC(): void {
+    document.getElementById("here")?.appendChild(this.compilerC);
+  }
+
+  odstranCompilerC(): void {
+    document.getElementById("here")?.removeChild(this.compilerC);
+  }
+
+  ngOnInit(): void{
+
+  }
 }
