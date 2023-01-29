@@ -9,12 +9,17 @@ import {HttpClient} from "@angular/common/http";
 })
 
 export class CviceniaZoznamComponent implements OnInit {
-  currentStepIndex = 0;
+
 
     constructor(private http: HttpClient) {
 
-  }
 
+    }
+
+    ngOnInit(): void {
+    }
+/*
+  currentStepIndex = 0;
   @Input()
   cvicenie: zoznamCviceni[] = [];
 
@@ -48,9 +53,5 @@ export class CviceniaZoznamComponent implements OnInit {
   showSolution(){
     this.showElement = !this.showElement;
   }
-
-  ngOnInit(): void {
-  }
-
-
+*/
 }

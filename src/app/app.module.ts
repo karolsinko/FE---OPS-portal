@@ -35,6 +35,8 @@ import { CFormularComponent } from './cvicenia/c/c-formular/c-formular.component
 import { CZoznamComponent } from './cvicenia/c/c-zoznam/c-zoznam.component';
 import { BashFormularComponent } from './cvicenia/bash/bash-formular/bash-formular.component';
 import { BashZoznamComponent } from './cvicenia/bash/bash-zoznam/bash-zoznam.component';
+import { AdminComponent } from './admin/admin.component';
+import { KonzolaComponent } from './admin/konzola/konzola.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +64,8 @@ import { BashZoznamComponent } from './cvicenia/bash/bash-zoznam/bash-zoznam.com
     CZoznamComponent,
     BashFormularComponent,
     BashZoznamComponent,
+    AdminComponent,
+    KonzolaComponent,
   ],
   imports: [
     BrowserModule,

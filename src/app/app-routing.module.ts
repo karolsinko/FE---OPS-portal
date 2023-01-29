@@ -8,6 +8,8 @@ import {CStrankaComponent} from "./cvicenia/c/c-stranka/c-stranka.component";
 import {LinuxStrankaComponent} from "./cvicenia/linux/linux-stranka/linux-stranka.component";
 import {BashStrankaComponent} from "./cvicenia/bash/bash-stranka/bash-stranka.component";
 import {MenuComponent} from "./menu/menu.component";
+import {AdminComponent} from "./admin/admin.component";
+import {KonzolaComponent} from "./admin/konzola/konzola.component";
 
 const routes: Routes = [
   {
@@ -41,6 +43,14 @@ const routes: Routes = [
   {
     path: 'FAQ',
     component: FAQStrankaComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
+  },
+  {
+    path: 'admin/konzola',
+    component: KonzolaComponent
   }
 ];
 
