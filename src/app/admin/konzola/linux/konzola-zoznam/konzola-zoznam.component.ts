@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {zoznamCviceniLinux} from "../../../models/cvicenie.model";
+import {zoznamCviceniLinux} from "../../../../models/cvicenie.model";
 import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
@@ -12,6 +12,7 @@ export class KonzolaZoznamComponent implements OnInit {
   constructor() {
   }
 
+  //LINUX
   @Input()
   cvicenieLinux: zoznamCviceniLinux[] = [];
 
@@ -31,4 +32,5 @@ export class KonzolaZoznamComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 }

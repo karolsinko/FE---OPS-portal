@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {zoznamCviceniLinux} from "../../../models/cvicenie.model";
+import {zoznamCviceniLinux} from "../../../../models/cvicenie.model";
 import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
@@ -9,6 +9,7 @@ import {FormControl, FormGroup} from "@angular/forms";
 })
 export class KonzolaFormularComponent implements OnInit {
 
+  //LINUX
   @Input()
   set cvicenieLinux(data: zoznamCviceniLinux | undefined){
     if (data) {
@@ -55,6 +56,7 @@ export class KonzolaFormularComponent implements OnInit {
     this.cvicenieLinux = undefined;
     this.form.reset();
   }
+
   ngOnInit(): void {
   }
 }

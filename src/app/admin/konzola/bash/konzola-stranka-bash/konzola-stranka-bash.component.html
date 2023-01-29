@@ -1,0 +1,12 @@
+<app-konzola-formular-bash
+  [cvicenieBash]="cvicenieNaUpravu"
+  (pridajBashCvicenie)="pridaj($event)"
+  (upravBashCvicenie)="uprav($event)">>
+
+</app-konzola-formular-bash>
+<app-konzola-zoznam-bash
+  [cvicenieBash]="cvicenieBash"
+  (upravBashCvicenie)="upravZoZoznamu($event)"
+  (vymazBashCvicenie)="zmazZoZoznamu($event)">
+
+</app-konzola-zoznam-bash>

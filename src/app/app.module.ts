@@ -36,10 +36,16 @@ import { CZoznamComponent } from './cvicenia/c/c-zoznam/c-zoznam.component';
 import { BashFormularComponent } from './cvicenia/bash/bash-formular/bash-formular.component';
 import { BashZoznamComponent } from './cvicenia/bash/bash-zoznam/bash-zoznam.component';
 import { AdminComponent } from './admin/admin.component';
-import { KonzolaComponent } from './admin/konzola/konzola-stranka/konzola.component';
-import { KonzolaFormularComponent } from './admin/konzola/konzola-formular/konzola-formular.component';
-import { KonzolaZoznamComponent } from './admin/konzola/konzola-zoznam/konzola-zoznam.component';
+import { KonzolaComponent } from './admin/konzola/linux/konzola-stranka/konzola.component';
+import { KonzolaFormularComponent } from './admin/konzola/linux/konzola-formular/konzola-formular.component';
+import { KonzolaZoznamComponent } from './admin/konzola/linux/konzola-zoznam/konzola-zoznam.component';
 import { MenuKonzolaComponent } from './menu/menu-konzola/menu-konzola.component';
+import { KonzolaFormularCComponent } from './admin/konzola/c/konzola-formular-c/konzola-formular-c.component';
+import { KonzolaStrankaCComponent } from './admin/konzola/c/konzola-stranka-c/konzola-stranka-c.component';
+import { KonzolaZoznamCComponent } from './admin/konzola/c/konzola-zoznam-c/konzola-zoznam-c.component';
+import { KonzolaFormularBashComponent } from './admin/konzola/bash/konzola-formular-bash/konzola-formular-bash.component';
+import { KonzolaStrankaBashComponent } from './admin/konzola/bash/konzola-stranka-bash/konzola-stranka-bash.component';
+import { KonzolaZoznamBashComponent } from './admin/konzola/bash/konzola-zoznam-bash/konzola-zoznam-bash.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +78,12 @@ import { MenuKonzolaComponent } from './menu/menu-konzola/menu-konzola.component
     KonzolaFormularComponent,
     KonzolaZoznamComponent,
     MenuKonzolaComponent,
+    KonzolaFormularCComponent,
+    KonzolaStrankaCComponent,
+    KonzolaZoznamCComponent,
+    KonzolaFormularBashComponent,
+    KonzolaStrankaBashComponent,
+    KonzolaZoznamBashComponent,
   ],
   imports: [
     BrowserModule,

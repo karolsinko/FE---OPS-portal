@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {cvicenie, zoznamCviceniBash, zoznamCviceniC, zoznamCviceniLinux} from "../../../models/cvicenie.model";
-import {cvicenieLinuxService} from "../../../../Service/cvicenieLinux-service";
+import {cvicenie, zoznamCviceniBash, zoznamCviceniC, zoznamCviceniLinux} from "../../../../models/cvicenie.model";
+import {cvicenieLinuxService} from "../../../../../Service/cvicenieLinux-service";
 
 @Component({
   selector: 'app-konzola',
@@ -31,10 +31,6 @@ export class KonzolaComponent implements OnInit {
   //Admin konzola
   @Input()
   cvicenieLinux: zoznamCviceniLinux[] = [];
-  @Input()
-  cvicenieBash: zoznamCviceniBash[] = [];
-  @Input()
-  cvicenieC: zoznamCviceniC[] = [];
 
   cvicenieNaUpravu?: cvicenie;
 
@@ -71,5 +67,33 @@ export class KonzolaComponent implements OnInit {
         this.obnovitCvicenia();
       });
     }
+  }
+
+  //pager
+  currentStepIndex = 0;
+  steps = 3;
+  previousStep() {
+    if (this.currentStepIndex > 0) {
+      this.currentStepIndex--;
+      this.updateStepIndicator();
+    }
+  }
+
+  nextStep() {
+    if (this.currentStepIndex < this.steps - 1) {
+      this.currentStepIndex++;
+      this.updateStepIndicator();
+    }
+  }
+
+  updateStepIndicator() {
+    const stepIndicatorEls = document.querySelectorAll(".step-indicator");
+    stepIndicatorEls.forEach((el, index) => {
+      if (index === this.currentStepIndex) {
+        el.classList.add("active");
+      } else {
+        el.classList.remove("active");
+      }
+    });
   }
 }

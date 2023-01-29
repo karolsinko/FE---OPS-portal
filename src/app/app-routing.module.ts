@@ -9,7 +9,7 @@ import {LinuxStrankaComponent} from "./cvicenia/linux/linux-stranka/linux-strank
 import {BashStrankaComponent} from "./cvicenia/bash/bash-stranka/bash-stranka.component";
 import {MenuComponent} from "./menu/menu.component";
 import {AdminComponent} from "./admin/admin.component";
-import {KonzolaComponent} from "./admin/konzola/konzola-stranka/konzola.component";
+import {KonzolaComponent} from "./admin/konzola/linux/konzola-stranka/konzola.component";
 
 const routes: Routes = [
   {
