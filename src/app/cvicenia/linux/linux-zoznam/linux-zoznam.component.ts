@@ -1,7 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {zoznamCviceniLinux} from "../../../models/cvicenie.model";
 import {Router} from "@angular/router";
-import {CvicenieService} from "../../../../Service/cvicenie-service";
 import {cvicenieLinuxService} from "../../../../Service/cvicenieLinux-service";
 
 @Component({

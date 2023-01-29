@@ -48,3 +48,37 @@ export class zoznamCviceniLinux{
     this.language = cvicenie.language;
   }
 }
+
+export class zoznamCviceniBash{
+
+  id?: number;
+  content: string;
+  input: string;
+  solution: string;
+  language: string;
+
+  constructor(cvicenie: zoznamCviceniBash) {
+    this.id = cvicenie.id;
+    this.content = cvicenie.content;
+    this.input = cvicenie.input;
+    this.solution = cvicenie.solution;
+    this.language = cvicenie.language;
+  }
+}
+
+export class zoznamCviceniC{
+
+  id?: number;
+  content: string;
+  input: string;
+  solution: string;
+  language: string;
+
+  constructor(cvicenie: zoznamCviceniC) {
+    this.id = cvicenie.id;
+    this.content = cvicenie.content;
+    this.input = cvicenie.input;
+    this.solution = cvicenie.solution;
+    this.language = cvicenie.language;
+  }
+}
