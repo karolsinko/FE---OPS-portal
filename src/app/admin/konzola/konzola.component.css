@@ -146,23 +146,24 @@ header {
 /* VSTUP - INPUTY
  --------------------------------------------
 */
-label {
-  color: white;
-  font-size: 20px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
+
+input{
+  height: 30px;
+  width: 300px;
+  font-size: 25px;
+  margin: 10px;
+  text-align: center;
+  background-color: white;
+  border: navajowhite 2px groove;
+  color: #1F1431;
+  margin-block: 50px;
+  box-sizing: border-box;
 }
-input {
-   font-size:18px;
-   padding:10px 10px 10px 5px;
-   display:block;
-   width:300px;
-   border:none;
-   border-bottom:1px solid white;
-   background-color: #353084;
-   color: navajowhite;
- }
+
+
+input:hover{
+  background-color: white;
+}
 
 /*  MENU
 ------------------------------------------------
@@ -299,4 +300,3 @@ button:hover span:before{
 button:active {
   transform: translateY(5px);
 }
-

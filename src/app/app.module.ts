@@ -84,7 +84,9 @@ import { KonzolaComponent } from './admin/konzola/konzola.component';
     MatTableModule,
     MatCardModule
   ],
-  providers: [],
+  providers: [
+    AdminComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

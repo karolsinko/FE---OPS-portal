@@ -50,7 +50,8 @@ const routes: Routes = [
   },
   {
     path: 'admin/konzola',
-    component: KonzolaComponent
+    component: KonzolaComponent,
+    canActivate: [AdminComponent]
   }
 ];
 

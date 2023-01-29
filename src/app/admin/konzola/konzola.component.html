@@ -4,7 +4,8 @@
 </head>
 <div class='dashboard-app'>
   <div class='dashboard-nav'>
-    <app-menu></app-menu>
+    <app-menu>
+    </app-menu>
   </div>
   <div class='dashboard-content'>
     <div class='container'>
@@ -12,22 +13,10 @@
         <div class='card-header'>
           <i class="bi bi-person"></i><h1>Admin panel</h1>
           <button class="btn btn--action" (click)="chodSpat()"><i class="bi bi-house-door"></i><span> | Späť</span></button>
+          <button (click)="logout()"><i class="bi bi-arrow-bar-left"></i><span> | Logout</span></button>
         </div>
         <div class='card-body'>
-          <form (submit)="login()">
 
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>Meno:</label>
-            <input type="text" [(ngModel)]="username" name="username" placeholder="Meno" required>
-
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>Heslo:</label>
-            <input type="password" [(ngModel)]="password" name="password" placeholder="Heslo" required>
-            <button type="submit"><i class="bi bi-arrow-bar-right"></i><span> | Login</span></button>
-
-          </form>
         </div>
       </div>
     </div>
