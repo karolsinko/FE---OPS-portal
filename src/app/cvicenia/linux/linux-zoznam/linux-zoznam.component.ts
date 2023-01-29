@@ -1,20 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {cvicenie, zoznamCviceniLinux} from "../../../models/cvicenie.model";
+import {zoznamCviceniLinux} from "../../../models/cvicenie.model";
 import {Router} from "@angular/router";
 import {CvicenieService} from "../../../../Service/cvicenie-service";
+import {cvicenieLinuxService} from "../../../../Service/cvicenieLinux-service";
 
-async function getDataFromApi(): Promise<zoznamCviceniLinux[]> {
-  const response = await fetch('http://localhost:4200/cvicenia/linux');
-  const data = await response.json();
-  return data;
-}
-
-async function updateLinux() {
-  const cvicenie: zoznamCviceniLinux[] = await getDataFromApi();
-  console.log(cvicenie);
-  const cvicenieLinux = cvicenie.filter((obj: zoznamCviceniLinux) => obj.language === "linux");
-  console.log(cvicenieLinux);
-}
 @Component({
   selector: 'app-linux-zoznam',
   templateUrl: './linux-zoznam.component.html',
@@ -25,7 +14,7 @@ export class LinuxZoznamComponent implements OnInit {
   @Input()
   cvicenie: zoznamCviceniLinux[] = [];
 
-  constructor(private router: Router, private cvicenieService: CvicenieService) { }
+  constructor(private router: Router, private cvicenieLinuxService: cvicenieLinuxService) { }
 
   ngOnInit(): void {
   }
