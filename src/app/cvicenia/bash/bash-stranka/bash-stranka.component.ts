@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {zoznamCviceni} from "../../../models/cvicenie.model";
+import {zoznamCviceni, zoznamCviceniBash, zoznamCviceniC} from "../../../models/cvicenie.model";
 import {Router} from "@angular/router";
 import {CvicenieService} from "../../../../Service/cvicenie-service";
+import {CvicenieCService} from "../../../../Service/cvicenieC-service";
+import {cvicenieBashService} from "../../../../Service/cvicenieBash-service";
 
 @Component({
   selector: 'app-bash-stranka',
@@ -10,11 +12,19 @@ import {CvicenieService} from "../../../../Service/cvicenie-service";
 })
 export class BashStrankaComponent implements OnInit {
 
-  cvicenie: zoznamCviceni[] = [];
+  cvicenie: zoznamCviceniBash[] = [];
 
-  constructor(private router: Router, private cvicenieService: CvicenieService) { }
+  constructor(private router: Router, private CvicenieBashService:cvicenieBashService) { }
 
   ngOnInit(): void {
+    this.obnovitUlohy();
+  }
+
+  obnovitUlohy(): void {
+    this.CvicenieBashService.getCvicenia().subscribe(data => {
+      console.log('Prislo: ', data);
+      this.cvicenie = data;
+    });
   }
 
   chodSpat(): void {

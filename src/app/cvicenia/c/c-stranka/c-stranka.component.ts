@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {zoznamCviceni} from "../../../models/cvicenie.model";
+import {zoznamCviceniC} from "../../../models/cvicenie.model";
 import {Router} from "@angular/router";
-import {CvicenieService} from "../../../../Service/cvicenie-service";
+import {CvicenieCService} from "../../../../Service/cvicenieC-service";
 
 @Component({
   selector: 'app-c-stranka',
@@ -10,11 +10,19 @@ import {CvicenieService} from "../../../../Service/cvicenie-service";
 })
 export class CStrankaComponent implements OnInit {
 
-  cvicenie: zoznamCviceni[] = [];
+  cvicenie: zoznamCviceniC[] = [];
 
-  constructor(private router: Router, private cvicenieService: CvicenieService) { }
+  constructor(private router: Router, private cvicenieCService: CvicenieCService) { }
 
   ngOnInit(): void {
+    this.obnovitUlohy();
+  }
+
+  obnovitUlohy(): void {
+    this.cvicenieCService.getCvicenia().subscribe(data => {
+      console.log('Prislo: ', data);
+      this.cvicenie = data;
+    });
   }
 
   chodSpat(): void {

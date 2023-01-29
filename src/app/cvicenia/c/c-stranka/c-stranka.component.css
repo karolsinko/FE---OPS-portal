@@ -300,3 +300,53 @@ button:hover span:before{
 button:active {
   transform: translateY(5px);
 }
+/*   STEPPER
+-----------------------------------------
+ */
+.stepper-container {
+  display: block;
+  align-items: center;
+}
+
+.step-btn {
+  background-color: #353084;
+  color: white;
+  cursor: pointer;
+}
+
+.step-btn-1 {
+  background-color: #353084;
+  color: white;
+  cursor: pointer;
+  width: 250px;
+}
+
+.step-indicator-container {
+  margin: 0 16px;
+  display: flex;
+  align-content: center;
+}
+
+.step-indicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #D8D8D8;
+  margin-right: 8px;
+}
+
+.step-indicator.active {
+  background-color: #353084;
+}
+
+.step-content {
+  display: none;
+}
+.step-content {
+  visibility: hidden;
+}
+
+.step-content.active {
+  display: block;
+  visibility: visible;
+}
