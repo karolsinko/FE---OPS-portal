@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {cvicenie, zoznamCviceniBash, zoznamCviceniC, zoznamCviceniLinux} from "../../../../models/cvicenie.model";
+import {cvicenie, zoznamCviceniLinux} from "../../../../models/cvicenie.model";
 import {cvicenieLinuxService} from "../../../../../Service/cvicenieLinux-service";
 
 @Component({
@@ -14,18 +14,6 @@ export class KonzolaComponent implements OnInit {
 
   ngOnInit(): void {
     this.obnovitCvicenia();
-  }
-
-  logout() {
-    // Vymažte uložený stav prihlásenia
-    localStorage.removeItem('isLoggedIn');
-
-    // Navigate to login page
-    this.router.navigate(['/admin']);
-  }
-
-  chodSpat(): void {
-    this.router.navigate(['']);
   }
 
   //Admin konzola
@@ -69,31 +57,4 @@ export class KonzolaComponent implements OnInit {
     }
   }
 
-  //pager
-  currentStepIndex = 0;
-  steps = 3;
-  previousStep() {
-    if (this.currentStepIndex > 0) {
-      this.currentStepIndex--;
-      this.updateStepIndicator();
-    }
-  }
-
-  nextStep() {
-    if (this.currentStepIndex < this.steps - 1) {
-      this.currentStepIndex++;
-      this.updateStepIndicator();
-    }
-  }
-
-  updateStepIndicator() {
-    const stepIndicatorEls = document.querySelectorAll(".step-indicator");
-    stepIndicatorEls.forEach((el, index) => {
-      if (index === this.currentStepIndex) {
-        el.classList.add("active");
-      } else {
-        el.classList.remove("active");
-      }
-    });
-  }
 }

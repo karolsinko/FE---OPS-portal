@@ -1,0 +1,12 @@
+<app-konzola-formular-skripty
+  [skripty]="skriptNaUpravu"
+  (pridajSkripty)="pridaj($event)"
+  (upravSkripty)="uprav($event)">
+
+</app-konzola-formular-skripty>
+<app-konzola-zoznam-skripty
+  [skripty]="skripta"
+  (upravSkripty)="upravZoZoznamu($event)"
+  (vymazSkripty)="zmazZoZoznamu($event)">
+
+</app-konzola-zoznam-skripty>

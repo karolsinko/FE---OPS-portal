@@ -9,7 +9,7 @@ import {LinuxStrankaComponent} from "./cvicenia/linux/linux-stranka/linux-strank
 import {BashStrankaComponent} from "./cvicenia/bash/bash-stranka/bash-stranka.component";
 import {MenuComponent} from "./menu/menu.component";
 import {AdminComponent} from "./admin/admin.component";
-import {KonzolaComponent} from "./admin/konzola/linux/konzola-stranka/konzola.component";
+import {EditorComponent} from "./admin/konzola/editor/editor.component";
 
 const routes: Routes = [
   {
@@ -50,7 +50,7 @@ const routes: Routes = [
   },
   {
     path: 'admin/konzola',
-    component: KonzolaComponent,
+    component: EditorComponent,
     canActivate: [AdminComponent]
   }
 ];

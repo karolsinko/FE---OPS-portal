@@ -27,7 +27,7 @@ export class MenuComponent {
       this.router.navigate(['/FAQ']);
     }else if(m=== MENU.ADMIN){
       this.router.navigate(['/admin']);
-}
+    }
   }
 
 }

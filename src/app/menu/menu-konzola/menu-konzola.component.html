@@ -1,5 +1,45 @@
-<div class="wrapper">
-  <button class="btn btn--action"(click)="PrikladyC()"><i class="bi bi-house-door"></i><span> | C</span></button>
-  <button class="btn btn--action"(click)="PrikladyBash()"><i class="bi bi-house-door"></i><span> | Bash</span></button>
-  <button class="btn btn--action"(click)="PrikladyLinux()"><i class="bi bi-house-door"></i><span> | Linux</span></button>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  <title></title>
+</head>
+<script>const mobileScreen = window.matchMedia("(max-width: 990px )");
+$(document).ready(function () {
+  $(".dashboard-nav-dropdown-toggle").click(function () {
+    $(this).closest(".dashboard-nav-dropdown")
+      .toggleClass("show")
+      .find(".dashboard-nav-dropdown")
+      .removeClass("show");
+    $(this).parent()
+      .siblings()
+      .removeClass("show");
+  });
+  $(".menu-toggle").click(function () {
+    if (mobileScreen.matches) {
+      $(".dashboard-nav").toggleClass("mobile-show");
+    } else {
+      $(".dashboard").toggleClass("dashboard-compact");
+    }
+  });
+});</script>
+<div class='dashboard'>
+  <div class="dashboard-nav">
+    <header><a class="menu-toggle"><i class="fas fa-bars"></i></a>
+      <a (click)="openMenu(menu.HOME)" class="brand-logo"><i class="bi bi-journal-code"></i><span>| Operačné systémy 1 </span></a></header>
+    <nav class="dashboard-nav-list">
+        <a (click)="openMenu(menu.QUIZ)" class="dashboard-nav-item"><i class="bi bi-question-circle"></i> |  Quiz</a>
+        <a (click)="openMenu(menu.CVICENIA)" class="dashboard-nav-item"><i class="bi bi-code-slash"></i> |  Cvičenia</a>
+        <a (click)="openMenu(menu.SKRIPTA)" class="dashboard-nav-item"><i class="bi bi-printer"></i> |  Skriptá</a>
+        <a (click)="openMenu(menu.FAQ)" class="dashboard-nav-item"><i class="bi bi-person"></i>|  FAQ</a><br><br>
+        <a (click)="openMenu(menu.ADMIN)" class="dashboard-nav-item"><i class="bi bi-wrench"></i>|  Admin</a>
+        <a (click)="openMenu(menu.C)" class="dashboard-nav-item"><i class="bi bi-wrench"></i> |  Prejdi na C príklady</a>
+        <a (click)="openMenu(menu.LINUX)" class="dashboard-nav-item"><i class="bi bi-wrench"></i>|  Prejdi na Linux príklady</a>
+        <a (click)="openMenu(menu.BASH)" class="dashboard-nav-item"><i class="bi bi-wrench"></i>|  Prejdi na Bash príklady</a>
+      </nav>
+  </div>
 </div>
+
+
+
+
+
+
