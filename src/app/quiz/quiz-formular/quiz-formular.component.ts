@@ -1,6 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {FormControl, FormGroup} from "@angular/forms";
+import {Router} from "@angular/router";
+
+interface Question {
+  text: string;
+  options: Option[];
+}
+
+interface Option {
+  text: string;
+  isCorrect: boolean;
+}
 
 @Component({
   selector: 'app-quiz-formular',
@@ -9,10 +19,10 @@ import {FormControl, FormGroup} from "@angular/forms";
 })
 export class QuizFormularComponent implements OnInit {
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
-  ngOnInit() {
-  }
+ngOnInit() {
 
+}
 }
 

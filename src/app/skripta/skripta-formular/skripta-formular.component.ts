@@ -37,7 +37,7 @@ export class SkriptaFormularComponent implements OnInit {
   }
 
   updateStepIndicator() {
-    const stepIndicatorEls = document.querySelectorAll(".step-indicator");
+    const stepIndicatorEls = document.querySelectorAll(".step-indicator-1");
     stepIndicatorEls.forEach((el, index) => {
       if (index === this.currentStepIndex) {
         el.classList.add("active");

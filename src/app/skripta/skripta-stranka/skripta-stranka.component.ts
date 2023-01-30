@@ -26,6 +26,6 @@ export class SkriptaStrankaComponent implements OnInit {
     this.skriptaService.getSkripta().subscribe(data => {
       console.log('Prislo: ', data);
       this.skripta = data;
-    });
+    })
   }
 }

@@ -46,6 +46,7 @@ import { KonzolaZoznamCComponent } from './admin/konzola/c/konzola-zoznam-c/konz
 import { KonzolaFormularBashComponent } from './admin/konzola/bash/konzola-formular-bash/konzola-formular-bash.component';
 import { KonzolaStrankaBashComponent } from './admin/konzola/bash/konzola-stranka-bash/konzola-stranka-bash.component';
 import { KonzolaZoznamBashComponent } from './admin/konzola/bash/konzola-zoznam-bash/konzola-zoznam-bash.component';
+import { SkriptaPoznamkyComponent } from './skripta/skripta-poznamky/skripta-poznamky.component';
 
 @NgModule({
   declarations: [
@@ -84,6 +85,7 @@ import { KonzolaZoznamBashComponent } from './admin/konzola/bash/konzola-zoznam-
     KonzolaFormularBashComponent,
     KonzolaStrankaBashComponent,
     KonzolaZoznamBashComponent,
+    SkriptaPoznamkyComponent,
   ],
   imports: [
     BrowserModule,

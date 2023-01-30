@@ -320,7 +320,7 @@ input:hover{
   align-content: center;
 }
 
-.step-indicator {
+.step-indicator-1 {
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -328,7 +328,7 @@ input:hover{
   margin-right: 8px;
 }
 
-.step-indicator.active {
+.step-indicator-1.active {
   background-color: #353084;
 }
 
