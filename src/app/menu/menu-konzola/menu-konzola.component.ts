@@ -16,18 +16,6 @@ export class MenuKonzolaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  PrikladyC(): void{
-    this.router.navigate(['/cvicenia/c']);
-  }
-
-  PrikladyLinux(): void{
-    this.router.navigate(['/cvicenia/linux']);
-  }
-
-  PrikladyBash(): void{
-    this.router.navigate(['/cvicenia/bash']);
-  }
-
   public openMenu(m: MENU) {
     if (m === MENU.HOME) {
       this.router.navigate(['/']);
