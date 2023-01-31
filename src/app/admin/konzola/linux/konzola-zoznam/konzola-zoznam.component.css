@@ -12,7 +12,7 @@ td{
 }
 th{
   width: 150px;
-  color: navajowhite;
+  color: white;
   -webkit-transition: color 1s;
   transition: color 1s;
 }
@@ -51,6 +51,7 @@ p:hover {
  --------------------------------------------
 */
 
+
 button{
   display: block;
   font-weight: 700;
@@ -58,11 +59,11 @@ button{
   width: 100px;
   height: 25px;
   padding: 3px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   border-radius: 1.5rem;
-  background-color: navajowhite;
-  transition: all .5s ease 0s;
-  box-shadow: 0 6px black;
+  background-color: white;
+  transition: all .3s ease 0s;
+  box-shadow: 0 3px #443ea2;
 }
 
 span{
@@ -71,8 +72,8 @@ span{
   position: relative;
   transition: all .5s ease;
 }
+
 .uprav::before,.vymaz::before{
-  font-family: "Font Awesome 5 Free";
   color: #353084;
   font-weight: 900;
   font-size: 14px;
@@ -84,52 +85,36 @@ span{
   transition: all .1s ease 0s;
 }
 
-.uprav::before{
-  content: '\f304';
-}
-.vymaz::before{
-  content: '\f1f8';
-}
 button:hover{
-  box-shadow: 0 6px white;
-
+  box-shadow: 0 4px black;
 }
+
 button:hover span{
   padding-left: 2rem;
 }
 
-button:hover span:before{
-  left: 0;
-  opacity: 1;
-}
-
-button:active {
-
-  transform: translateY(5px);
-}
 
 /* LAYOUT
  --------------------------------------------
 */
+
 .wrapper {
-  width: 960px;
-  margin: 0 auto;
+  width: auto;
 }
 
 header {
-  width: 960px;
+  width: auto;
   text-align: center;
   color: white;
   letter-spacing: 3px;
   font-size: 35px;
 }
 nav {
-  width: 960px;
-  margin-right: 10px;
+  width: auto;
 }
 
 section {
-  width: 960px;
+  width: auto;
 }
 
 *, *:before, *:after {
@@ -142,28 +127,15 @@ body {
   background: #D6C4EC;
   color: #FFF;
   text-align: center;
-  margin: 0;
 }
 
-header,
-nav,
-section {
-  margin-bottom: 10px;
-  padding: 10px;
-}
-
-header {
-  padding: 20px 0;
-}
 /* VSTUP - INPUTY
  --------------------------------------------
 */
-
 input{
   height: 30px;
-  width: 300px;
+  width: auto;
   font-size: 25px;
-  margin: 10px;
   text-align: center;
   background-color: #D6C4EC;
   border: #D6C4EC 2px groove;
@@ -171,29 +143,6 @@ input{
   margin-block: 50px;
   box-sizing: border-box;
 }
-
-
 input:hover{
   background-color: white;
-}
-
-
-mat-paginator{
-  color: navajowhite;
-  display: flex;
-  justify-content: center;
-
-}
-::ng-deep .mat-paginator .mat-icon-button{
-  background-color: navajowhite;
-  color: #443ea2;
-  margin: 2px;
-
-
-}
-.mat-icon{
-  height: 40px;
-  width: 40px;
-  font-size: 40px;
-  line-height: 40px;
 }

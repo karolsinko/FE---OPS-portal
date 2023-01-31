@@ -2,18 +2,16 @@
  --------------------------------------------
 */
 table{
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
 }
 td{
   border: 0;
-  width: 150px;
+  width: auto;
   color: white;
 }
 th{
   border:0;
-  width: 150px;
+  width: auto;
   color: white;
 }
 /* TEXTY
@@ -32,7 +30,7 @@ h1:hover {
 
 p{
   text-align: left;
-  color: navajowhite;
+  color: white;
   display:inline;
   letter-spacing: 3px;
   margin-bottom: 10px;
@@ -49,44 +47,42 @@ p:hover {
 button{
   display: block;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 14px;
   width: 100px;
-  padding: 5px;
+  height: 25px;
+  padding: 3px;
   border-radius: 1.5rem;
-  background-color: navajowhite;
-  transition: all .5s ease 0s;
-  box-shadow: 0 6px black;
+  background-color: white;
+  transition: all .3s ease 0s;
+  box-shadow: 0 3px #443ea2;
 }
-
 span{
   display: inline-block;
   color: #353084;
   position: relative;
   transition: all .5s ease;
 }
-.pridaj::before,.uprav::before,.vymaz::before{
-  font-family: "Font Awesome 5 Free";
+
+.uprav::before,.vymaz::before{
   color: #353084;
   font-weight: 900;
-  font-size: 20px;
+  font-size: 14px;
   display: inline-block;
   position: absolute;
-  top: 0px;
   left: 1.5rem;
   opacity: 0;
   transition: all .1s ease 0s;
 }
-.pridaj::before{
-  content: '\f055';
+
+button:hover{
+  box-shadow: 0 4px black;
 }
-.uprav::before{
-  content: '\f304';
-}
-.vymaz::before{
-  content: '\f1f8';
+
+button:hover span{
+  padding-left: 2rem;
 }
 button:hover{
-  box-shadow: 0 6px white;
+  box-shadow: 0 4px #000000;
 
 }
 button:hover span{
@@ -99,82 +95,31 @@ button:hover span:before{
 }
 
 button:active {
-
   transform: translateY(5px);
 }
 
 /* LAYOUT
  --------------------------------------------
 */
-.wrapper {
-  width: 960px;
-  margin: 0 auto;
-}
-
-header {
-  width: 960px;
-  text-align: center;
-  color: white;
-  letter-spacing: 3px;
-  font-size: 35px;
-}
-nav {
-  width: 960px;
-  margin-right: 10px;
-}
-
-section {
-  width: 960px;
-}
-
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body {
-  background: #D6C4EC;
-  color: #FFF;
-  text-align: center;
-  margin: 0;
-}
-
-header,
-nav,
-section {
-  margin-bottom: 10px;
-  padding: 10px;
-}
-
-header {
-  padding: 20px 0;
-}
-
-
-.bi{
-  float: left;
-}
 
 .group        {
   position:relative;
-  margin-bottom:45px;
 }
+
 input         {
   font-size:18px;
   padding:10px 10px 10px 5px;
   display:block;
-  width:300px;
-  border:none;
+  width:auto;
   border-bottom:1px solid white;
   background-color: #353084;
-  color: navajowhite;
+  color: white;
 }
-input:focus     { outline:none; color:navajowhite }
+input:focus     { outline:none; color:white }
 
 /* LABEL ======================================= */
 label          {
-  color: navajowhite;
+  color: white;
   font-size:18px;
   font-weight:normal;
   position:absolute;
@@ -194,7 +139,7 @@ input:focus ~ label, input:valid ~ label    {
 }
 
 /* BOTTOM BARS ================================= */
-.bar  { position:relative; display:block; width:300px; }
+
 .bar:before, .bar:after   {
   content:'';
   height:3px;
@@ -222,7 +167,7 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
 .highlight {
   position:absolute;
   height:60%;
-  width:100px;
+  width:auto;
   top:25%;
   left:0;
   pointer-events:none;

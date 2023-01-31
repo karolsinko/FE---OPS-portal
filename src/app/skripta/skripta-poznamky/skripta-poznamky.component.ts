@@ -16,7 +16,7 @@ export class SkriptaPoznamkyComponent implements OnInit {
   ngOnInit(): void {
   }
   @Input()
-  poznamky: zoznamSkript[] = [];
+  skripta: zoznamSkript[] = [];
 
   previousStep() {
     if (this.currentStepIndex > 0) {
@@ -26,7 +26,7 @@ export class SkriptaPoznamkyComponent implements OnInit {
   }
 
   nextStep() {
-    if (this.currentStepIndex < this.poznamky.length - 1) {
+    if (this.currentStepIndex < this.skripta.length - 1) {
       this.currentStepIndex++;
       this.updateStepIndicator();
     }

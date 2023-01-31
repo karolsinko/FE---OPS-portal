@@ -8,10 +8,10 @@
     <tr><p>Poznámky: z {{currentStepIndex+1}}. hodiny</p></tr>
     <div class="stepper-container">
       <div class="stepper-content">
-        <ng-container *ngFor="let poznamky of poznamky; let i = index">
+        <ng-container *ngFor="let skripta of skripta; let i = index">
           <th>
           <div *ngIf="currentStepIndex === i">
-            {{poznamky.scripts}}
+            {{skripta.scripts}}
           </div>
           </th>
         </ng-container>
@@ -21,8 +21,8 @@
     <button class="step-btn prev-btn" (click)="previousStep()"><i class="bi bi-arrow-left-circle"></i><span>Dozadu</span></button>
   </div>
 </div>
+</section>
 <div class="step-indicator-container">
-  <div *ngFor="let poznamky of poznamky; let i = index" (click)="currentStepIndex = i" class="step-indicator-2" [ngClass]="{'active': currentStepIndex === i}">
+  <div *ngFor="let skripta of skripta; let i = index" (click)="currentStepIndex = i" class="step-indicator-2" [ngClass]="{'active': currentStepIndex === i}">
   </div>
 </div>
-</section>

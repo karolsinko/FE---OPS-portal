@@ -15,48 +15,45 @@
           <i class="bi bi-person"></i><h1>Admin panel</h1>
           <button class="btn btn--action" (click)="chodSpat()"><i class="bi bi-house-door"></i><span> | Späť</span></button>
           <button (click)="logout()"><i class="bi bi-arrow-bar-left"></i><span> | Logout</span></button>
+          <button class="button1" (click)="nextStep()"><i class="bi bi-arrow-right-circle"></i><span>Dopredu</span></button>
+          <button class="button1" (click)="previousStep()"><i class="bi bi-arrow-left-circle"></i><span>Dozadu</span></button>
         </div>
         <div class="stepper-container">
           <app-menu-konzola></app-menu-konzola>
           <div class="stepper-buttons-container">
-            <button class="step-btn next-btn" (click)="nextStep()"><i class="bi bi-arrow-right-circle"></i><span>Dopredu</span></button>
-            <button class="step-btn prev-btn" (click)="previousStep()"><i class="bi bi-arrow-left-circle"></i><span>Dozadu</span></button>
-            <div class="step-indicator-container">
-              <div *ngFor="let steps of stepsArray ; let i = index" (click)="currentStepIndex = i" class="step-indicator" [ngClass]="{'active': currentStepIndex === i}">
-              </div>
-            </div>
             <ng-container *ngIf="currentStepIndex === 0">
-                <h1>Linux panel</h1>
                 <div class='card-body'>
+                  <h1>Linux panel</h1>
                   <app-konzola>
                   </app-konzola>
                 </div>
               </ng-container>
               <ng-container *ngIf="currentStepIndex === 1">
-                <h1>C panel</h1>
                 <div class='card-body'>
+                  <h1>C panel</h1>
                   <app-konzola-stranka-c>
-
                   </app-konzola-stranka-c>
                 </div>
               </ng-container>
               <ng-container *ngIf="currentStepIndex === 2">
-                <h1>Bash panel</h1>
                 <div class='card-body'>
+                  <h1>Bash panel</h1>
                   <app-konzola-stranka-bash>
-
                   </app-konzola-stranka-bash>
                 </div>
               </ng-container>
               <ng-container *ngIf="currentStepIndex === 3">
-                <h1>Skripta panel</h1>
                 <div class='card-body'>
+                  <h1>Skripta panel</h1>
                   <app-konzola-stranka-skripty>
-
                   </app-konzola-stranka-skripty>
                 </div>
               </ng-container>
             </div>
+          <div class="step-indicator-container">
+            <div *ngFor="let steps of stepsArray ; let i = index" (click)="currentStepIndex = i" class="step-indicator" [ngClass]="{'active': currentStepIndex === i}">
+            </div>
+          </div>
           </div>
         </div>
       </div>
