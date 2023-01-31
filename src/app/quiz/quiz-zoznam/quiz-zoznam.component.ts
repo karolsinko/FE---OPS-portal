@@ -13,6 +13,8 @@ export class QuizZoznamComponent implements OnInit {
   @Input()
   quiz: zoznamQuizov[] = [];
 
+  currentStepIndex = 0;
+
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
@@ -21,12 +23,13 @@ export class QuizZoznamComponent implements OnInit {
   submitAnswers() {
     let score = 0;
     for (let i = 0; i < this.quiz.length; i++) {
-      const answer = this.quiz[i].option1;
-      const correctAnswer = this.quiz[i].option2;
-      if (answer === correctAnswer) {
+      const answer = this.quiz[i].option2;
+      const option2 = this.quiz[i].option2;
+      if (answer === option2) {
         score++;
+        this.currentStepIndex++;
       } else {
-        alert(`Question ${i + 1} is incorrect. Correct answer is "${correctAnswer}"`);
+        alert(`Question ${i + 1} is incorrect. Correct answer is "${option2}"`);
         return;
       }
     }
