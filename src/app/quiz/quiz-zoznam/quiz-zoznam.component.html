@@ -11,18 +11,14 @@
     </th>
   </div>
   <h1>Quiz</h1>
-    <div *ngFor="let zoznamQuizov of quiz; let i = index">
+    <div *ngFor="let quiz of quiz; let i = index">
       <div *ngIf="currentStepIndex === i">
-      <p>{{zoznamQuizov.question}}</p>
-      <input type="text" [name]="'question' + i">
+      <p>{{quiz.question}}</p>
+      <input type="text">
       <br><br>
-    </div>
-    <button (click)="submitAnswers()">Submit answers</button>
-      <div *ngIf="currentStepIndex >= quiz.length">
-        <p>Koniec quizu, gratulujeme!</p>
       </div>
-  </div>
-
+    </div>
+  <button (click)="submitAnswers()">Submit answers</button>
 </table>
   </div>
 </section>

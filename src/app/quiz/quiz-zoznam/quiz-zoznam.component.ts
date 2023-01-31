@@ -14,6 +14,7 @@ export class QuizZoznamComponent implements OnInit {
   quiz: zoznamQuizov[] = [];
 
   currentStepIndex = 0;
+  score = 0
 
   constructor(private http: HttpClient) {}
 
@@ -21,18 +22,20 @@ export class QuizZoznamComponent implements OnInit {
   }
 
   submitAnswers() {
-    let score = 0;
     for (let i = 0; i < this.quiz.length; i++) {
       const answer = this.quiz[i].option2;
-      const option2 = this.quiz[i].option2;
-      if (answer === option2) {
-        score++;
-        this.currentStepIndex++;
-      } else {
-        alert(`Question ${i + 1} is incorrect. Correct answer is "${option2}"`);
-        return;
-      }
+      const option2 = this.quiz[i].solution;
+        if (answer === option2) {
+        } else {
+          alert(`Question ${i + 1} is incorrect. Correct answer is "${option2}"`);
+          return;
+        }
     }
-    console.log(`Your score is: ${score}`);
+    if (this.currentStepIndex < this.quiz.length-1) {
+      this.currentStepIndex++;
+
+    }
+    this.score++;
+    console.log(`Your score is: ${this.score}`);
   }
 }
