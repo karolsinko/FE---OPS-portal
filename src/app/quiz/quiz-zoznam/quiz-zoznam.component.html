@@ -10,20 +10,15 @@
       Riešenie: {{quiz.solution}}
     </th>
   </div>
-    <!--
-    <h1>Quiz</h1>
-    <p *ngIf="!question">Načítání otázky...</p>
-    <p *ngIf="question">{{question}}</p>
-      <label>
-        <input type="radio" [(ngModel)]="selectedOption" [value]="quiz">
-        {{options1}}
-        {{options2}}
-        {{options3}}
-        {{solution}}
-      </label>
+  <h1>Quiz</h1>
+  <div *ngIf="quiz">
+    <div *ngFor="let zoznamQuizov of quiz; let i = index">
+      <p>{{zoznamQuizov.question}}</p>
+      <input type="text" [name]="'question' + i">
+      <br><br>
     </div>
-    <button (click)="checkAnswer()">Odeslat odpověď</button>
-    <p *ngIf="showResult">{{result}}</p> -->
+    <button (click)="submitAnswers()">Submit answers</button>
+  </div>
 </table>
   </div>
 </section>
