@@ -10,15 +10,19 @@
       Riešenie: {{quiz.solution}}
     </th>
   </div>
+  <form [formGroup]="form">
   <h1>Quiz</h1>
     <div *ngFor="let quiz of quiz; let i = index">
       <div *ngIf="currentStepIndex === i">
+        <div *ngIf="quiz.solution === quiz.option2">
       <p>{{quiz.question}}</p>
-      <input type="text">
+      <input type="text" formControlName="solution" required>
       <br><br>
+      </div>
       </div>
     </div>
   <button (click)="submitAnswers()">Submit answers</button>
+  </form>
 </table>
   </div>
 </section>
