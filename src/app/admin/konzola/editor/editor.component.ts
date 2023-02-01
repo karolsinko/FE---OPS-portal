@@ -29,7 +29,7 @@ export class EditorComponent implements OnInit {
   //pager
   currentStepIndex = 0;
 
-  stepsArray = Array(4).fill(0).map((x, i) => i);
+  stepsArray = Array(5).fill(0).map((x, i) => i);
   public steps = 4;
 
   previousStep() {

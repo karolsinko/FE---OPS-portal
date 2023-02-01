@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {zoznamQuizov} from "../../models/quiz.model";
-import {QuizService} from "../../../Service/quiz-service";
 
 @Component({
   selector: 'app-quiz-zoznam',
@@ -14,42 +13,34 @@ export class QuizZoznamComponent implements OnInit {
   quiz: zoznamQuizov[] = [];
 
   currentStepIndex = 0;
-  score = 0
-
-  constructor(quizService: QuizService) {
-
+  score = 0;
+  userAnswer: string;
+  constructor() {
+    this.userAnswer = "";
   }
-  userAnswer: string | undefined;
 
   ngOnInit() {
-    this.userAnswer = '';
+    this.submitAnswers();
   }
 
   submitAnswers() {
+
     let correct = true;
-      for (let i = 0; i < this.quiz.length; i++) {
-      let vysledok = this.quiz[i].solution;
-      if (!this.userAnswer) {
-        console.error(`Element with id 'question_${i + 1}' not found.`);
-        return;
-      }
-      if (this.userAnswer.trim() !== vysledok) {
-        alert(`Nesprávna odpoveď. Correct answer is "${(vysledok)}"`);
+    if (!this.quiz || !this.quiz[this.currentStepIndex]) {
+      return;
+    }
+      if (this.userAnswer.trim() === this.quiz[this.currentStepIndex].solution) {
+        this.score++;
+        correct = true;
+      }else {
+        alert(`Wrong answer. Correct answer is "${(this.quiz[this.currentStepIndex].solution)}"`);
         this.score--;
         correct = false;
-        break;
+        return;
       }
-      console.log(`answer: ${this.quiz[i].option2}`);
-      console.log(`option2: ${this.quiz[i].solution}`);
-    }
-    if (correct) {
-      if (this.currentStepIndex < this.quiz.length-1) {
-        this.currentStepIndex++;
-      }
-      this.score++;
-    }
-    console.log(`Your score is: ${this.score}`);
-
+      console.log(`solution: ${this.quiz[this.currentStepIndex].solution}`);
+      console.log(`userAnswer: ${this.userAnswer.trim()}`);
+      console.log(`Your score is: ${this.score}`);
+    this.currentStepIndex++;
   }
-
 }

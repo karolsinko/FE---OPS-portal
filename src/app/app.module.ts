@@ -51,6 +51,9 @@ import { KonzolaFormularSkriptyComponent } from './admin/konzola/skripty/konzola
 import { KonzolaZoznamSkriptyComponent } from './admin/konzola/skripty/konzola-zoznam-skripty/konzola-zoznam-skripty.component';
 import { KonzolaStrankaSkriptyComponent } from './admin/konzola/skripty/konzola-stranka-skripty/konzola-stranka-skripty.component';
 import { EditorComponent } from './admin/konzola/editor/editor.component';
+import { KonzolaFormularQuizComponent } from './admin/konzola/quiz/konzola-formular-quiz/konzola-formular-quiz.component';
+import { KonzolaZoznamQuizComponent } from './admin/konzola/quiz/konzola-zoznam-quiz/konzola-zoznam-quiz.component';
+import { KonzolaStrankaQuizComponent } from './admin/konzola/quiz/konzola-stranka-quiz/konzola-stranka-quiz.component';
 
 @NgModule({
   declarations: [
@@ -94,6 +97,9 @@ import { EditorComponent } from './admin/konzola/editor/editor.component';
     KonzolaZoznamSkriptyComponent,
     KonzolaStrankaSkriptyComponent,
     EditorComponent,
+    KonzolaFormularQuizComponent,
+    KonzolaZoznamQuizComponent,
+    KonzolaStrankaQuizComponent,
   ],
   imports: [
     BrowserModule,

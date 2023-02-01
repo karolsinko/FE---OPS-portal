@@ -1,0 +1,148 @@
+/* TABULKY
+ --------------------------------------------
+*/
+table{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+td{
+  width: 150px;
+  color: white;
+}
+th{
+  width: 150px;
+  color: white;
+  -webkit-transition: color 1s;
+  transition: color 1s;
+}
+th:hover {
+  color: white;
+}
+/* TEXTY
+ --------------------------------------------
+*/
+h1{
+  text-align: center;
+  color: white;
+  display: inline;
+  letter-spacing: 3px;
+}
+
+h1:hover {
+  color: white;
+}
+
+p{
+  text-align: left;
+  color: white;
+  display:inline;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  -webkit-transition: color 1s;
+  transition: color 1s;
+}
+
+p:hover {
+  color: white;
+}
+
+/* TLACIDLA
+ --------------------------------------------
+*/
+
+
+button{
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  width: 100px;
+  height: 25px;
+  padding: 3px;
+  margin-bottom: 8px;
+  border-radius: 1.5rem;
+  background-color: white;
+  transition: all .3s ease 0s;
+  box-shadow: 0 3px #443ea2;
+}
+
+span{
+  display: inline-block;
+  color: #353084;
+  position: relative;
+  transition: all .5s ease;
+}
+
+.uprav::before,.vymaz::before{
+  color: #353084;
+  font-weight: 900;
+  font-size: 14px;
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 1.5rem;
+  opacity: 0;
+  transition: all .1s ease 0s;
+}
+
+button:hover{
+  box-shadow: 0 4px black;
+}
+
+button:hover span{
+  padding-left: 2rem;
+}
+
+
+/* LAYOUT
+ --------------------------------------------
+*/
+
+.wrapper {
+  width: auto;
+}
+
+header {
+  width: auto;
+  text-align: center;
+  color: white;
+  letter-spacing: 3px;
+  font-size: 35px;
+}
+nav {
+  width: auto;
+}
+
+section {
+  width: auto;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #D6C4EC;
+  color: #FFF;
+  text-align: center;
+}
+
+/* VSTUP - INPUTY
+ --------------------------------------------
+*/
+input{
+  height: 30px;
+  width: auto;
+  font-size: 25px;
+  text-align: center;
+  background-color: #D6C4EC;
+  border: #D6C4EC 2px groove;
+  color: #1F1431;
+  margin-block: 50px;
+  box-sizing: border-box;
+}
+input:hover{
+  background-color: white;
+}

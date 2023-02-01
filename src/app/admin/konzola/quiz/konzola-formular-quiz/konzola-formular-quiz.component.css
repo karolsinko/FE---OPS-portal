@@ -1,0 +1,196 @@
+/* TABULKY
+ --------------------------------------------
+*/
+table{
+  text-align: center;
+}
+td{
+  border: 0;
+  width: auto;
+  color: white;
+}
+th{
+  border:0;
+  width: auto;
+  color: white;
+}
+/* TEXTY
+ --------------------------------------------
+*/
+h1{
+  text-align: center;
+  color: white;
+  display: inline;
+  letter-spacing: 3px;
+}
+
+h1:hover {
+  color: #D6C4EC;
+}
+
+p{
+  text-align: left;
+  color: white;
+  display:inline;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  -webkit-transition: color 1s;
+  transition: color 1s;
+}
+
+p:hover {
+  color: white;
+}
+/* TLACIDLA
+ --------------------------------------------
+*/
+button{
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  width: 100px;
+  height: 25px;
+  padding: 3px;
+  border-radius: 1.5rem;
+  background-color: white;
+  transition: all .3s ease 0s;
+  box-shadow: 0 3px #443ea2;
+}
+span{
+  display: inline-block;
+  color: #353084;
+  position: relative;
+  transition: all .5s ease;
+}
+
+.uprav::before,.vymaz::before{
+  color: #353084;
+  font-weight: 900;
+  font-size: 14px;
+  display: inline-block;
+  position: absolute;
+  left: 1.5rem;
+  opacity: 0;
+  transition: all .1s ease 0s;
+}
+
+button:hover{
+  box-shadow: 0 4px black;
+}
+
+button:hover span{
+  padding-left: 2rem;
+}
+button:hover{
+  box-shadow: 0 4px #000000;
+
+}
+button:hover span{
+  padding-left: 2rem;
+}
+
+button:hover span:before{
+  left: 0;
+  opacity: 1;
+}
+
+button:active {
+  transform: translateY(5px);
+}
+
+/* LAYOUT
+ --------------------------------------------
+*/
+
+.group        {
+  position:relative;
+}
+
+input         {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:auto;
+  border-bottom:1px solid white;
+  background-color: #353084;
+  color: white;
+}
+input:focus     { outline:none; color:white }
+
+/* LABEL ======================================= */
+label          {
+  color: white;
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label    {
+  top:-30px;
+  font-size:20px;
+  color:white;
+}
+
+/* BOTTOM BARS ================================= */
+
+.bar:before, .bar:after   {
+  content:'';
+  height:3px;
+  width:0;
+  bottom:1px;
+  position:absolute;
+  background:navajowhite;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%;
+  width:auto;
+  top:25%;
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
+}

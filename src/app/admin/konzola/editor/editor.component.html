@@ -49,6 +49,13 @@
                   </app-konzola-stranka-skripty>
                 </div>
               </ng-container>
+            <ng-container *ngIf="currentStepIndex === 4">
+              <div class='card-body'>
+                <h1>Quiz panel</h1>
+                <app-konzola-stranka-quiz>
+                </app-konzola-stranka-quiz>
+              </div>
+            </ng-container>
             </div>
           <div class="step-indicator-container">
             <div *ngFor="let steps of stepsArray ; let i = index" (click)="currentStepIndex = i" class="step-indicator" [ngClass]="{'active': currentStepIndex === i}">
