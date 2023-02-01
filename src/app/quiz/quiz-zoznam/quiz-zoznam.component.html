@@ -14,14 +14,14 @@
     <div *ngFor="let quiz of quiz; let i = index">
       <div *ngIf="currentStepIndex === i">
       <p>{{quiz.question}}</p>
+        <p>Aktuálne skóre: {{score}}</p>
         <form>
-        <input type="text" id="question_{{i}}" required>
+        <input [(ngModel)]="userAnswer" name="userAnswer">
+          <button (click)="submitAnswers()">Submit answers</button>
        </form>
       <br><br>
       </div>
     </div>
-
-  <button (click)="submitAnswers()">Submit answers</button>
 
 </table>
   </div>

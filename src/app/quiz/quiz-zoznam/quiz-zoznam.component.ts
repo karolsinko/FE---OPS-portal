@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {zoznamQuizov} from "../../models/quiz.model";
+import {QuizService} from "../../../Service/quiz-service";
 
 @Component({
   selector: 'app-quiz-zoznam',
@@ -15,24 +16,26 @@ export class QuizZoznamComponent implements OnInit {
   currentStepIndex = 0;
   score = 0
 
-  constructor() {
+  constructor(quizService: QuizService) {
 
   }
+  userAnswer: string | undefined;
 
   ngOnInit() {
+    this.userAnswer = '';
   }
 
   submitAnswers() {
     let correct = true;
-    for (let i = 1; i < this.quiz.length; i++) {
+      for (let i = 0; i < this.quiz.length; i++) {
       let vysledok = this.quiz[i].solution;
-      const userAnswer = (<HTMLInputElement>document.getElementById("question_" + i)).value;
-      if (!userAnswer) {
-        console.error(`Element with id 'question_${i}' not found.`);
+      if (!this.userAnswer) {
+        console.error(`Element with id 'question_${i + 1}' not found.`);
         return;
       }
-      if (userAnswer.trim() !== vysledok) {
-        alert(`Question ${i + 1} is incorrect. Correct answer is "${(vysledok)}"`);
+      if (this.userAnswer.trim() !== vysledok) {
+        alert(`Nesprávna odpoveď. Correct answer is "${(vysledok)}"`);
+        this.score--;
         correct = false;
         break;
       }
