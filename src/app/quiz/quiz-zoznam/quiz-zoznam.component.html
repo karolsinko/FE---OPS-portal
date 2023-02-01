@@ -22,8 +22,40 @@
       <br><br>
       </div>
     </div>
+      <div *ngFor="let quiz of quiz; let i = index">
+        <div *ngIf="currentStepIndex === i">
+          <p>{{quiz.question}}</p>
+          <p>Aktuálne skóre: {{score}}</p>
+          <select [(ngModel)]="userAnswer" name="userAnswer">
+            <option >{{quiz.option1}}</option>
+            <option >{{quiz.option2}}</option>
+            <option >{{quiz.option3}}</option>
+            <option >{{quiz.option4}}</option>
+          </select>
+            <button (click)="submitAnswers()">Submit answers</button>
+            <br><br>
+        </div>
+      </div>
+      <div *ngFor="let quiz of quiz; let i = index">
+        <div *ngIf="currentStepIndex === i">
+          <p>{{quiz.question}}</p>
+          <p>Aktuálne skóre: {{score}}</p>
+
+            <input [(ngModel)]="userAnswer" name="userAnswer" type="radio" >{{quiz.option1}}
+            <input [(ngModel)]="userAnswer" name="userAnswer" type="radio">{{quiz.option2}}
+            <input [(ngModel)]="userAnswer" name="userAnswer" type="radio">{{quiz.option3}}
+            <input [(ngModel)]="userAnswer" name="userAnswer" type="radio">{{quiz.option4}}
+
+          <button (click)="submitAnswers()">Submit answers</button>
+          <br><br>
+        </div>
+      </div>
     </div>
   </div>
+
+
+
+
 </table>
   </div>
 </section>

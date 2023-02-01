@@ -24,7 +24,6 @@ export class QuizZoznamComponent implements OnInit {
   }
 
   submitAnswers() {
-
     let correct = true;
     if (!this.quiz || !this.quiz[this.currentStepIndex]) {
       return;
