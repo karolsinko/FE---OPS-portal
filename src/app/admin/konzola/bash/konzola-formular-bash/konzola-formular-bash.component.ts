@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {zoznamCviceniBash, zoznamCviceniC, zoznamCviceniLinux} from "../../../../models/cvicenie.model";
+import {zoznamCviceniBash} from "../../../../models/cvicenie.model";
 import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
@@ -10,7 +10,7 @@ import {FormControl, FormGroup} from "@angular/forms";
 export class KonzolaFormularBashComponent implements OnInit {
   //Bash
   @Input()
-  set cvicenieBash(data: zoznamCviceniLinux | undefined){
+  set cvicenieBash(data: zoznamCviceniBash | undefined){
     if (data) {
       this.fillForm(data);
     }

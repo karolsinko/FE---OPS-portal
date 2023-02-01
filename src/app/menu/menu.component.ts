@@ -30,4 +30,11 @@ export class MenuComponent {
     }
   }
 
+  ngOnInit(): void {
+    const token = localStorage.getItem("isAuthorized");
+
+    if (!token) {
+      // redirect to login page
+    }
+  }
 }

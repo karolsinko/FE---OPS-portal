@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {cvicenie, zoznamCviceniBash, zoznamCviceniC} from "../../../../models/cvicenie.model";
+import {cvicenie, zoznamCviceniBash} from "../../../../models/cvicenie.model";
 import {cvicenieBashService} from "../../../../../Service/cvicenieBash-service";
 
 @Component({

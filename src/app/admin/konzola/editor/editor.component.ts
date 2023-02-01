@@ -30,7 +30,7 @@ export class EditorComponent implements OnInit {
   currentStepIndex = 0;
 
   stepsArray = Array(5).fill(0).map((x, i) => i);
-  public steps = 4;
+  public steps = 5;
 
   previousStep() {
     if (this.currentStepIndex > 0) {

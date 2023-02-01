@@ -19,11 +19,11 @@ export class CvicenieCService{
     return this.http.get<zoznamCviceniC>(`${this.apiUrl}/${id}`);
   }
 
-  createCvicenie(zoznamCviceniC: zoznamCviceniC): Observable<cvicenie> {
-    return this.http.post<zoznamCviceniC>(`${this.apiUrl}`, cvicenie);
+  createCvicenie(zoznamCviceniC: zoznamCviceniC): Observable<zoznamCviceniC> {
+    return this.http.post<zoznamCviceniC>(`${this.apiUrl}`, zoznamCviceniC);
   }
 
-  updateCvicenie(id: number, zoznamCviceniC : zoznamCviceniC): Observable<cvicenie>{
+  updateCvicenie(id: number, zoznamCviceniC : zoznamCviceniC): Observable<zoznamCviceniC>{
     return this.http.put<zoznamCviceniC>(`${this.apiUrl}/${id}`, zoznamCviceniC);
   }
 

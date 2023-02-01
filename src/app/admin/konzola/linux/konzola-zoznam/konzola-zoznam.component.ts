@@ -1,6 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {zoznamCviceniLinux} from "../../../../models/cvicenie.model";
-import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-konzola-zoznam',

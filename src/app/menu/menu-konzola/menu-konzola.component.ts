@@ -14,6 +14,11 @@ export class MenuKonzolaComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    const token = localStorage.getItem("isAuthorized");
+
+    if (!token) {
+      // redirect to login page
+    }
   }
 
   public openMenu(m: MENU) {

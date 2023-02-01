@@ -415,6 +415,13 @@ span label{
   color: white;
 }
 
+span label:hover{
+  -ms-transform: scale(1.12);
+  -webkit-transform: scale(1.12);
+  transform: scale(1.12);
+  color: white;
+}
+
 input[type="radio"] {
   position: relative;
   display: none;
@@ -423,7 +430,6 @@ input[type="radio"] {
 input[type=radio]:checked ~ .option {
   background: #00ff05;
 }
-
 
 
 
