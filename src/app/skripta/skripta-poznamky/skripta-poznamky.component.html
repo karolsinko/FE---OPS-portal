@@ -11,7 +11,7 @@
         <ng-container *ngFor="let skripta of skripta; let i = index">
           <th>
           <div *ngIf="currentStepIndex === i">
-            {{skripta.scripts}}
+            <div [innerHTML]="skripta.scripts"></div>
           </div>
           </th>
         </ng-container>

@@ -11,14 +11,14 @@
             <textarea type="text" formControlName="content" required></textarea>
             <span class="highlight"></span>
             <span class="bar"></span>
-            <label>content</label>
+            <label>Príklad1: </label>
           </div></td>
 
           <td><div class="group">
             <textarea type="text" formControlName="content1" required></textarea>
             <span class="highlight"></span>
             <span class="bar"></span>
-            <label>content1</label>
+            <label>Príklad2: </label>
           </div></td>
           <td><button class="btn btn--action" (click)="pridaj()" *ngIf="form.value.id === null"><span class="pridaj">Pridaj</span></button>
             <button class="btn btn--action" (click)="uprav()" *ngIf="form.value.id !== null"><span class="uprav">Uprav</span></button><br>
@@ -29,13 +29,13 @@
             <textarea type="text" formControlName="explain" required></textarea>
             <span class="highlight"></span>
             <span class="bar"></span>
-            <label>explain</label>
+            <label>Vysvetlivky: </label>
           </div></td>
           <td><div class="group">
             <textarea type="text" formControlName="scripts" required></textarea>
             <span class="highlight"></span>
             <span class="bar"></span>
-            <label>scripts</label>
+            <label>Skriptá: </label>
           </div></td>
         </tr>
         <tr>
@@ -43,7 +43,7 @@
             <textarea type="text" formControlName="commands" required></textarea>
             <span class="highlight"></span>
             <span class="bar"></span>
-            <label>commands</label>
+            <label>Príkazy: </label>
           </div></td>
         </tr>
 

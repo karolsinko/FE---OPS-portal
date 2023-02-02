@@ -11,10 +11,10 @@
           <ng-container *ngFor="let skripta of skripta; let i = index">
             <div *ngIf="currentStepIndex === i">
               <th>
-                Uloha: {{skripta.content}}
+                Uloha: <div [innerHTML]="skripta.content"></div>
               </th>
               <th>
-                Uloha1: {{skripta.content1}}
+                Uloha1: <div [innerHTML]="skripta.content1"></div>
               </th>
             </div>
           </ng-container>

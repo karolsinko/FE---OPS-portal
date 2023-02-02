@@ -11,7 +11,7 @@
           <ng-container *ngFor="let skripta of skripta; let i = index">
             <div *ngIf="currentStepIndex === i">
               <th>
-                Vysvetlivky: {{skripta.explain}}
+                Vysvetlivky: <div [innerHTML]="skripta.explain"></div>
               </th>
             </div>
           </ng-container>
@@ -19,7 +19,7 @@
           <ng-container *ngFor="let skripta of skripta; let i = index">
             <div *ngIf="currentStepIndex === i">
               <th>
-                Príkazy: {{skripta.commands}}
+                Príkazy: <div [innerHTML]="skripta.commands"></div>
               </th>
             </div>
           </ng-container>
