@@ -11,12 +11,12 @@
   <tbody>
   <tr *ngFor="let q of quiz">
     <td>{{ q.id }}</td>
-    <td>{{ q.question }}</td>
-    <td>{{ q.solution }}</td>
-    <td>{{ q.option1 }}</td>
-    <td>{{ q.option2 }}</td>
-    <td>{{ q.option3}}</td>
-    <td>{{ q.option4}}</td>
+    <td><div [innerHTML]="q.question"></div></td>
+    <td><div [innerHTML]="q.solution"></div></td>
+    <td><div [innerHTML]="q.option1"></div></td>
+    <td><div [innerHTML]="q.option2"></div></td>
+    <td><div [innerHTML]="q.option3"></div></td>
+    <td><div [innerHTML]="q.option4"></div></td>
     <td>
       <button class="btn btn--action" (click)="uprav(q.id)"><span class="uprav">Uprav</span></button>
       <button class="btn btn--action" (click)="zmaz(q.id)"><span class="vymaz">Vymaž</span></button>
