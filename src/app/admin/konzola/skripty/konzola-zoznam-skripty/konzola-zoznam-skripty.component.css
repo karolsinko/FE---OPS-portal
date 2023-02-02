@@ -5,16 +5,21 @@ table{
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  word-wrap: break-word;
 }
 td{
-  width: 150px;
+  width: auto;
   color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 th{
-  width: 150px;
+  width: auto;
   color: white;
   -webkit-transition: color 1s;
   transition: color 1s;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 th:hover {
   color: white;

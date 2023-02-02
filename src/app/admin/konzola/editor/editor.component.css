@@ -64,13 +64,11 @@ span, i{
   transition: all .5s ease;
 }
 span::before{
-  font-family: "Font Awesome 5 Free";
   color: #443ea2;
   font-weight: 900;
   font-size: 20px;
   display: inline-block;
   position: absolute;
-  top: 0px;
   left: 1.5rem;
   opacity: 0;
   transition: all .1s ease 0s;
@@ -113,7 +111,6 @@ button:active {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 1.25rem;
-
 }
 
 .card-header {
@@ -136,7 +133,6 @@ button:active {
   flex-direction: column;
   -webkit-box-flex: 2;
   -webkit-flex-grow: 2;
-  -ms-flex-positive: 2;
   flex-grow: 2;
   margin-top: 84px;
 }
@@ -144,7 +140,6 @@ button:active {
 .dashboard-content {
   -webkit-box-flex: 2;
   -webkit-flex-grow: 2;
-  -ms-flex-positive: 2;
   flex-grow: 2;
   padding: 25px;
 }

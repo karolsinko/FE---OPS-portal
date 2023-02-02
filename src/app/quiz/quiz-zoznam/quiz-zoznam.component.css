@@ -48,6 +48,7 @@ p:hover, h2:hover, h1:hover {
   color: #D6C4EC;
 }
 
+
 /* TLACIDLA
  --------------------------------------------
 */
@@ -55,27 +56,18 @@ button{
   display: block;
   font-weight: 700;
   font-size: 18px;
-  width: 175px;
-  padding: 5px;
+  width: auto;
+  padding: 10px;
   border-radius: 1.5rem;
-  background-color: black;
-  transition: all .3s ease 0s;
-  box-shadow: 0 3px #443ea2;
+  background-color: #443ea2;
+  transition: all .5s ease 0s;
   float: right;
+  border: black solid 1px;
 }
-button:hover span{
-  padding-left: 1rem;
+button:hover{
+  box-shadow: 0 3px white;
 }
-
-button:hover span:before{
-  left: 0;
-  opacity: 1;
-}
-
-button:active {
-  transform: translateY(5px);
-}
-span{
+span, i{
   display: inline-block;
   color:white;
   position: relative;
@@ -102,6 +94,28 @@ button:hover span:before{
 button:active {
   transform: translateY(5px);
 }
+/*   IKONY
+-----------------------------------------
+ */
+
+
+.center {
+  text-align: center;
+}
+button:hover span{
+  padding-left: 2rem;
+}
+
+button:hover span:before{
+  left: 0;
+  opacity: 1;
+}
+
+button:active {
+  transform: translateY(5px);
+}
+
+
 /* LAYOUT
  --------------------------------------------
 */
@@ -281,24 +295,6 @@ input:hover{
     display: block;
   }
 }
-/*   IKONY
------------------------------------------
- */
-.bi-person{
-  color: white;
-  float:left;
-  font-size: 50px;
-  margin-top: -12px;
-}
-.bi-person:hover{
-  color:navajowhite;
-}
-
-.center {
-  text-align: center;
-}
-
-
 
 
 /*   STEPPER
