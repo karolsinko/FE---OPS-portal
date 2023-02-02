@@ -48,13 +48,29 @@
 <section>
   <div class="wrapper">
 <div *ngFor="let quiz of quiz; let i = index">
+  <div class="modal-container" id="score-modal">
+
+    <div class="modal-content-container">
+
+      <h1>Congratulations, Quiz Completed.</h1>
+
+      <div class="grade-details">
+        <p>Attempts : {{currentStepIndex}}</p>
+        <p>Score : {{score}}</p>
+        <p ><span id="remarks"></span></p>
+      </div>
+      <div class="modal-button-container">
+        <button (click)="closeScoreModal()">Continue</button>
+      </div>
+    </div>
+  </div>
   <div *ngIf="currentStepIndex === i">
 
       <div class="game-quiz-container">
 
         <div class="game-details-container">
           <h1>Score : <span id="player-score"></span>{{score}}</h1>
-          <h1> Question : <span id="question-number"></span>{{currentStepIndex}} / 10</h1>
+          <h1> Question : <span id="question-number"></span>{{currentStepIndex}} / {{currentStepIndex}}</h1>
         </div>
 
         <div class="game-question-container">
@@ -88,7 +104,7 @@
           </span>
       </div>
 
-        <button (click)="submitAnswers()"><i class="bi bi-send"></i><span>| Submit answers</span></button>
+        <button (click)="submitAnswers()"><i class="bi bi-send"></i><span>| Potvrď odpoveď</span></button>
 </div>
   </div>
   </div>

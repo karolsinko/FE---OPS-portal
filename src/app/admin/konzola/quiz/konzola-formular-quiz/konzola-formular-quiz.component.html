@@ -8,17 +8,17 @@
       <table class="table">
         <tr>
           <td><div class="group">
-            <textarea type="text" formControlName="solution" required></textarea>
+            <textarea type="text" formControlName="option1" required></textarea>
             <span class="highlight"></span>
             <span class="bar"></span>
-            <label>solution</label>
+            <label>1. možnosť: </label>
           </div></td>
 
           <td><div class="group">
-            <textarea type="text" formControlName="option4" required></textarea>
+            <textarea type="text" formControlName="option2" required></textarea>
             <span class="highlight"></span>
             <span class="bar"></span>
-            <label>option4</label>
+            <label>2. možnosť: </label>
           </div></td>
           <td><button class="btn btn--action" (click)="pridaj()" *ngIf="form.value.id === null"><span class="pridaj">Pridaj</span></button>
             <button class="btn btn--action" (click)="uprav()" *ngIf="form.value.id !== null"><span class="uprav">Uprav</span></button><br>
@@ -26,32 +26,33 @@
         </tr>
         <tr>
           <td><div class="group">
-            <textarea type="text" formControlName="question" required></textarea>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>question</label>
-          </div></td>
-
-          <td><div class="group">
             <textarea type="text" formControlName="option3" required></textarea>
             <span class="highlight"></span>
             <span class="bar"></span>
-            <label>option3</label>
-          </div></td>
-        </tr>
-        <tr>
-          <td><div class="group">
-            <textarea type="text" formControlName="option1" required></textarea>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>option1</label>
+            <label>3. možnosť: </label>
           </div></td>
 
           <td><div class="group">
-            <textarea type="text" formControlName="option2" required></textarea>
+            <textarea type="text" formControlName="option4" required></textarea>
             <span class="highlight"></span>
             <span class="bar"></span>
-            <label>option2</label>
+            <label>4. možnosť: </label>
+          </div></td>
+
+        </tr>
+        <tr>
+          <td><div class="group">
+            <textarea type="text" formControlName="question" required></textarea>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Otázka: </label>
+          </div></td>
+
+          <td><div class="group">
+            <textarea type="text" formControlName="solution" required></textarea>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Odpoveď: </label>
           </div></td>
         </tr>
 
