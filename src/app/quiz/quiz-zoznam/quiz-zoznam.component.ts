@@ -14,6 +14,9 @@ export class QuizZoznamComponent implements OnInit {
 
   currentStepIndex = 0;
   score = 0;
+  pocetPokusov = 0;
+  pocetChyb = 0;
+  koniec = this.quiz.length;
   userAnswer: string;
   constructor() {
     this.userAnswer = "";
@@ -30,10 +33,13 @@ export class QuizZoznamComponent implements OnInit {
     }
       if (this.userAnswer.trim() === this.quiz[this.currentStepIndex].solution) {
         this.score++;
+        this.pocetPokusov++;
         correct = true;
       }else {
         alert(`Wrong answer. Correct answer is "${(this.quiz[this.currentStepIndex].solution)}"`);
         this.score--;
+        this.pocetPokusov++;
+        this.pocetChyb++;
         correct = false;
         return;
       }
@@ -56,7 +62,7 @@ export class QuizZoznamComponent implements OnInit {
     }
   }
 
-    resetQuiz() {
-      window.location.reload();
+  resetQuiz() {
+    window.location.reload();
   }
 }

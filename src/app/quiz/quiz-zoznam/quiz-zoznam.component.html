@@ -48,19 +48,20 @@
 <section>
   <div class="wrapper">
 <div *ngFor="let quiz of quiz; let i = index">
-  <div class="modal-container" id="score-modal">
+  <div *ngIf="i === koniec">
+    <div class="modal-container" id="score-modal">
 
-    <div class="modal-content-container">
+      <div class="modal-content-container">
 
-      <h1>Congratulations, Quiz Completed.</h1>
+        <h1>Gratulujem, dokončil si quiz</h1>
 
-      <div class="grade-details">
-        <p>Attempts : {{currentStepIndex}}</p>
-        <p>Score : {{score}}</p>
-        <p ><span id="remarks"></span></p>
-      </div>
-      <div class="modal-button-container">
-        <button (click)="closeScoreModal()">Continue</button>
+        <div class="grade-details">
+          <p>Pokusy : {{pocetPokusov}}</p>
+          <p>Skóre : {{score}}</p>
+          <p>Počet chýb : {{pocetChyb}}</p>
+          <p ><span id="remarks"></span></p>
+        </div>
+          <button (click)="closeScoreModal()"><i class="bi bi-send"></i><span>| Continue</span></button>
       </div>
     </div>
   </div>
@@ -105,9 +106,9 @@
       </div>
 
         <button (click)="submitAnswers()"><i class="bi bi-send"></i><span>| Potvrď odpoveď</span></button>
+    </div>
+  </div>
 </div>
-  </div>
-  </div>
   </div>
 </section>
 </table>
