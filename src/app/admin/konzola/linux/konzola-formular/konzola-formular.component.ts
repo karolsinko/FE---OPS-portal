@@ -17,7 +17,7 @@ export class KonzolaFormularComponent implements OnInit {
     }
   }
   form: FormGroup;
-
+  contentHTML = '';
   @Output()
   pridajLinuxCvicenie = new EventEmitter<zoznamCviceniLinux>();
 
@@ -29,8 +29,7 @@ export class KonzolaFormularComponent implements OnInit {
       id: new FormControl(null),
       content: new FormControl(null),
       input: new FormControl(null),
-      solution: new FormControl(null),
-      language: new FormControl(null)
+      solution: new FormControl(null)
     });
   }
 
@@ -39,7 +38,6 @@ export class KonzolaFormularComponent implements OnInit {
     this.form.controls['content'].setValue(zoznamCviceniLinux.content);
     this.form.controls['input'].setValue(zoznamCviceniLinux.input);
     this.form.controls['solution'].setValue(zoznamCviceniLinux.solution);
-    this.form.controls['language'].setValue(zoznamCviceniLinux.language);
   }
 
   public pridaj(): void {

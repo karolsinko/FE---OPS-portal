@@ -8,44 +8,43 @@
       <table class="table">
         <tr>
           <td><div class="group">
-            <input type="text" formControlName="content" required>
+            <textarea type="text" formControlName="content" required></textarea>
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>content</label>
           </div></td>
 
           <td><div class="group">
-            <input type="text" formControlName="content1" required>
+            <textarea type="text" formControlName="content1" required></textarea>
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>content1</label>
           </div></td>
-        </tr>
-        <tr>
           <td><div class="group">
-            <input type="text" formControlName="commands" required>
+            <textarea type="text" formControlName="commands" required></textarea>
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>commands</label>
           </div></td>
+          <td><button class="btn btn--action" (click)="pridaj()" *ngIf="form.value.id === null"><span class="pridaj">Pridaj</span></button>
+            <button class="btn btn--action" (click)="uprav()" *ngIf="form.value.id !== null"><span class="uprav">Uprav</span></button><br>
+            <button class="btn btn--action" (click)="zrus()"><span class="vymaz">Vymaž</span></button></td>
+        </tr>
+        <tr>
           <td><div class="group">
-            <input type="text" formControlName="explain" required>
+            <textarea type="text" formControlName="explain" required></textarea>
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>explain</label>
           </div></td>
           <td><div class="group">
-            <input type="text" formControlName="scripts" required>
+            <textarea type="text" formControlName="scripts" required></textarea>
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>scripts</label>
           </div></td>
         </tr>
-        <tr>
-          <td><button class="btn btn--action" (click)="pridaj()" *ngIf="form.value.id === null"><span class="pridaj">Pridaj</span></button>
-            <button class="btn btn--action" (click)="uprav()" *ngIf="form.value.id !== null"><span class="uprav">Uprav</span></button><br>
-            <button class="btn btn--action" (click)="zrus()"><span class="vymaz">Vymaž</span></button></td>
-        </tr>
+
       </table>
     </form>
   </section>

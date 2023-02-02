@@ -29,8 +29,7 @@ export class KonzolaFormularCComponent implements OnInit {
       id: new FormControl(null),
       content: new FormControl(null),
       input: new FormControl(null),
-      solution: new FormControl(null),
-      language: new FormControl(null)
+      solution: new FormControl(null)
     });
   }
 
@@ -39,7 +38,6 @@ export class KonzolaFormularCComponent implements OnInit {
     this.form.controls['content'].setValue(zoznamCviceniC.content);
     this.form.controls['input'].setValue(zoznamCviceniC.input);
     this.form.controls['solution'].setValue(zoznamCviceniC.solution);
-    this.form.controls['language'].setValue(zoznamCviceniC.language);
   }
 
   public pridaj(): void {

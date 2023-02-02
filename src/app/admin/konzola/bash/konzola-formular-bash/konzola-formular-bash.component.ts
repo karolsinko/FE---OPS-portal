@@ -28,8 +28,7 @@ export class KonzolaFormularBashComponent implements OnInit {
       id: new FormControl(null),
       content: new FormControl(null),
       input: new FormControl(null),
-      solution: new FormControl(null),
-      language: new FormControl(null)
+      solution: new FormControl(null)
     });
   }
 
@@ -38,7 +37,6 @@ export class KonzolaFormularBashComponent implements OnInit {
     this.form.controls['content'].setValue(zoznamCviceniBash.content);
     this.form.controls['input'].setValue(zoznamCviceniBash.input);
     this.form.controls['solution'].setValue(zoznamCviceniBash.solution);
-    this.form.controls['language'].setValue(zoznamCviceniBash.language);
   }
 
   public pridaj(): void {

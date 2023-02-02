@@ -1,3 +1,4 @@
+
 <table class="table">
   <tr>
     <th>id</th>
@@ -10,11 +11,11 @@
   <tbody>
   <tr *ngFor="let s of skripty">
     <td>{{ s.id }}</td>
-    <td>{{ s.content }}</td>
-    <td>{{ s.content1 }}</td>
-    <td>{{ s.explain }}</td>
-    <td>{{ s.scripts }}</td>
-    <td>{{ s.commands}}</td>
+    <td><div [innerHTML]="s.content"></div></td>
+    <td><div [innerHTML]="s.content1"></div></td>
+    <td><div [innerHTML]="s.explain"></div></td>
+    <td><div [innerHTML]="s.scripts"></div></td>
+    <td><div [innerHTML]="s.commands"></div></td>
     <td>
       <button class="btn btn--action" (click)="uprav(s.id)"><span class="uprav">Uprav</span></button>
       <button class="btn btn--action" (click)="zmaz(s.id)"><span class="vymaz">Vymaž</span></button>

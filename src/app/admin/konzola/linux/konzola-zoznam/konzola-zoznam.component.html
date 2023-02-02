@@ -4,15 +4,13 @@
     <th>content</th>
     <th>input</th>
     <th>solution</th>
-    <th>language</th>
   </tr>
   <tbody>
   <tr *ngFor="let c of cvicenieLinux">
     <td>{{ c.id }}</td>
-    <td>{{ c.content }}</td>
-    <td>{{ c.input }}</td>
-    <td>{{ c.solution }}</td>
-    <td>{{ c.language}}</td>
+    <td><div [innerHTML]="c.content"></div></td>
+    <td><div [innerHTML]="c.input"></div></td>
+    <td><div [innerHTML]="c.solution"></div></td>
     <td>
       <button class="btn btn--action" (click)="uprav(c.id)"><span class="uprav">Uprav</span></button>
       <button class="btn btn--action" (click)="zmaz(c.id)"><span class="vymaz">Vymaž</span></button>

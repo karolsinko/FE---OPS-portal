@@ -8,37 +8,29 @@
       <table class="table">
         <tr>
           <td><div class="group">
-            <input type="text" formControlName="content" required>
+            <textarea type="text" formControlName="content" required></textarea>
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>content</label>
           </div></td>
 
           <td><div class="group">
-            <input type="text" formControlName="input" required>
+            <textarea  type="text" formControlName="input" required></textarea>
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>input</label>
           </div></td>
+          <td><button class="btn btn--action" (click)="pridaj()" *ngIf="form.value.id === null"><span class="pridaj">Pridaj</span></button>
+            <button class="btn btn--action" (click)="uprav()" *ngIf="form.value.id !== null"><span class="uprav">Uprav</span></button><br>
+            <button class="btn btn--action" (click)="zrus()"><span class="vymaz">Vymaž</span></button></td>
         </tr>
         <tr>
           <td><div class="group">
-            <input type="text" formControlName="solution" required>
+            <textarea  type="text" formControlName="solution" required></textarea>
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>solution</label>
           </div></td>
-          <td><div class="group">
-            <input type="text" formControlName="language" required>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>language</label>
-          </div></td>
-        </tr>
-        <tr>
-          <td><button class="btn btn--action" (click)="pridaj()" *ngIf="form.value.id === null"><span class="pridaj">Pridaj</span></button>
-            <button class="btn btn--action" (click)="uprav()" *ngIf="form.value.id !== null"><span class="uprav">Uprav</span></button><br>
-            <button class="btn btn--action" (click)="zrus()"><span class="vymaz">Vymaž</span></button></td>
         </tr>
       </table>
     </form>
