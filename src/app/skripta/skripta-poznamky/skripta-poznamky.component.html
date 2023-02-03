@@ -11,7 +11,9 @@
         <ng-container *ngFor="let skripta of skripta; let i = index">
           <th>
           <div *ngIf="currentStepIndex === i">
-            <div [innerHTML]="skripta.scripts"></div>
+            <div [innerHTML]="skripta.scripts">
+            </div>
+            <img src="assets/1.%20hodina/blok%20riadenia%20procesu.png">
           </div>
           </th>
         </ng-container>

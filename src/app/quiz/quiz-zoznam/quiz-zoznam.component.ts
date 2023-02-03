@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {zoznamQuizov} from "../../models/quiz.model";
+import {Router} from "@angular/router";
+import {QuizService} from "../../../Service/quiz-service";
 
 @Component({
   selector: 'app-quiz-zoznam',
@@ -16,14 +18,22 @@ export class QuizZoznamComponent implements OnInit {
   score = 0;
   pocetPokusov = 0;
   pocetChyb = 0;
-  koniec = this.quiz.length;
   userAnswer: string;
-  constructor() {
+  koniec = 0;
+  constructor(private router: Router, private quizService: QuizService) {
     this.userAnswer = "";
   }
 
   ngOnInit() {
     this.submitAnswers();
+    this.obnovitQuizy();
+  }
+
+  obnovitQuizy(): void {
+    this.quizService.getQuizy().subscribe(data => {
+      this.quiz = data;
+      this.koniec = data.length;
+    });
   }
 
   submitAnswers() {

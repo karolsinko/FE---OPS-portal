@@ -1,6 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Router} from "@angular/router";
-import {SkriptaService} from "../../../Service/skripta-service";
 import {zoznamSkript} from "../../models/skripta.model";
 
 @Component({
@@ -42,4 +40,6 @@ export class SkriptaPoznamkyComponent implements OnInit {
       }
     });
   }
+
+
 }
