@@ -36,7 +36,7 @@ export class QuizZoznamComponent implements OnInit {
         this.pocetPokusov++;
         correct = true;
       }else {
-        alert(`Wrong answer. Correct answer is "${(this.quiz[this.currentStepIndex].solution)}"`);
+        alert(`Zlá odpoveď, správna odpoveď je: "${(this.quiz[this.currentStepIndex].solution)}"`);
         this.score--;
         this.pocetPokusov++;
         this.pocetChyb++;

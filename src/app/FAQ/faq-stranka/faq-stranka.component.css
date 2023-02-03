@@ -23,19 +23,15 @@ th:hover {
 /* TEXTY
  --------------------------------------------
 */
-h1{
-  text-align: center;
+h1, h2{
+  text-align: justify;
   color: white;
   display: inline;
   letter-spacing: 3px;
 }
 
-h1:hover {
-  color: #443ea2;
-}
-
 p{
-  text-align: left;
+  text-align: justify;
   color: white;
   display:inline;
   letter-spacing: 3px;
@@ -142,27 +138,6 @@ section {
 
 header {
   padding: 20px 0;
-}
-/* VSTUP - INPUTY
- --------------------------------------------
-*/
-
-input{
-  height: 30px;
-  width: 300px;
-  font-size: 25px;
-  margin: 10px;
-  text-align: center;
-  background-color: white;
-  border: navajowhite 2px groove;
-  color: #1F1431;
-  margin-block: 50px;
-  box-sizing: border-box;
-}
-
-
-input:hover{
-  background-color: white;
 }
 
 /*  MENU
@@ -285,9 +260,6 @@ input:hover{
   color:#443ea2;
 }
 
-.center {
-  text-align: center;
-}
 button:hover span{
   padding-left: 2rem;
 }
