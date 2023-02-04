@@ -178,10 +178,6 @@ h1, .h1 {
   text-decoration: none;
 }
 
-.dashboard-nav {
-  background-color: #443ea2;
-}
-
 .dashboard-nav a {
   color: #fff;
 }
@@ -378,13 +374,6 @@ h1, .h1 {
   z-index: 1000;
 }
 
-.nav-item-divider {
-  height: 1px;
-  margin: 1rem 0;
-  overflow: hidden;
-  background-color: rgba(236, 238, 239, 0.3);
-}
-
 @media (min-width: 992px) {
   .dashboard-app {
     margin-left: 238px;
@@ -405,7 +394,6 @@ h1, .h1 {
 @media (max-width: 992px) {
   .dashboard-nav {
     display: none;
-    position: fixed;
     top: 0;
     right: 0;
     left: 0;
@@ -445,3 +433,4 @@ h1, .h1 {
   color:white;
   font-size: 12px;
 }
+

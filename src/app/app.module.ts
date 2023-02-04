@@ -55,6 +55,8 @@ import { KonzolaFormularQuizComponent } from './admin/konzola/quiz/konzola-formu
 import { KonzolaZoznamQuizComponent } from './admin/konzola/quiz/konzola-zoznam-quiz/konzola-zoznam-quiz.component';
 import { KonzolaStrankaQuizComponent } from './admin/konzola/quiz/konzola-stranka-quiz/konzola-stranka-quiz.component';
 import {MatRadioModule} from "@angular/material/radio";
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatDividerModule} from "@angular/material/divider";
 
 @NgModule({
   declarations: [
@@ -118,7 +120,9 @@ import {MatRadioModule} from "@angular/material/radio";
     MatInputModule,
     MatTableModule,
     MatCardModule,
-    MatRadioModule
+    MatRadioModule,
+    MatSidenavModule,
+    MatDividerModule
   ],
   providers: [
     AdminComponent

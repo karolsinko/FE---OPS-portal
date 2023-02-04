@@ -11,6 +11,7 @@ enum MENU {   HOME, QUIZ,SKRIPTA, CVICENIA, FAQ, ADMIN}
 export class MenuComponent {
   date=new Date();
   menu = MENU;
+  showFiller = false;
 
   constructor(private router: Router) { }
 
@@ -37,4 +38,6 @@ export class MenuComponent {
       // redirect to login page
     }
   }
+
+
 }
