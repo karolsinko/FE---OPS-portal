@@ -57,6 +57,7 @@ import { KonzolaStrankaQuizComponent } from './admin/konzola/quiz/konzola-strank
 import {MatRadioModule} from "@angular/material/radio";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatDividerModule} from "@angular/material/divider";
+import {MatExpansionModule} from "@angular/material/expansion";
 
 @NgModule({
   declarations: [
@@ -122,7 +123,8 @@ import {MatDividerModule} from "@angular/material/divider";
     MatCardModule,
     MatRadioModule,
     MatSidenavModule,
-    MatDividerModule
+    MatDividerModule,
+    MatExpansionModule
   ],
   providers: [
     AdminComponent

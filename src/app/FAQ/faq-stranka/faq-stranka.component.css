@@ -45,11 +45,13 @@ nav {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
+  color: white;
 }
 
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  color: white;
 }
 
 a {
@@ -88,9 +90,9 @@ h1, .h1 {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: #443ea2;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-bottom: 1px solid black;
   border-radius: 0;
 }
 
@@ -104,9 +106,8 @@ h1, .h1 {
 
 .card-header {
   padding: 0.75rem 1.25rem;
-  margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  background-color: #353084;
+  border-bottom: 1px solid black;
   text-align: center;
 }
 
@@ -132,7 +133,6 @@ h1, .h1 {
   -webkit-flex-grow: 2;
   -ms-flex-positive: 2;
   flex-grow: 2;
-  margin-top: 84px;
 }
 
 .dashboard-content {
@@ -150,7 +150,6 @@ h1, .h1 {
   top: 0;
   bottom: 0;
   overflow: auto;
-  background-color: #373193;
 }
 
 .brand-logo {
@@ -219,3 +218,78 @@ h1, .h1 {
   }
 }
 
+/*   IKONY
+-----------------------------------------
+ */
+.bi-question-circle{
+  color: white;
+  float:left;
+  font-size: 50px;
+  margin-top: -12px;
+}
+.bi-question-circle:hover{
+  color:#443ea2;
+}
+
+.center {
+  text-align: center;
+}
+
+/* TLACIDLA
+ --------------------------------------------
+*/
+button{
+  display: block;
+  font-weight: 700;
+  font-size: 18px;
+  width: auto;
+  padding: 10px;
+  float: right;
+  border-radius: 1.5rem;
+  background-color: #443ea2;
+  transition: all .5s ease 0s;
+  border: black solid 1px;
+}
+
+button:hover{
+  box-shadow: 0 3px white;
+}
+span, i{
+  display: inline-block;
+  color:white;
+  position: relative;
+  transition: all .5s ease;
+}
+span::before{
+  color: #443ea2;
+  font-weight: 900;
+  font-size: 20px;
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 1.5rem;
+  opacity: 0;
+  transition: all .1s ease 0s;
+}
+
+button:hover span:before{
+  left: 0;
+  opacity: 1;
+}
+
+button:active {
+  transform: translateY(5px);
+}
+
+button:hover span{
+  padding-left: 2rem;
+}
+
+button:hover span:before{
+  left: 0;
+  opacity: 1;
+}
+
+button:active {
+  transform: translateY(5px);
+}

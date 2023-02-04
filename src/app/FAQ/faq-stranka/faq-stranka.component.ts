@@ -16,4 +16,6 @@ export class FAQStrankaComponent implements OnInit {
   chodSpat(): void {
     this.router.navigate(['']);
   }
+
+  panelOpenState = false;
 }
