@@ -7,24 +7,25 @@
   <table class="table">
     <tr><p>Poznámky: z {{currentStepIndex+1}}. hodiny</p></tr>
     <div class="stepper-container">
-      <div class="stepper-content">
+      <div class="stepper-content" id="here">
         <ng-container *ngFor="let skripta of skripta; let i = index">
           <th>
           <div *ngIf="currentStepIndex === i">
-            <div [innerHTML]="skripta.scripts">
-            </div>
-            <img src="assets/1.%20hodina/blok%20riadenia%20procesu.png">
+            <!-- <div [innerHTML]="skripta.scripts"></div> -->
+            <a href="https://www.ramstery.sk/user/documents/upload/OPSY1.pdf" target="_blank">PDF s poznámkami a obrázkami</a>
           </div>
           </th>
         </ng-container>
       </div></div></table>
+  <!--
   <div class="stepper-buttons-container">
     <button class="step-btn next-btn" (click)="nextStep()"><i class="bi bi-arrow-right-circle"></i><span>| Dopredu</span></button>
     <button class="step-btn prev-btn" (click)="previousStep()"><i class="bi bi-arrow-left-circle"></i><span>| Dozadu</span></button>
-  </div>
+  </div>-->
 </div>
 </section>
+<!--
 <div class="step-indicator-container">
   <div *ngFor="let skripta of skripta; let i = index" (click)="currentStepIndex = i" class="step-indicator-2" [ngClass]="{'active': currentStepIndex === i}">
   </div>
-</div>
+</div>-->

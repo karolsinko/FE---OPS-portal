@@ -9,7 +9,9 @@ import {zoznamSkript} from "../../models/skripta.model";
 export class SkriptaPoznamkyComponent implements OnInit {
 
   currentStepIndex = 0;
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
@@ -27,8 +29,10 @@ export class SkriptaPoznamkyComponent implements OnInit {
     if (this.currentStepIndex < this.skripta.length - 1) {
       this.currentStepIndex++;
       this.updateStepIndicator();
+
     }
   }
+
 
   updateStepIndicator() {
     const stepIndicatorEls = document.querySelectorAll(".step-indicator-2");

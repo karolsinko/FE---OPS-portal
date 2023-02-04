@@ -2,6 +2,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
   <title></title>
 </head>
+
 <div class='dashboard-app'>
   <div class='dashboard-nav'>
     <app-menu></app-menu>
@@ -14,8 +15,11 @@
           <button class="btn btn--action" (click)="chodSpat()"><i class="bi bi-house-door"></i><span> | Späť</span></button>
         </div>
         <div class='card-body'>
-
-            <h1>1) Quiz</h1><br>
+          <section>
+            <div class="wrapper">
+              <table class="table">
+              <tr>
+            <th><h1>1) Quiz</h1><br>
             <h2>1-1) Quiz sa skladá z 4 častí, ktoré potrebuje používateľ pochopiť:</h2><br>
           <p>a) Skóre = (zobrazenie fiktívneho hodnotenia na základe vašej úspešnosti, správna odpoveď = +1 bod, nesprávna odpoveď = -1 bod)</p><br>
           <p>b) Číslo otázky = (postupné číselné zobrazenie úlohy na ktorej sa nachádzate a z koľkých celkových)</p><br>
@@ -28,7 +32,8 @@
             automaticky prejdete na ďalšiu otázku. V prípade, že odpoveď bola nesprávna, tak vyskočí okno s tým, že ste urobili
             chybu. Po dokončení quizu Vám bude zobrazená tabuľka s celkovým hodnotením, ktoré obsahuje dosiahnuté skóre, počet chýb a podobne.
           </p><br>
-
+            </th></tr><tr>
+                <th>
             <h1>2) Cvičenia</h1><br>
             <h2>2-1) Cvičenia sa skladajú z 3 častí:</h2><br>
           <p>a) Cvičenia pre linux </p><br>
@@ -41,7 +46,8 @@
             nemáte program typu codeblocks, či putty vo Vašom zariadení. Následne jednoduchý systém tlačidiel na posun dopredu a dozadu medzi
             príkladmi s možnosťou zobrazenia výsledka keby neviete prísť na riešenie.
           </p><br>
-
+                </th></tr>
+                <tr> <th>
           <h1>3) Skriptá</h1><br>
           <h2>3-1) Skriptá sa skladajú z 4 častí:</h2><br>
           <p>a) Poznámky = (teória z prednášok včetne obrázkov)</p><br>
@@ -55,7 +61,10 @@
             Dôvodom tohto je, že napríklad riešite úlohy z posledných hodín no napriek tomu potrebujete základné príkazy z prvých hodín,
             takže miesto zbytočného posúvania celej stránky posúvate len sekcie, ktoré potrebujete.
           </p><br>
-
+                </th></tr>
+              </table>
+            </div>
+          </section>
         </div>
       </div>
     </div>

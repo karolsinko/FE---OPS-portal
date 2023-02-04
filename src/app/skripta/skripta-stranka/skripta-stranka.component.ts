@@ -9,8 +9,14 @@ import {SkriptaService} from "../../../Service/skripta-service";
   styleUrls: ['./skripta-stranka.component.css']
 })
 export class SkriptaStrankaComponent implements OnInit {
+  pdf: HTMLIFrameElement;
 
-  constructor(private router: Router,private skriptaService: SkriptaService) { }
+  constructor(private router: Router,private skriptaService: SkriptaService) {
+    this.pdf = document.createElement("iframe");
+    this.pdf.src = "https://www.ramstery.sk/user/documents/upload/OPSY1.pdf";
+    this.pdf.height = "auto";
+    this.pdf.width = "auto";
+  }
 
   skripta: zoznamSkript[] = [];
 
@@ -27,5 +33,9 @@ export class SkriptaStrankaComponent implements OnInit {
       console.log('Prislo: ', data);
       this.skripta = data;
     })
+  }
+
+  pridajPDF(): void {
+    document.getElementById("here")?.appendChild(this.pdf);
   }
 }
