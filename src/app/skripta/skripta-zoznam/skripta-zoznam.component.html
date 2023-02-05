@@ -26,8 +26,9 @@
       <button class="step-btn prev-btn" (click)="previousStep()"><i class="bi bi-arrow-left-circle"></i><span>| Dozadu</span></button>
     </div>
   </div>
-</section>
-<div class="step-indicator-container">
-  <div *ngFor="let skripta of skripta; let i = index" (click)="currentStepIndex = i" class="step-indicator" [ngClass]="{'active': currentStepIndex === i}">
+  <div class="step-indicator-container">
+    <div *ngFor="let skripta of skripta; let i = index" (click)="currentStepIndex = i" class="step-indicator" [ngClass]="{'active': currentStepIndex === i}">
+    </div>
   </div>
-</div>
+</section>
+

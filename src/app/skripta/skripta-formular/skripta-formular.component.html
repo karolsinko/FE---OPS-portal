@@ -15,7 +15,7 @@
               </th>
             </div>
           </ng-container>
-          <tr><p>základné príkazy: z {{currentStepIndex+1}}. hodiny</p></tr>
+          <tr><p>Základné príkazy: z {{currentStepIndex+1}}. hodiny</p></tr>
           <ng-container *ngFor="let skripta of skripta; let i = index">
             <div *ngIf="currentStepIndex === i">
               <th>
@@ -32,7 +32,4 @@
     </div>
   </div>
 </section>
-<div class="step-indicator-container">
-  <div *ngFor="let skripta of skripta; let i = index" (click)="currentStepIndex = i" class="step-indicator-1" [ngClass]="{'active': currentStepIndex === i}">
-  </div>
-</div>
+

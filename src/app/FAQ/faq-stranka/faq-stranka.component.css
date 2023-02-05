@@ -20,6 +20,8 @@ th{
 th:hover {
   color: #D6C4EC;
 }
+
+/* STRANKA */
 :root {
   --font-family-sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont,
   "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
@@ -77,6 +79,7 @@ h1, .h1 {
   font-weight: normal;
 }
 
+/* LAYOUT MIMO MENU*/
 .card {
   position: relative;
   display: -webkit-box;
@@ -167,6 +170,7 @@ h1, .h1 {
   align-items: center;
 }
 
+/*MOBILNY LAYOUT*/
 @media (min-width: 992px) {
   .dashboard-app {
     margin-left: 238px;
@@ -244,6 +248,7 @@ button{
   font-size: 18px;
   width: auto;
   padding: 10px;
+  position: relative;
   float: right;
   border-radius: 1.5rem;
   background-color: #443ea2;
@@ -266,7 +271,6 @@ span::before{
   font-size: 20px;
   display: inline-block;
   position: absolute;
-  top: 0px;
   left: 1.5rem;
   opacity: 0;
   transition: all .1s ease 0s;

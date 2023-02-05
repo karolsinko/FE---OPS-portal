@@ -336,3 +336,32 @@ input:hover{
   display: block;
   visibility: visible;
 }
+.step-indicator-container {
+  margin: 0 16px;
+  display: flex;
+  align-content: center;
+}
+
+.step-indicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #D8D8D8;
+  margin-right: 8px;
+}
+
+.step-indicator.active {
+  background-color: #353084;
+}
+
+.step-content {
+  display: none;
+}
+.step-content {
+  visibility: hidden;
+}
+
+.step-content.active {
+  display: block;
+  visibility: visible;
+}
