@@ -1,20 +1,18 @@
 <table class="table">
-  <tr>
-    <th>id</th>
-    <th>content</th>
-    <th>input</th>
-    <th>solution</th>
-  </tr>
-  <tbody>
-  <tr *ngFor="let c of cvicenieC">
-    <td>{{ c.id }}</td>
-    <td><div [innerHTML]="c.content"></div></td>
-    <td><div [innerHTML]="c.input"></div></td>
-    <td><div [innerHTML]="c.solution"></div></td>
-    <td>
-      <button class="btn btn--action" (click)="uprav(c.id)"><span class="uprav">Uprav</span></button>
-      <button class="btn btn--action" (click)="zmaz(c.id)"><span class="vymaz">Vymaž</span></button>
-    </td>
-  </tr>
+
+  <th>id</th>
+  <th>content</th>
+  <th>input</th>
+  <th>solution</th>
+
+  <tbody *ngFor="let c of cvicenieC">
+  <td>{{ c.id }}</td>
+  <td><div [innerHTML]="c.content"></div></td>
+  <td><div [innerHTML]="c.input"></div></td>
+  <td><div [innerHTML]="c.solution"></div></td>
+  <td>
+    <button class="btn btn--action" (click)="uprav(c.id)"><span class="uprav">Uprav</span></button>
+    <button class="btn btn--action" (click)="zmaz(c.id)"><span class="vymaz">Vymaž</span></button>
+  </td>
   </tbody>
 </table>

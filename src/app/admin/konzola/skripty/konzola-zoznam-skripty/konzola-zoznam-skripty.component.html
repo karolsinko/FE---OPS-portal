@@ -1,15 +1,14 @@
-<div class="wrapper">
+
 <table class="table">
-  <tr>
+
     <th>id</th>
     <th>príklad1</th>
     <th>príklad2</th>
     <th>vysvetlivky</th>
     <th>skripty</th>
     <th>príkazy</th>
-  </tr>
-  <tbody>
-  <tr *ngFor="let s of skripty">
+
+  <tbody *ngFor="let s of skripty">
     <td>{{ s.id }}</td>
     <td><div [innerHTML]="s.content"></div></td>
     <td><div [innerHTML]="s.content1"></div></td>
@@ -20,7 +19,6 @@
       <button class="btn btn--action" (click)="uprav(s.id)"><span class="uprav">Uprav</span></button>
       <button class="btn btn--action" (click)="zmaz(s.id)"><span class="vymaz">Vymaž</span></button>
     </td>
-  </tr>
   </tbody>
 </table>
-</div>
+

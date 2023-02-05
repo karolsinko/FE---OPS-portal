@@ -16,17 +16,16 @@
         <div class='card-body'>
           <form (submit)="login()">
 
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>Meno:</label>
+              <mat-form-field class="example-full-width">
+                <mat-label>Meno:</mat-label>
             <input type="text" [(ngModel)]="username" name="username" placeholder="Meno" required>
+              </mat-form-field>
 
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>Heslo:</label>
+            <mat-form-field class="example-full-width">
+              <mat-label>Heslo:</mat-label>
             <input type="password" [(ngModel)]="password" name="password" placeholder="Heslo" required>
             <button type="submit"><i class="bi bi-arrow-bar-right"></i><span> | Login</span></button>
-
+            </mat-form-field>
           </form>
         </div>
       </div>
