@@ -2,61 +2,54 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
   <title></title>
 </head>
-<div class="wrapper">
-  <section>
     <form [formGroup]="form">
       <table class="table">
-        <tr>
-          <td><div class="group">
+        <th>
+          <div class="group">
             <textarea type="text" formControlName="option1" required></textarea>
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>1. možnosť: </label>
-          </div></td>
+          </div>
 
-          <td><div class="group">
+          <div class="group">
             <textarea type="text" formControlName="option2" required></textarea>
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>2. možnosť: </label>
-          </div></td>
-          <td><button class="btn btn--action" (click)="pridaj()" *ngIf="form.value.id === null"><span class="pridaj">Pridaj</span></button>
-            <button class="btn btn--action" (click)="uprav()" *ngIf="form.value.id !== null"><span class="uprav">Uprav</span></button><br>
-            <button class="btn btn--action" (click)="zrus()"><span class="vymaz">Vymaž</span></button></td>
-        </tr>
-        <tr>
-          <td><div class="group">
+          </div>
+
+          <div class="group">
             <textarea type="text" formControlName="option3" required></textarea>
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>3. možnosť: </label>
-          </div></td>
+          </div>
 
-          <td><div class="group">
+          <div class="group">
             <textarea type="text" formControlName="option4" required></textarea>
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>4. možnosť: </label>
-          </div></td>
+          </div>
 
-        </tr>
-        <tr>
-          <td><div class="group">
+          <div class="group">
             <textarea type="text" formControlName="question" required></textarea>
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>Otázka: </label>
-          </div></td>
+          </div>
 
-          <td><div class="group">
+          <div class="group">
             <textarea type="text" formControlName="solution" required></textarea>
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>Odpoveď: </label>
-          </div></td>
-        </tr>
-
+          </div>
+        </th>
+        <th><button class="btn btn--action" (click)="pridaj()" *ngIf="form.value.id === null"><span class="pridaj">Pridaj</span></button>
+          <button class="btn btn--action" (click)="uprav()" *ngIf="form.value.id !== null"><span class="uprav">Uprav</span></button><br>
+          <button class="btn btn--action" (click)="zrus()"><span class="vymaz">Vymaž</span></button></th>
       </table>
     </form>
-  </section>
-</div>
+

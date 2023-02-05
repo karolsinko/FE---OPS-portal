@@ -11,12 +11,13 @@ td{
   width: auto;
   color: white;
   height: auto;
-  max-width: 50px;
+  max-width: 40px;
 }
 th{
   border-bottom:1px solid white;
   width: auto;
   color: white;
+  max-width: 40px;
 }
 
 /* STRANKA */

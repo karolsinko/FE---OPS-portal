@@ -2,33 +2,20 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
   <title></title>
 </head>
-<div class='dashboard-app'>
-  <div class='dashboard-nav'>
-    <app-menu></app-menu>
-  </div>
-  <div class='dashboard-content'>
-    <div class='container'>
-      <div class='card'>
-        <div class='card-header'>
-          <i class="bi bi-person"></i><h1>Admin panel</h1>
-          <button class="btn btn--action" (click)="chodSpat()"><i class="bi bi-house-door"></i><span> | Späť</span></button>
-        </div>
-        <div class='card-body'>
+
+
+
           <form (submit)="login()">
+            <div class="box">
+            <h1>Dashboard</h1>
+            <input class="email" type="text" [(ngModel)]="username" name="username" placeholder="Meno" required>
 
-              <mat-form-field class="example-full-width">
-                <mat-label>Meno:</mat-label>
-            <input type="text" [(ngModel)]="username" name="username" placeholder="Meno" required>
-              </mat-form-field>
+            <input class="email" type="password" [(ngModel)]="password" name="password" placeholder="Heslo" required>
 
-            <mat-form-field class="example-full-width">
-              <mat-label>Heslo:</mat-label>
-            <input type="password" [(ngModel)]="password" name="password" placeholder="Heslo" required>
-            <button type="submit"><i class="bi bi-arrow-bar-right"></i><span> | Login</span></button>
-            </mat-form-field>
+            <button class="btn" type="submit"><i class="bi bi-arrow-bar-right"></i><span> | Login</span></button>
+            <button class="btn" (click)="chodSpat()"><i class="bi bi-house-door"></i><span> | Späť</span></button>
+            </div>
           </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+
+
