@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router';
 
-enum MENU {   HOME, QUIZ,SKRIPTA, CVICENIA, FAQ, ADMIN}
+enum MENU {   HOME, QUIZ,SKRIPTA, CVICENIA, FAQ, ADMIN, C, LINUX,BASH}
 
 @Component({
   selector: 'app-menu',
@@ -27,6 +27,12 @@ export class MenuComponent {
       this.router.navigate(['/FAQ']);
     }else if(m=== MENU.ADMIN){
       this.router.navigate(['/admin']);
+    } else if (m === MENU.C) {
+      this.router.navigate(['/cvicenia/c']);
+    }else if(m=== MENU.LINUX){
+      this.router.navigate(['/cvicenia/linux']);
+    }else if(m=== MENU.BASH){
+      this.router.navigate(['/cvicenia/bash']);
     }
   }
 
@@ -38,5 +44,5 @@ export class MenuComponent {
     }
   }
 
-
+  showFiller = false;
 }

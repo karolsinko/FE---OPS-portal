@@ -58,6 +58,7 @@ import {MatRadioModule} from "@angular/material/radio";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatDividerModule} from "@angular/material/divider";
 import {MatExpansionModule} from "@angular/material/expansion";
+import {MatMenuModule} from "@angular/material/menu";
 
 @NgModule({
   declarations: [
@@ -124,7 +125,8 @@ import {MatExpansionModule} from "@angular/material/expansion";
     MatRadioModule,
     MatSidenavModule,
     MatDividerModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatMenuModule
   ],
   providers: [
     AdminComponent
