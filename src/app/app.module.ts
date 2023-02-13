@@ -59,6 +59,7 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatDividerModule} from "@angular/material/divider";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatMenuModule} from "@angular/material/menu";
+import {MatSortModule} from "@angular/material/sort";
 
 @NgModule({
   declarations: [
@@ -106,28 +107,29 @@ import {MatMenuModule} from "@angular/material/menu";
     KonzolaZoznamQuizComponent,
     KonzolaStrankaQuizComponent,
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule,
-    AppRoutingModule,
-    HttpClientModule,
-    MatPaginatorModule,
-    MatStepperModule,
-    MatIconModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatTableModule,
-    MatCardModule,
-    MatRadioModule,
-    MatSidenavModule,
-    MatDividerModule,
-    MatExpansionModule,
-    MatMenuModule
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        ReactiveFormsModule,
+        RouterModule,
+        AppRoutingModule,
+        HttpClientModule,
+        MatPaginatorModule,
+        MatStepperModule,
+        MatIconModule,
+        MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatTableModule,
+        MatCardModule,
+        MatRadioModule,
+        MatSidenavModule,
+        MatDividerModule,
+        MatExpansionModule,
+        MatMenuModule,
+        MatSortModule
+    ],
   providers: [
     AdminComponent
   ],

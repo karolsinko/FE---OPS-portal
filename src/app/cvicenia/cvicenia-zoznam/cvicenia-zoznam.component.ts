@@ -18,7 +18,7 @@ export class CviceniaZoznamComponent implements OnInit {
 
     ngOnInit(): void {
     }
-/*
+
   currentStepIndex = 0;
   @Input()
   cvicenie: zoznamCviceni[] = [];
@@ -53,5 +53,5 @@ export class CviceniaZoznamComponent implements OnInit {
   showSolution(){
     this.showElement = !this.showElement;
   }
-*/
+
 }

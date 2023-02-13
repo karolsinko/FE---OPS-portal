@@ -1,7 +1,7 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {cvicenie, zoznamCviceniC} from "../app/models/cvicenie.model";
+import {zoznamCviceniC} from "../app/models/cvicenie.model";
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +11,12 @@ export class CvicenieCService{
 
   constructor(private http: HttpClient) { }
 
-  getCvicenia(): Observable<zoznamCviceniC[]> {
+  getSortnuteCvicenia(): Observable<zoznamCviceniC[]>{
     return this.http.get<zoznamCviceniC[]>(`${this.apiUrl}`);
-  }
+    }
+ // getCvicenia(): Observable<zoznamCviceniC[]> {
+ //   return this.http.get<zoznamCviceniC[]>(`${this.apiUrl}`);
+ // }
 
   getCviceniePodlaId(id : number): Observable<zoznamCviceniC> {
     return this.http.get<zoznamCviceniC>(`${this.apiUrl}/${id}`);

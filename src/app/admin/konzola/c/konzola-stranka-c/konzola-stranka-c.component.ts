@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {cvicenie, zoznamCviceniC, zoznamCviceniLinux} from "../../../../models/cvicenie.model";
+import {cvicenie, zoznamCviceniC} from "../../../../models/cvicenie.model";
 import {CvicenieCService} from "../../../../../Service/cvicenieC-service";
 
 @Component({
@@ -23,7 +23,7 @@ export class KonzolaStrankaCComponent implements OnInit {
   cvicenieNaUpravu?: cvicenie;
 
   obnovitCvicenia(): void {
-    this.cvicenieCService.getCvicenia().subscribe(data => {
+    this.cvicenieCService.getSortnuteCvicenia().subscribe(data => {
       console.log('Prislo: ', data);
       this.cvicenieC = data;
     });

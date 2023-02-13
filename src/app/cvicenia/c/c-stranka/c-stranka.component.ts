@@ -19,7 +19,7 @@ export class CStrankaComponent implements OnInit {
   }
 
   obnovitUlohy(): void {
-    this.cvicenieCService.getCvicenia().subscribe(data => {
+    this.cvicenieCService.getSortnuteCvicenia().subscribe(data => {
       console.log('Prislo: ', data);
       this.cvicenie = data;
     });
