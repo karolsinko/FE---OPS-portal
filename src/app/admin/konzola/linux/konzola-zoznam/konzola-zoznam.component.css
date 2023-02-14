@@ -276,28 +276,6 @@ span::before{
   transition: all .1s ease 0s;
 }
 
-button:hover span:before{
-  left: 0;
-  opacity: 1;
-}
-
-button:active {
-  transform: translateY(5px);
-}
-
-button:hover span{
-  padding-left: 2rem;
-}
-
-button:hover span:before{
-  left: 0;
-  opacity: 1;
-}
-
-button:active {
-  transform: translateY(5px);
-}
-
 
 /* LAYOUT
  --------------------------------------------
