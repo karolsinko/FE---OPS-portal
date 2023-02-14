@@ -5,7 +5,7 @@
 <section>
   <div class="wrapper">
     <table class="table">
-      <tr><p>Príklad: {{currentStepIndex+1}} pre jazyk Bash</p></tr>
+      <tr><p>Príklad: {{currentStepIndex+1}}/{{cvicenie.length}} pre jazyk Bash</p></tr>
       <div class="stepper-container">
         <ng-container *ngFor="let zoznamCviceniBash of cvicenie; let i = index">
           <div *ngIf="currentStepIndex === i">

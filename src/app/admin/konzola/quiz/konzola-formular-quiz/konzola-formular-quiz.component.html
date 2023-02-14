@@ -46,10 +46,12 @@
             <span class="bar"></span>
             <label>Odpoveď: </label>
           </div>
+          <div class="group">
+            <button class="btn btn--action" (click)="pridaj()" *ngIf="form.value.id === null"><i class="bi bi-folder-plus"></i><span class="pridaj"></span></button>
+            <button class="btn btn--action" (click)="uprav()" *ngIf="form.value.id !== null"><i class="bi bi-wrench"></i><span class="uprav"></span></button>
+            <button class="btn btn--action" (click)="zrus()"><i class="bi bi-folder-minus"></i><span class="vymaz"></span></button>
+          </div>
         </th>
-        <th><button class="btn btn--action" (click)="pridaj()" *ngIf="form.value.id === null"><span class="pridaj">Pridaj</span></button>
-          <button class="btn btn--action" (click)="uprav()" *ngIf="form.value.id !== null"><span class="uprav">Uprav</span></button><br>
-          <button class="btn btn--action" (click)="zrus()"><span class="vymaz">Vymaž</span></button></th>
       </table>
     </form>
 

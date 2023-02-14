@@ -7,19 +7,14 @@
     <table class="table">
       <div class="stepper-container">
         <div class="stepper-content">
-          <tr><p>Vysvetlivky: z {{currentStepIndex+1}}. hodiny</p></tr>
-          <ng-container *ngFor="let skripta of skripta; let i = index">
-            <div *ngIf="currentStepIndex === i">
-              <th>
-                Vysvetlivky: <div [innerHTML]="skripta.explain"></div>
-              </th>
-            </div>
-          </ng-container>
-          <tr><p>Základné príkazy: z {{currentStepIndex+1}}. hodiny</p></tr>
+          <tr><p>Základné príkazy a pomôcky: {{currentStepIndex+1}}/{{skripta.length}}</p></tr>
           <ng-container *ngFor="let skripta of skripta; let i = index">
             <div *ngIf="currentStepIndex === i">
               <th>
                 Príkazy: <div [innerHTML]="skripta.commands"></div>
+              </th>
+              <th>
+                Pomôcky: <div [innerHTML]="skripta.explain"></div>
               </th>
             </div>
           </ng-container>

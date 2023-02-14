@@ -5,7 +5,7 @@
 <section>
   <div class="wrapper">
     <table class="table">
-      <tr><p>Príklad: {{currentStepIndex+1}} pre jazyk Linux</p></tr>
+      <tr><p>Príklad: {{currentStepIndex+1}}/{{cvicenie.length}} pre jazyk Linux</p></tr>
       <div class="stepper-container">
         <ng-container *ngFor="let zoznamCviceniLinux of cvicenie; let i = index">
           <div *ngIf="currentStepIndex === i">

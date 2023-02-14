@@ -5,7 +5,7 @@
 <section>
   <div class="wrapper">
     <table class="table">
-      <tr><p>Hodina: {{currentStepIndex+1}}, príklady ktoré by ste mali chápať po danej hodine</p></tr>
+      <tr><p>Hodina: {{currentStepIndex+1}}/{{skripta.length}}, príklady ktoré by ste mali chápať po danej hodine</p></tr>
       <div class="stepper-container">
         <div class="stepper-content">
           <ng-container *ngFor="let skripta of skripta; let i = index">

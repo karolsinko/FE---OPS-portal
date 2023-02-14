@@ -1,23 +1,24 @@
 /* TABULKY
- --------------------------------------------
+--------------------------------------------
 */
-table{
-  margin-left: auto;
-  margin-right: auto;
-  text-align: justify-all;
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
 }
 td{
   border: 0;
   width: auto;
   color: white;
   height: auto;
-  max-width: 40px;
+  max-width: 50px;
 }
 th{
   border-bottom:1px solid white;
   width: auto;
   color: white;
-  max-width: 40px;
 }
 
 /* STRANKA */

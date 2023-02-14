@@ -14,16 +14,16 @@
       <a (click)="openMenu(menu.HOME)" class="brand-logo"><i class="bi bi-journal-code"></i><span>| Operačné systémy 1 </span></a>
     </header>
       <a (click)="openMenu(menu.QUIZ)" class="dashboard-nav-item"><i class="bi bi-question-circle"></i> |  Quiz</a>
-      <a (click)="showFiller = !showFiller" class="dashboard-nav-item"><i class="bi bi-code-slash"></i> |  Cvičenia</a>
+      <a (click)="showFiller = !showFiller" class="dashboard-nav-item"><i class="bi bi-code-square"></i> |  Cvičenia</a>
       <div *ngIf="showFiller" class="nav-item-divider"></div>
-        <a *ngIf="showFiller" (click)="openMenu(menu.C)" class="dashboard-nav-item"><i class="bi bi-wrench"></i> |  C cvičenia</a>
-        <a *ngIf="showFiller" (click)="openMenu(menu.LINUX)" class="dashboard-nav-item"><i class="bi bi-wrench"></i>|  Linux cvičenia</a>
-        <a *ngIf="showFiller" (click)="openMenu(menu.BASH)" class="dashboard-nav-item"><i class="bi bi-wrench"></i>|  Bash cvičenia</a>
+        <a *ngIf="showFiller" (click)="openMenu(menu.C)" class="dashboard-nav-item"><i class="bi bi-terminal"></i>|  C cvičenia</a>
+        <a *ngIf="showFiller" (click)="openMenu(menu.LINUX)" class="dashboard-nav-item"><i class="bi bi-terminal"></i>|  Linux cvičenia</a>
+        <a *ngIf="showFiller" (click)="openMenu(menu.BASH)" class="dashboard-nav-item"><i class="bi bi-terminal"></i>|  Bash cvičenia</a>
       <div *ngIf="showFiller" class="nav-item-divider"></div>
-      <a (click)="openMenu(menu.SKRIPTA)" class="dashboard-nav-item"><i class="bi bi-printer"></i> |  Skriptá</a>
-      <a (click)="openMenu(menu.FAQ)" class="dashboard-nav-item"><i class="bi bi-person"></i>|  FAQ</a>
+      <a (click)="openMenu(menu.SKRIPTA)" class="dashboard-nav-item"><i class="bi bi-archive"></i> |  OPSY</a>
+      <a (click)="openMenu(menu.FAQ)" class="dashboard-nav-item"><i class="bi bi-info-circle"></i>|  FAQ</a>
       <div class="nav-item-divider"></div>
-      <a (click)="openMenu(menu.ADMIN)" class="dashboard-nav-item"><i class="bi bi-wrench"></i>|  Admin</a>
+      <a (click)="openMenu(menu.ADMIN)" class="dashboard-nav-item"><i class="bi bi-person-circle"></i>|  Admin</a>
       <div class="date">
       {{date| date:'dd.MM.yyyy'}}
     </div>
