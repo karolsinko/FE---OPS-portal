@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {cvicenie, zoznamCviceniBash} from "../../../../models/cvicenie.model";
-import {cvicenieBashService} from "../../../../../Service/cvicenieBash-service";
+import {cvicenieBashService} from "../../../../../Service/Cvicenia/cvicenieBash-service";
 
 @Component({
   selector: 'app-konzola-stranka-bash',

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {QuizService} from "../../../Service/quiz-service";
+import {QuizLinuxService} from "../../../Service/Quiz/quizLinux-service";
 import {zoznamQuizov} from "../../models/quiz.model";
 
 @Component({
@@ -10,7 +10,7 @@ import {zoznamQuizov} from "../../models/quiz.model";
 })
 export class QuizStrankaComponent implements OnInit {
 
-  constructor(private router: Router, private quizService: QuizService) { }
+  constructor(private router: Router, private quizService: QuizLinuxService) { }
 
   quiz: zoznamQuizov[] = [];
 

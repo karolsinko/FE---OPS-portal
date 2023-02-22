@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {zoznamSkript} from "../../../../models/skripta.model";
 import {Router} from "@angular/router";
-import {SkriptaService} from "../../../../../Service/skripta-service";
+import {SkriptaLinuxService} from "../../../../../Service/Skripta/skriptaLinux-service";
 
 @Component({
   selector: 'app-konzola-zoznam-skripty',
@@ -10,7 +10,7 @@ import {SkriptaService} from "../../../../../Service/skripta-service";
 })
 export class KonzolaZoznamSkriptyComponent implements OnInit {
 
-  constructor(private router: Router, private skriptaService: SkriptaService) {
+  constructor(private router: Router, private skriptaService: SkriptaLinuxService) {
   }
 
   //Skripty

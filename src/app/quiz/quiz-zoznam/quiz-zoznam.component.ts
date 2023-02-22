@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {zoznamQuizov} from "../../models/quiz.model";
 import {Router} from "@angular/router";
-import {QuizService} from "../../../Service/quiz-service";
+import {QuizLinuxService} from "../../../Service/Quiz/quizLinux-service";
 
 @Component({
   selector: 'app-quiz-zoznam',
@@ -20,7 +20,7 @@ export class QuizZoznamComponent implements OnInit {
   pocetChyb = 0;
   userAnswer: string;
   koniec = 0;
-  constructor(private router: Router, private quizService: QuizService) {
+  constructor(private router: Router, private quizService: QuizLinuxService) {
     this.userAnswer = "";
   }
 

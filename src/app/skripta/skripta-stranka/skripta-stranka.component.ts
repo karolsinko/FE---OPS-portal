@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {zoznamSkript} from "../../models/skripta.model";
-import {SkriptaService} from "../../../Service/skripta-service";
+import {SkriptaLinuxService} from "../../../Service/Skripta/skriptaLinux-service";
 
 @Component({
   selector: 'app-skripta-stranka',
@@ -11,7 +11,7 @@ import {SkriptaService} from "../../../Service/skripta-service";
 export class SkriptaStrankaComponent implements OnInit {
   pdf: HTMLIFrameElement;
 
-  constructor(private router: Router,private skriptaService: SkriptaService) {
+  constructor(private router: Router,private skriptaService: SkriptaLinuxService) {
     this.pdf = document.createElement("iframe");
     this.pdf.src = "https://www.ramstery.sk/user/documents/upload/OPSY1.pdf";
     this.pdf.height = "auto";

@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {quiz, zoznamQuizov} from "../../../../models/quiz.model";
-import {QuizService} from "../../../../../Service/quiz-service";
+import {QuizLinuxService} from "../../../../../Service/Quiz/quizLinux-service";
 
 @Component({
   selector: 'app-konzola-stranka-quiz',
@@ -10,7 +10,7 @@ import {QuizService} from "../../../../../Service/quiz-service";
 })
 export class KonzolaStrankaQuizComponent implements OnInit {
 
-  constructor(private router: Router, private quizService: QuizService) { }
+  constructor(private router: Router, private quizService: QuizLinuxService) { }
 
   ngOnInit(): void {
     this.obnovitSkripta();

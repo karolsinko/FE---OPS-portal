@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {skripta, zoznamSkript} from "../../../../models/skripta.model";
-import {SkriptaService} from "../../../../../Service/skripta-service";
+import {SkriptaLinuxService} from "../../../../../Service/Skripta/skriptaLinux-service";
 
 @Component({
   selector: 'app-konzola-stranka-skripty',
@@ -10,7 +10,7 @@ import {SkriptaService} from "../../../../../Service/skripta-service";
 })
 export class KonzolaStrankaSkriptyComponent implements OnInit {
 
-  constructor(private router: Router, private skriptaService: SkriptaService) { }
+  constructor(private router: Router, private skriptaService: SkriptaLinuxService) { }
 
   ngOnInit(): void {
     this.obnovitSkripta();

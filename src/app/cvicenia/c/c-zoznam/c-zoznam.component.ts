@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {zoznamCviceniC} from "../../../models/cvicenie.model";
 import {Router} from "@angular/router";
-import {CvicenieCService} from "../../../../Service/cvicenieC-service";
+import {CvicenieCService} from "../../../../Service/Cvicenia/cvicenieC-service";
 
 @Component({
   selector: 'app-c-zoznam',

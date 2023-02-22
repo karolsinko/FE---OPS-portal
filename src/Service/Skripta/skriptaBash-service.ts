@@ -1,13 +1,13 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
+import {skripta, zoznamSkript} from "../../app/models/skripta.model";
 import {Observable} from "rxjs";
-import {skripta, zoznamSkript} from "../app/models/skripta.model";
 
 @Injectable({
   providedIn: 'root'
 })
-export class SkriptaService{
-  private apiUrl = 'http://localhost:8080/api/skripta';
+export class SkriptaBashService {
+  private apiUrl = 'http://localhost:8080/api/skripta/bash';
 
   constructor(private http: HttpClient) { }
 

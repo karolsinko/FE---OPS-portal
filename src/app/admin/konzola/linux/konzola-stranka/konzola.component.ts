@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {cvicenie, zoznamCviceniLinux} from "../../../../models/cvicenie.model";
-import {cvicenieLinuxService} from "../../../../../Service/cvicenieLinux-service";
+import {cvicenieLinuxService} from "../../../../../Service/Cvicenia/cvicenieLinux-service";
 
 @Component({
   selector: 'app-konzola',

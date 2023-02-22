@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {zoznamCviceniLinux} from "../../../models/cvicenie.model";
 import {Router} from "@angular/router";
-import {cvicenieLinuxService} from "../../../../Service/cvicenieLinux-service";
+import {cvicenieLinuxService} from "../../../../Service/Cvicenia/cvicenieLinux-service";
 
 @Component({
   selector: 'app-linux-stranka',
