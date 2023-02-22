@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { MenuKonzolaComponent } from './menu-konzola.component';
+import {MenuKonzolaComponent} from './menu-konzola.component';
 
 describe('MenuKonzolaComponent', () => {
   let component: MenuKonzolaComponent;

@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { LinuxZoznamComponent } from './linux-zoznam.component';
+import {LinuxZoznamComponent} from './linux-zoznam.component';
 
 describe('LinuxZoznamComponent', () => {
   let component: LinuxZoznamComponent;

@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { KonzolaFormularBashComponent } from './konzola-formular-bash.component';
+import {KonzolaFormularBashComponent} from './konzola-formular-bash.component';
 
 describe('KonzolaFormularBashComponent', () => {
   let component: KonzolaFormularBashComponent;

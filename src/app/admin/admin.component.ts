@@ -36,7 +36,7 @@ export class AdminComponent implements CanActivate {
   password = '';
 
   login() {
-    if (this.username === 'user' && this.password === 'user') {
+    if (this.username === 'user' && this.password === 'kajojepan') {
       window.localStorage.setItem('isAuthorized', 'true');
       this.router.navigate(['/admin/konzola']);
     } else {

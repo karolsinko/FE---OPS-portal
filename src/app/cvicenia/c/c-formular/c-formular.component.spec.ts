@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { CFormularComponent } from './c-formular.component';
+import {CFormularComponent} from './c-formular.component';
 
 describe('CFormularComponent', () => {
   let component: CFormularComponent;

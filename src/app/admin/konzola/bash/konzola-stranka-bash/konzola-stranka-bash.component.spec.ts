@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { KonzolaStrankaBashComponent } from './konzola-stranka-bash.component';
+import {KonzolaStrankaBashComponent} from './konzola-stranka-bash.component';
 
 describe('KonzolaStrankaBashComponent', () => {
   let component: KonzolaStrankaBashComponent;

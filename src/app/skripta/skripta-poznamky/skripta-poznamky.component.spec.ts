@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SkriptaPoznamkyComponent } from './skripta-poznamky.component';
+import {SkriptaPoznamkyComponent} from './skripta-poznamky.component';
 
 describe('SkriptaPoznamkyComponent', () => {
   let component: SkriptaPoznamkyComponent;

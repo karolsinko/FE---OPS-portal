@@ -74,7 +74,7 @@ span, i{
   transition: all .5s ease;
 }
 span::before{
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 5 Free", serif;
   color: #443ea2;
   font-weight: 900;
   font-size: 20px;

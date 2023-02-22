@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { BashZoznamComponent } from './bash-zoznam.component';
+import {BashZoznamComponent} from './bash-zoznam.component';
 
 describe('BashZoznamComponent', () => {
   let component: BashZoznamComponent;

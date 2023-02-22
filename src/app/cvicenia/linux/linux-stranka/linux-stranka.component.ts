@@ -26,6 +26,6 @@ export class LinuxStrankaComponent implements OnInit {
   }
 
   chodSpat(): void {
-    this.router.navigate(['/cvicenia']);
+    this.router.navigate(['']);
   }
 }

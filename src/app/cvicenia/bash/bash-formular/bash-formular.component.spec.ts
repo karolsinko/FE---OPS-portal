@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { BashFormularComponent } from './bash-formular.component';
+import {BashFormularComponent} from './bash-formular.component';
 
 describe('BashFormularComponent', () => {
   let component: BashFormularComponent;

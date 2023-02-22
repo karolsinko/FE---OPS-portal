@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { KonzolaFormularSkriptyComponent } from './konzola-formular-skripty.component';
+import {KonzolaFormularSkriptyComponent} from './konzola-formular-skripty.component';
 
 describe('KonzolaFormularSkriptyComponent', () => {
   let component: KonzolaFormularSkriptyComponent;

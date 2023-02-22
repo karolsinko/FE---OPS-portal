@@ -1,5 +1,4 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {zoznamCviceniLinux} from "../../../../models/cvicenie.model";
 import {FormControl, FormGroup} from "@angular/forms";
 import {zoznamSkript} from "../../../../models/skripta.model";
 

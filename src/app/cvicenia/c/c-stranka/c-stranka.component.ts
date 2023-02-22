@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {zoznamCviceniC} from "../../../models/cvicenie.model";
 import {Router} from "@angular/router";
 import {CvicenieCService} from "../../../../Service/cvicenieC-service";
@@ -26,6 +26,6 @@ export class CStrankaComponent implements OnInit {
   }
 
   chodSpat(): void {
-    this.router.navigate(['/cvicenia']);
+    this.router.navigate(['']);
   }
 }

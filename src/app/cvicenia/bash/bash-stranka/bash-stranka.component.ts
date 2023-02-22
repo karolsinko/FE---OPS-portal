@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {zoznamCviceni, zoznamCviceniBash, zoznamCviceniC} from "../../../models/cvicenie.model";
+import {Component, OnInit} from '@angular/core';
+import {zoznamCviceniBash} from "../../../models/cvicenie.model";
 import {Router} from "@angular/router";
-import {CvicenieService} from "../../../../Service/cvicenie-service";
-import {CvicenieCService} from "../../../../Service/cvicenieC-service";
 import {cvicenieBashService} from "../../../../Service/cvicenieBash-service";
 
 @Component({
@@ -28,6 +26,6 @@ export class BashStrankaComponent implements OnInit {
   }
 
   chodSpat(): void {
-    this.router.navigate(['/cvicenia']);
+    this.router.navigate(['']);
   }
 }

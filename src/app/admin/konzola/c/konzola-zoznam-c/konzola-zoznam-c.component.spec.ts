@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { KonzolaZoznamCComponent } from './konzola-zoznam-c.component';
+import {KonzolaZoznamCComponent} from './konzola-zoznam-c.component';
 
 describe('KonzolaZoznamCComponent', () => {
   let component: KonzolaZoznamCComponent;

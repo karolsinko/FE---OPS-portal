@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { CZoznamComponent } from './c-zoznam.component';
+import {CZoznamComponent} from './c-zoznam.component';
 
 describe('CZoznamComponent', () => {
   let component: CZoznamComponent;

@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SkriptaFormularComponent } from './skripta-formular.component';
+import {SkriptaFormularComponent} from './skripta-formular.component';
 
 describe('SkriptaFormularComponent', () => {
   let component: SkriptaFormularComponent;

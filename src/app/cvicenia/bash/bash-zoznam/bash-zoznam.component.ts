@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {zoznamCviceniBash, zoznamCviceniC} from "../../../models/cvicenie.model";
+import {zoznamCviceniBash} from "../../../models/cvicenie.model";
 import {Router} from "@angular/router";
 import {cvicenieBashService} from "../../../../Service/cvicenieBash-service";
 

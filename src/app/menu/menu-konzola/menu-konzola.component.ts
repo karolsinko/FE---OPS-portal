@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 
 enum MENU { HOME, QUIZ,SKRIPTA, CVICENIA, FAQ, ADMIN,C, LINUX,BASH}

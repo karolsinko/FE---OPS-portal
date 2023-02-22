@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { KonzolaZoznamBashComponent } from './konzola-zoznam-bash.component';
+import {KonzolaZoznamBashComponent} from './konzola-zoznam-bash.component';
 
 describe('KonzolaZoznamBashComponent', () => {
   let component: KonzolaZoznamBashComponent;

@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { LinuxFormularComponent } from './linux-formular.component';
+import {LinuxFormularComponent} from './linux-formular.component';
 
 describe('LinuxFormularComponent', () => {
   let component: LinuxFormularComponent;
