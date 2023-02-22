@@ -17,9 +17,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {SkriptaFormularComponent} from './skripta/skripta-formular/skripta-formular.component';
 import {SkriptaStrankaComponent} from './skripta/skripta-stranka/skripta-stranka.component';
 import {SkriptaZoznamComponent} from './skripta/skripta-zoznam/skripta-zoznam.component';
-import {QuizFormularComponent} from './quiz/quiz-formular/quiz-formular.component';
-import {QuizStrankaComponent} from './quiz/quiz-stranka/quiz-stranka.component';
-import {QuizZoznamComponent} from './quiz/quiz-zoznam/quiz-zoznam.component';
+import {QuizStrankaComponent} from './quiz/linux/quiz-stranka/quiz-stranka.component';
+import {QuizComponent} from './quiz/linux/quiz/quiz.component';
 import {FAQStrankaComponent} from './FAQ/faq-stranka/faq-stranka.component';
 import {MatCardModule} from "@angular/material/card";
 import {LinuxStrankaComponent} from './cvicenia/linux/linux-stranka/linux-stranka.component';
@@ -73,9 +72,8 @@ import {MatSortModule} from "@angular/material/sort";
     SkriptaFormularComponent,
     SkriptaStrankaComponent,
     SkriptaZoznamComponent,
-    QuizFormularComponent,
     QuizStrankaComponent,
-    QuizZoznamComponent,
+    QuizComponent,
     FAQStrankaComponent,
     LinuxStrankaComponent,
     CStrankaComponent,
@@ -105,6 +103,7 @@ import {MatSortModule} from "@angular/material/sort";
     KonzolaFormularQuizComponent,
     KonzolaZoznamQuizComponent,
     KonzolaStrankaQuizComponent,
+    QuizComponent,
   ],
     imports: [
         BrowserModule,

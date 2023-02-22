@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {QuizLinuxService} from "../../../Service/Quiz/quizLinux-service";
-import {zoznamQuizov} from "../../models/quiz.model";
+import {QuizLinuxService} from "../../../../Service/Quiz/quizLinux-service";
+import {zoznamQuizov} from "../../../models/quiz.model";
 
 @Component({
   selector: 'app-quiz-stranka',

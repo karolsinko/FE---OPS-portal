@@ -1,15 +1,15 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {zoznamQuizov} from "../../models/quiz.model";
+import {zoznamQuizov} from "../../../models/quiz.model";
 import {Router} from "@angular/router";
-import {QuizLinuxService} from "../../../Service/Quiz/quizLinux-service";
+import {QuizLinuxService} from "../../../../Service/Quiz/quizLinux-service";
 
 @Component({
-  selector: 'app-quiz-zoznam',
-  templateUrl: './quiz-zoznam.component.html',
-  styleUrls: ['./quiz-zoznam.component.css']
+  selector: 'app-quiz',
+  templateUrl: './quiz.component.html',
+  styleUrls: ['./quiz.component.css']
 })
 
-export class QuizZoznamComponent implements OnInit {
+export class QuizComponent implements OnInit {
 
   @Input()
   quiz: zoznamQuizov[] = [];

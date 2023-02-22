@@ -1,7 +1,7 @@
 import {RouterModule, Routes} from "@angular/router";
 import {NgModule} from "@angular/core";
 import {SkriptaStrankaComponent} from "./skripta/skripta-stranka/skripta-stranka.component";
-import {QuizStrankaComponent} from "./quiz/quiz-stranka/quiz-stranka.component";
+import {QuizStrankaComponent} from "./quiz/linux/quiz-stranka/quiz-stranka.component";
 import {FAQStrankaComponent} from "./FAQ/faq-stranka/faq-stranka.component";
 import {CStrankaComponent} from "./cvicenia/c/c-stranka/c-stranka.component";
 import {LinuxStrankaComponent} from "./cvicenia/linux/linux-stranka/linux-stranka.component";
