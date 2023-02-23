@@ -1,7 +1,8 @@
 import {Component} from '@angular/core';
 import {Router} from '@angular/router';
 
-enum MENU {   HOME, QUIZ,SKRIPTA, CVICENIA, FAQ, ADMIN, C, LINUX,BASH}
+//enum MENU {   HOME, QUIZ,SKRIPTA, CVICENIA, FAQ, ADMIN, C, LINUX,BASH}
+enum MAINMENU { HOME, C, LINUX,BASH, ADMIN}
 
 @Component({
   selector: 'app-menu',
@@ -10,10 +11,10 @@ enum MENU {   HOME, QUIZ,SKRIPTA, CVICENIA, FAQ, ADMIN, C, LINUX,BASH}
 })
 export class MenuComponent {
   date=new Date();
-  menu = MENU;
+  menu = MAINMENU;
 
   constructor(private router: Router) { }
-
+/*
   public openMenu(m: MENU) {
     if (m === MENU.HOME) {
       this.router.navigate(['/']);
@@ -33,6 +34,20 @@ export class MenuComponent {
       this.router.navigate(['/cvicenia/linux']);
     }else if(m=== MENU.BASH){
       this.router.navigate(['/cvicenia/bash']);
+    }
+  }
+*/
+  public openMainMenu(m: MAINMENU) {
+    if (m === MAINMENU.HOME) {
+      this.router.navigate(['/']);
+    } else if (m === MAINMENU.C) {
+      this.router.navigate(['/c']);
+    }else if(m=== MAINMENU.LINUX){
+      this.router.navigate(['/linux']);
+    }else if(m=== MAINMENU.BASH){
+      this.router.navigate(['/bash']);
+    }else if(m=== MAINMENU.ADMIN){
+      this.router.navigate(['/admin']);
     }
   }
 

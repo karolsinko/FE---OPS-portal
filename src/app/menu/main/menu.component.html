@@ -6,7 +6,7 @@
   <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-</head>
+</head> <!--
 <a class='dashboard-toolbar' mat-icon-button (click)="drawer.toggle()"><h1 class="bi bi-list"></h1></a>
   <mat-drawer-container autosize>
     <mat-drawer #drawer mode="side" class="dashboard-nav" opened>
@@ -29,6 +29,24 @@
     </div>
     </mat-drawer>
 
-  </mat-drawer-container>
+  </mat-drawer-container> -->
 
 
+
+<a class='dashboard-toolbar' mat-icon-button (click)="drawer.toggle()"><h1 class="bi bi-list"></h1></a>
+<mat-drawer-container autosize>
+  <mat-drawer #drawer mode="side" class="dashboard-nav" opened>
+    <header >
+      <a (click)="openMainMenu(menu.HOME)" class="brand-logo"><i class="bi bi-journal-code"></i><span>| Operačné systémy 1 </span></a>
+    </header>
+    <a (click)="openMainMenu(menu.C)" class="dashboard-nav-item"><i class="bi bi-question-circle"></i> |  C</a>
+    <a (click)="openMainMenu(menu.BASH)" class="dashboard-nav-item"><i class="bi bi-archive"></i> |  Bash</a>
+    <a (click)="openMainMenu(menu.LINUX)" class="dashboard-nav-item"><i class="bi bi-info-circle"></i>|  Linux</a>
+    <div class="nav-item-divider"></div>
+    <a (click)="openMainMenu(menu.ADMIN)" class="dashboard-nav-item"><i class="bi bi-person-circle"></i>|  Admin</a>
+    <div class="date">
+      {{date| date:'dd.MM.yyyy'}}
+    </div>
+  </mat-drawer>
+
+</mat-drawer-container>

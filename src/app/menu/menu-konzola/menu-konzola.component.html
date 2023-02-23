@@ -2,25 +2,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
   <title></title>
 </head>
-<script>const mobileScreen = window.matchMedia("(max-width: 990px )");
-$(document).ready(function () {
-  $(".dashboard-nav-dropdown-toggle").click(function () {
-    $(this).closest(".dashboard-nav-dropdown")
-      .toggleClass("show")
-      .find(".dashboard-nav-dropdown")
-      .removeClass("show");
-    $(this).parent()
-      .siblings()
-      .removeClass("show");
-  });
-  $(".menu-toggle").click(function () {
-    if (mobileScreen.matches) {
-      $(".dashboard-nav").toggleClass("mobile-show");
-    } else {
-      $(".dashboard").toggleClass("dashboard-compact");
-    }
-  });
-});</script>
 <div class='dashboard'>
   <div class="dashboard-nav">
     <header><a class="menu-toggle"><i class="fas fa-bars"></i></a>

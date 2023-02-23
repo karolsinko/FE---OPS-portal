@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent} from './app.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {MenuComponent} from "./menu/menu.component";
+import {MenuComponent} from "./menu/main/menu.component";
 import {AppRoutingModule} from "./app-routing.module";
 import {RouterModule} from "@angular/router";
 import {HttpClientModule} from '@angular/common/http';
@@ -65,6 +65,7 @@ import {QuizBashComponent} from "./quiz/bash/quiz/quiz-bash.component";
 import {QuizBashStrankaComponent} from "./quiz/bash/quiz-stranka/quiz-bash-stranka.component";
 import {QuizCComponent} from "./quiz/c/quiz/quiz-c.component";
 import {QuizCStrankaComponent} from "./quiz/c/quiz-stranka/quiz-c-stranka.component";
+import { MenuCComponent } from './menu/menu-c/menu-c.component';
 
 @NgModule({
   declarations: [
@@ -113,6 +114,7 @@ import {QuizCStrankaComponent} from "./quiz/c/quiz-stranka/quiz-c-stranka.compon
     QuizBashStrankaComponent,
     QuizCComponent,
     QuizCStrankaComponent,
+    MenuCComponent,
 
   ],
     imports: [
