@@ -15,12 +15,10 @@ import {QuizBashComponent} from "./quiz/bash/quiz/quiz-bash.component";
 import {QuizBashStrankaComponent} from "./quiz/bash/quiz-stranka/quiz-bash-stranka.component";
 import {QuizCComponent} from "./quiz/c/quiz/quiz-c.component";
 import {QuizLinuxComponent} from "./quiz/linux/quiz/quiz-linux.component";
+import {MenuLinuxComponent} from "./menu/menu-linux/menu-linux.component";
+import {MenuBashComponent} from "./menu/menu-bash/menu-bash.component";
 
 const routes: Routes = [
-  {
-    path: '',
-    component: MenuComponent
-  },
   {
     path: 'FAQ',
     component: FAQStrankaComponent
@@ -28,15 +26,15 @@ const routes: Routes = [
   //QUIZY
   {
     path: 'quiz/linux',
-    component: QuizLinuxComponent
+    component: QuizLinuxStrankaComponent
   },
   {
     path: 'quiz/c',
-    component: QuizCComponent
+    component: QuizCStrankaComponent
   },
   {
     path: 'quiz/bash',
-    component: QuizBashComponent
+    component: QuizBashStrankaComponent
   },
   //SKRIPTA
   {
@@ -68,10 +66,14 @@ const routes: Routes = [
   },
   //MENU
   {
+    path: '',
+    component: MenuComponent
+  },
+  {
     path: 'c',
     component: MenuCComponent
   },
-  /*{
+  {
     path: 'bash',
     component: MenuBashComponent
   },
@@ -79,8 +81,6 @@ const routes: Routes = [
     path: 'linux',
     component: MenuLinuxComponent
   }
-  */
-
 ];
 
 

@@ -1,0 +1,48 @@
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head> <!--
+<a class='dashboard-toolbar' mat-icon-button (click)="drawer.toggle()"><h1 class="bi bi-list"></h1></a>
+  <mat-drawer-container autosize>
+    <mat-drawer #drawer mode="side" class="dashboard-nav" opened>
+    <header >
+      <a (click)="openMenu(menu.HOME)" class="brand-logo"><i class="bi bi-journal-code"></i><span>| Operačné systémy 1 </span></a>
+    </header>
+      <a (click)="openMenu(menu.QUIZ)" class="dashboard-nav-item"><i class="bi bi-question-circle"></i> |  Quiz</a>
+      <a (click)="showFiller = !showFiller" class="dashboard-nav-item"><i class="bi bi-code-square"></i> |  Cvičenia</a>
+      <div *ngIf="showFiller" class="nav-item-divider"></div>
+        <a *ngIf="showFiller" (click)="openMenu(menu.C)" class="dashboard-nav-item"><i class="bi bi-terminal"></i>|  C cvičenia</a>
+        <a *ngIf="showFiller" (click)="openMenu(menu.LINUX)" class="dashboard-nav-item"><i class="bi bi-terminal"></i>|  Linux cvičenia</a>
+        <a *ngIf="showFiller" (click)="openMenu(menu.BASH)" class="dashboard-nav-item"><i class="bi bi-terminal"></i>|  Bash cvičenia</a>
+      <div *ngIf="showFiller" class="nav-item-divider"></div>
+      <a (click)="openMenu(menu.SKRIPTA)" class="dashboard-nav-item"><i class="bi bi-archive"></i> |  OPSY</a>
+      <a (click)="openMenu(menu.FAQ)" class="dashboard-nav-item"><i class="bi bi-info-circle"></i>|  FAQ</a>
+      <div class="nav-item-divider"></div>
+      <a (click)="openMenu(menu.ADMIN)" class="dashboard-nav-item"><i class="bi bi-person-circle"></i>|  Admin</a>
+      <div class="date">
+      {{date| date:'dd.MM.yyyy'}}
+    </div>
+    </mat-drawer>
+
+  </mat-drawer-container> -->
+<a class='dashboard-toolbar' mat-icon-button (click)="drawer.toggle()"><h1 class="bi bi-list"></h1></a>
+<mat-drawer-container autosize>
+  <mat-drawer #drawer mode="side" class="dashboard-nav" opened>
+    <header >
+      <a (click)="openMenu(menu.HOME)" class="brand-logo"><i class="bi bi-journal-code"></i><span>| Operačné systémy 1 </span></a>
+    </header>
+    <a (click)="openMenu(menu.QUIZC)" class="dashboard-nav-item"><i class="bi bi-question-circle"></i> |  Quiz</a>
+    <a (click)="openMenu(menu.CVICENIAC)" class="dashboard-nav-item"><i class="bi bi-archive"></i> |  Cvičenia</a>
+    <a (click)="openMenu(menu.SKRIPTAC)" class="dashboard-nav-item"><i class="bi bi-info-circle"></i>|  Skriptá</a>
+    <div class="nav-item-divider"></div>
+    <div class="date">
+      {{date| date:'dd.MM.yyyy'}}
+    </div>
+  </mat-drawer>
+
+</mat-drawer-container>

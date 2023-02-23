@@ -66,6 +66,8 @@ import {QuizBashStrankaComponent} from "./quiz/bash/quiz-stranka/quiz-bash-stran
 import {QuizCComponent} from "./quiz/c/quiz/quiz-c.component";
 import {QuizCStrankaComponent} from "./quiz/c/quiz-stranka/quiz-c-stranka.component";
 import { MenuCComponent } from './menu/menu-c/menu-c.component';
+import { MenuLinuxComponent } from './menu/menu-linux/menu-linux.component';
+import { MenuBashComponent } from './menu/menu-bash/menu-bash.component';
 
 @NgModule({
   declarations: [
@@ -115,6 +117,8 @@ import { MenuCComponent } from './menu/menu-c/menu-c.component';
     QuizCComponent,
     QuizCStrankaComponent,
     MenuCComponent,
+    MenuLinuxComponent,
+    MenuBashComponent,
 
   ],
     imports: [
