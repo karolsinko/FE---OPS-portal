@@ -17,8 +17,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {SkriptaFormularComponent} from './skripta/skripta-formular/skripta-formular.component';
 import {SkriptaStrankaComponent} from './skripta/skripta-stranka/skripta-stranka.component';
 import {SkriptaZoznamComponent} from './skripta/skripta-zoznam/skripta-zoznam.component';
-import {QuizStrankaComponent} from './quiz/linux/quiz-stranka/quiz-stranka.component';
-import {QuizComponent} from './quiz/linux/quiz/quiz.component';
+import {QuizLinuxStrankaComponent} from './quiz/linux/quiz-stranka/quiz-linux-stranka.component';
+import {QuizLinuxComponent} from './quiz/linux/quiz/quiz-linux.component';
 import {FAQStrankaComponent} from './FAQ/faq-stranka/faq-stranka.component';
 import {MatCardModule} from "@angular/material/card";
 import {LinuxStrankaComponent} from './cvicenia/linux/linux-stranka/linux-stranka.component';
@@ -61,6 +61,10 @@ import {MatDividerModule} from "@angular/material/divider";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatSortModule} from "@angular/material/sort";
+import {QuizBashComponent} from "./quiz/bash/quiz/quiz-bash.component";
+import {QuizBashStrankaComponent} from "./quiz/bash/quiz-stranka/quiz-bash-stranka.component";
+import {QuizCComponent} from "./quiz/c/quiz/quiz-c.component";
+import {QuizCStrankaComponent} from "./quiz/c/quiz-stranka/quiz-c-stranka.component";
 
 @NgModule({
   declarations: [
@@ -72,8 +76,8 @@ import {MatSortModule} from "@angular/material/sort";
     SkriptaFormularComponent,
     SkriptaStrankaComponent,
     SkriptaZoznamComponent,
-    QuizStrankaComponent,
-    QuizComponent,
+    QuizLinuxStrankaComponent,
+    QuizLinuxComponent,
     FAQStrankaComponent,
     LinuxStrankaComponent,
     CStrankaComponent,
@@ -103,7 +107,13 @@ import {MatSortModule} from "@angular/material/sort";
     KonzolaFormularQuizComponent,
     KonzolaZoznamQuizComponent,
     KonzolaStrankaQuizComponent,
-    QuizComponent,
+    QuizLinuxComponent,
+    QuizLinuxStrankaComponent,
+    QuizBashComponent,
+    QuizBashStrankaComponent,
+    QuizCComponent,
+    QuizCStrankaComponent,
+
   ],
     imports: [
         BrowserModule,

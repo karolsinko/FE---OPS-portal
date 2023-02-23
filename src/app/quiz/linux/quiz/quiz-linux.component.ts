@@ -1,18 +1,18 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {zoznamQuizov} from "../../../models/quiz.model";
+import {zoznamQuizovLinux} from "../../../models/quiz.model";
 import {Router} from "@angular/router";
 import {QuizLinuxService} from "../../../../Service/Quiz/quizLinux-service";
 
 @Component({
-  selector: 'app-quiz',
-  templateUrl: './quiz.component.html',
-  styleUrls: ['./quiz.component.css']
+  selector: 'app-quiz-linux',
+  templateUrl: './quiz-linux.component.html',
+  styleUrls: ['./quiz-linux.component.css']
 })
 
-export class QuizComponent implements OnInit {
+export class QuizLinuxComponent implements OnInit {
 
   @Input()
-  quiz: zoznamQuizov[] = [];
+  quiz: zoznamQuizovLinux[] = [];
 
   currentStepIndex = 0;
   score = 0;

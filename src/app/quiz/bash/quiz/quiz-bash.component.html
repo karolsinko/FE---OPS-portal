@@ -1,0 +1,63 @@
+<table class="table">
+  <div *ngFor="let quiz of quiz; let i = index">
+    <div class="modal-container" id="score-modal">
+
+      <div class="modal-content-container">
+
+        <h1>Gratulujem, dokončil si quiz</h1>
+
+        <div class="grade-details">
+          <p>Pokusy : {{pocetPokusov}}</p>
+          <p>Skóre : {{score}}</p>
+          <p>Počet chýb : {{pocetChyb}}</p>
+          <p ><span id="remarks"></span></p>
+        </div>
+        <button (click)="closeScoreModal()"><i class="bi bi-send"></i><span>| Continue</span></button>
+      </div>
+    </div>
+    <div *ngIf="currentStepIndex === i">
+
+      <div class="game-quiz-container">
+
+        <div class="game-details-container">
+          <h1>Score : <span id="player-score"></span>{{score}} / {{koniec}}</h1>
+          <h1> Question : <span id="question-number"></span>{{currentStepIndex}} / {{koniec}}</h1>
+        </div>
+
+        <div class="game-question-container">
+          <h1 id="display-question">{{quiz.question}}</h1>
+        </div>
+
+        <div class="game-options-container">
+
+        <span>
+        <input id="option-one" [(ngModel)]="userAnswer" name="userAnswer" type="radio" [value]="quiz.option1">
+          <label for="option-one" class="option" id="option-one-label">{{quiz.option1}}
+        </label>
+        </span>
+
+          <span>
+        <input id="option-two" [(ngModel)]="userAnswer" name="userAnswer" type="radio" [value]="quiz.option2">
+          <label for="option-two" class="option" id="option-two-label">{{quiz.option2}}
+        </label>
+          </span>
+
+          <span>
+        <input id="option-three" [(ngModel)]="userAnswer" name="userAnswer" type="radio" [value]="quiz.option3">
+          <label for="option-three" class="option" id="option-three-label">{{quiz.option3}}
+        </label>
+          </span>
+
+          <span>
+        <input id="option-four" [(ngModel)]="userAnswer" name="userAnswer" type="radio" [value]="quiz.option4">
+          <label for="option-four" class="option" id="option-four-label">{{quiz.option4}}
+        </label>
+          </span>
+        </div>
+
+        <button id="submit-answers" (click)="submitAnswers()"><i class="bi bi-send"></i><span>| Potvrď odpoveď</span></button>
+
+      </div>
+    </div>
+  </div>
+</table>

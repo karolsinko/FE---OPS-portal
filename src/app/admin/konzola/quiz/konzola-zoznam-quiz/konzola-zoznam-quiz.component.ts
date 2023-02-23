@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {zoznamQuizov} from "../../../../models/quiz.model";
+import {zoznamQuizovLinux} from "../../../../models/quiz.model";
 
 @Component({
   selector: 'app-konzola-zoznam-quiz',
@@ -12,7 +12,7 @@ export class KonzolaZoznamQuizComponent implements OnInit {
 
   //Quizy
   @Input()
-  quiz: zoznamQuizov[] = [];
+  quiz: zoznamQuizovLinux[] = [];
 
   @Output()
   upravQuizy: EventEmitter<number> = new EventEmitter<number>();

@@ -1,18 +1,18 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {quiz, zoznamQuizov} from "../../app/models/quiz.model";
+import {quiz, zoznamQuizovBash, zoznamQuizovLinux} from "../../app/models/quiz.model";
 
 @Injectable({
   providedIn: 'root'
 })
-export class QuizLinuxService {
+export class QuizBashService {
   private apiUrl = 'http://localhost:8080/api/quiz/bash';
 
   constructor(private http: HttpClient) { }
 
-  getQuizy(): Observable<zoznamQuizov[]> {
-    return this.http.get<zoznamQuizov[]>(`${this.apiUrl}`);
+  getQuizy(): Observable<zoznamQuizovBash[]> {
+    return this.http.get<zoznamQuizovBash[]>(`${this.apiUrl}`);
   }
 
   getQuizPodlaId(id : number): Observable<quiz> {

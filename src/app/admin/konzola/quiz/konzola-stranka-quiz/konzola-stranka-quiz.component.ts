@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {quiz, zoznamQuizov} from "../../../../models/quiz.model";
+import {quiz, zoznamQuizovLinux} from "../../../../models/quiz.model";
 import {QuizLinuxService} from "../../../../../Service/Quiz/quizLinux-service";
 
 @Component({
@@ -18,7 +18,7 @@ export class KonzolaStrankaQuizComponent implements OnInit {
 
   //Admin konzola Quiz
   @Input()
-  quiz: zoznamQuizov[] = [];
+  quiz: zoznamQuizovLinux[] = [];
 
   quizNaUpravu?: quiz;
 
