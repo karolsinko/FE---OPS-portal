@@ -1,21 +1,26 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {zoznamSkript} from "../../models/skripta.model";
+import {Router} from "@angular/router";
+import {zoznamSkriptLinux} from "../../../models/skripta.model";
 
 @Component({
-  selector: 'app-skripta-zoznam',
-  templateUrl: './skripta-zoznam.component.html',
-  styleUrls: ['./skripta-zoznam.component.css']
+  selector: 'app-skripta-formular',
+  templateUrl: './skripta-formular.component.html',
+  styleUrls: ['./skripta-formular.component.css']
 })
-export class SkriptaZoznamComponent implements OnInit {
+export class SkriptaFormularComponent implements OnInit {
 
   currentStepIndex = 0;
 
-  constructor() {
+  constructor(private router: Router) {
 
   }
 
   @Input()
-  skripta: zoznamSkript[] = [];
+  skripta: zoznamSkriptLinux[] = [];
+
+  chodSpat(): void {
+    this.router.navigate(['']);
+  }
 
   previousStep() {
     if (this.currentStepIndex > 0) {
@@ -32,7 +37,7 @@ export class SkriptaZoznamComponent implements OnInit {
   }
 
   updateStepIndicator() {
-    const stepIndicatorEls = document.querySelectorAll(".step-indicator");
+    const stepIndicatorEls = document.querySelectorAll(".step-indicator-1");
     stepIndicatorEls.forEach((el, index) => {
       if (index === this.currentStepIndex) {
         el.classList.add("active");
@@ -42,7 +47,7 @@ export class SkriptaZoznamComponent implements OnInit {
     });
   }
 
-
   ngOnInit(): void {
   }
+
 }

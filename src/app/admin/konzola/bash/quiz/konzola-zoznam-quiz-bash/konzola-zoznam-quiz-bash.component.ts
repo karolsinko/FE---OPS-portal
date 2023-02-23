@@ -1,18 +1,19 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {zoznamQuizovC} from "../../../../../models/quiz.model";
+import {zoznamQuizovBash} from "../../../../../models/quiz.model";
 
 @Component({
-  selector: 'app-konzola-zoznam-quiz-c',
-  templateUrl: './konzola-zoznam-quiz-c.component.html',
-  styleUrls: ['./konzola-zoznam-quiz-c.component.css']
+  selector: 'app-konzola-zoznam-quiz-bash',
+  templateUrl: './konzola-zoznam-quiz-bash.component.html',
+  styleUrls: ['./konzola-zoznam-quiz-bash.component.css']
 })
-export class KonzolaZoznamQuizCComponent implements OnInit {
+export class KonzolaZoznamQuizBashComponent implements OnInit {
+
   constructor() {
   }
 
   //Quizy
   @Input()
-  quiz: zoznamQuizovC[] = [];
+  quiz: zoznamQuizovBash[] = [];
 
   @Output()
   upravQuizy: EventEmitter<number> = new EventEmitter<number>();

@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {skripta, zoznamSkript} from "../../../../../models/skripta.model";
+import {skripta, zoznamSkriptLinux} from "../../../../../models/skripta.model";
 import {SkriptaLinuxService} from "../../../../../../Service/Skripta/skriptaLinux-service";
 
 @Component({
@@ -18,7 +18,7 @@ export class KonzolaStrankaSkriptyComponent implements OnInit {
 
   //Admin konzola
   @Input()
-  skripta: zoznamSkript[] = [];
+  skripta: zoznamSkriptLinux[] = [];
 
   skriptNaUpravu?: skripta;
 

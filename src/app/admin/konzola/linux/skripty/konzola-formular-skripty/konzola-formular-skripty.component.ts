@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
-import {zoznamSkript} from "../../../../../models/skripta.model";
+import {zoznamSkriptLinux} from "../../../../../models/skripta.model";
 
 @Component({
   selector: 'app-konzola-formular-skripty',
@@ -10,7 +10,7 @@ import {zoznamSkript} from "../../../../../models/skripta.model";
 export class KonzolaFormularSkriptyComponent implements OnInit {
 //Skripty
   @Input()
-  set skripty(data: zoznamSkript | undefined){
+  set skripty(data: zoznamSkriptLinux | undefined){
     if (data) {
       this.fillForm(data);
     }
@@ -18,10 +18,10 @@ export class KonzolaFormularSkriptyComponent implements OnInit {
   form: FormGroup;
 
   @Output()
-  pridajSkripty = new EventEmitter<zoznamSkript>();
+  pridajSkripty = new EventEmitter<zoznamSkriptLinux>();
 
   @Output()
-  upravSkripty = new EventEmitter<zoznamSkript>();
+  upravSkripty = new EventEmitter<zoznamSkriptLinux>();
 
   constructor() {
     this.form = new FormGroup({
@@ -34,13 +34,12 @@ export class KonzolaFormularSkriptyComponent implements OnInit {
     });
   }
 
-  private fillForm(zoznamSkript: zoznamSkript): void {
+  private fillForm(zoznamSkript: zoznamSkriptLinux): void {
     this.form.controls['id'].setValue(zoznamSkript.id);
     this.form.controls['commands'].setValue(zoznamSkript.commands);
     this.form.controls['content'].setValue(zoznamSkript.content);
     this.form.controls['content1'].setValue(zoznamSkript.content1);
     this.form.controls['explain'].setValue(zoznamSkript.explain);
-    this.form.controls['scripts'].setValue(zoznamSkript.scripts);
   }
 
   public pridaj(): void {

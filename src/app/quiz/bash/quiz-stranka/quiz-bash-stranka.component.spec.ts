@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { QuizBashStrankaComponent } from './quiz-bash-stranka.component';
+import {QuizBashStrankaComponent} from './quiz-bash-stranka.component';
 
 describe('QuizStrankaComponent', () => {
   let component: QuizBashStrankaComponent;

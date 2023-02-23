@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {zoznamSkript} from "../../../../../models/skripta.model";
+import {zoznamSkriptLinux} from "../../../../../models/skripta.model";
 import {Router} from "@angular/router";
 import {SkriptaLinuxService} from "../../../../../../Service/Skripta/skriptaLinux-service";
 
@@ -15,7 +15,7 @@ export class KonzolaZoznamSkriptyComponent implements OnInit {
 
   //Skripty
   @Input()
-  skripty: zoznamSkript[] = [];
+  skripty: zoznamSkriptLinux[] = [];
 
   @Output()
   upravSkripty: EventEmitter<number> = new EventEmitter<number>();

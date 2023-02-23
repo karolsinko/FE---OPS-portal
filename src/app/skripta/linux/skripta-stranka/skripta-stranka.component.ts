@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {zoznamSkript} from "../../models/skripta.model";
-import {SkriptaLinuxService} from "../../../Service/Skripta/skriptaLinux-service";
+import {zoznamSkriptLinux} from "../../../models/skripta.model";
+import {SkriptaLinuxService} from "../../../../Service/Skripta/skriptaLinux-service";
 
 @Component({
   selector: 'app-skripta-stranka',
@@ -18,7 +18,7 @@ export class SkriptaStrankaComponent implements OnInit {
     this.pdf.width = "auto";
   }
 
-  skripta: zoznamSkript[] = [];
+  skripta: zoznamSkriptLinux[] = [];
 
   chodSpat(): void {
     this.router.navigate(['']);

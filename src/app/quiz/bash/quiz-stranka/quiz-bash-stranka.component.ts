@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {zoznamQuizovBash, zoznamQuizovLinux} from "../../../models/quiz.model";
+import {zoznamQuizovBash} from "../../../models/quiz.model";
 import {QuizBashService} from "../../../../Service/Quiz/quizBash-service";
 
 @Component({

@@ -14,9 +14,9 @@ import {MatInputModule} from "@angular/material/input";
 import {MatTableModule} from "@angular/material/table";
 import {MatIconModule} from "@angular/material/icon";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {SkriptaFormularComponent} from './skripta/skripta-formular/skripta-formular.component';
-import {SkriptaStrankaComponent} from './skripta/skripta-stranka/skripta-stranka.component';
-import {SkriptaZoznamComponent} from './skripta/skripta-zoznam/skripta-zoznam.component';
+import {SkriptaFormularComponent} from './skripta/linux/skripta-formular/skripta-formular.component';
+import {SkriptaStrankaComponent} from './skripta/linux/skripta-stranka/skripta-stranka.component';
+import {SkriptaZoznamComponent} from './skripta/linux/skripta-zoznam/skripta-zoznam.component';
 import {QuizLinuxStrankaComponent} from './quiz/linux/quiz-stranka/quiz-linux-stranka.component';
 import {QuizLinuxComponent} from './quiz/linux/quiz/quiz-linux.component';
 import {FAQStrankaComponent} from './FAQ/faq-stranka/faq-stranka.component';
@@ -38,10 +38,15 @@ import {MenuKonzolaComponent} from './menu/menu-konzola/menu-konzola.component';
 import {KonzolaFormularCComponent} from './admin/konzola/c/cvicenia/konzola-formular-c/konzola-formular-c.component';
 import {KonzolaStrankaCComponent} from './admin/konzola/c/cvicenia/konzola-stranka-c/konzola-stranka-c.component';
 import {KonzolaZoznamCComponent} from './admin/konzola/c/cvicenia/konzola-zoznam-c/konzola-zoznam-c.component';
-import {KonzolaFormularBashComponent} from './admin/konzola/bash/cvicenia/konzola-formular-bash/konzola-formular-bash.component';
-import {KonzolaStrankaBashComponent} from './admin/konzola/bash/cvicenia/konzola-stranka-bash/konzola-stranka-bash.component';
-import {KonzolaZoznamBashComponent} from './admin/konzola/bash/cvicenia/konzola-zoznam-bash/konzola-zoznam-bash.component';
-import {SkriptaPoznamkyComponent} from './skripta/skripta-poznamky/skripta-poznamky.component';
+import {
+  KonzolaFormularBashComponent
+} from './admin/konzola/bash/cvicenia/konzola-formular-bash/konzola-formular-bash.component';
+import {
+  KonzolaStrankaBashComponent
+} from './admin/konzola/bash/cvicenia/konzola-stranka-bash/konzola-stranka-bash.component';
+import {
+  KonzolaZoznamBashComponent
+} from './admin/konzola/bash/cvicenia/konzola-zoznam-bash/konzola-zoznam-bash.component';
 import {
   KonzolaFormularSkriptyComponent
 } from './admin/konzola/linux/skripty/konzola-formular-skripty/konzola-formular-skripty.component';
@@ -52,9 +57,13 @@ import {
   KonzolaStrankaSkriptyComponent
 } from './admin/konzola/linux/skripty/konzola-stranka-skripty/konzola-stranka-skripty.component';
 import {EditorComponent} from './admin/konzola/editor/editor.component';
-import {KonzolaFormularQuizComponent} from './admin/konzola/linux/quiz/konzola-formular-quiz/konzola-formular-quiz.component';
+import {
+  KonzolaFormularQuizComponent
+} from './admin/konzola/linux/quiz/konzola-formular-quiz/konzola-formular-quiz.component';
 import {KonzolaZoznamQuizComponent} from './admin/konzola/linux/quiz/konzola-zoznam-quiz/konzola-zoznam-quiz.component';
-import {KonzolaStrankaQuizComponent} from './admin/konzola/linux/quiz/konzola-stranka-quiz/konzola-stranka-quiz.component';
+import {
+  KonzolaStrankaQuizComponent
+} from './admin/konzola/linux/quiz/konzola-stranka-quiz/konzola-stranka-quiz.component';
 import {MatRadioModule} from "@angular/material/radio";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatDividerModule} from "@angular/material/divider";
@@ -65,9 +74,9 @@ import {QuizBashComponent} from "./quiz/bash/quiz/quiz-bash.component";
 import {QuizBashStrankaComponent} from "./quiz/bash/quiz-stranka/quiz-bash-stranka.component";
 import {QuizCComponent} from "./quiz/c/quiz/quiz-c.component";
 import {QuizCStrankaComponent} from "./quiz/c/quiz-stranka/quiz-c-stranka.component";
-import { MenuCComponent } from './menu/menu-c/menu-c.component';
-import { MenuLinuxComponent } from './menu/menu-linux/menu-linux.component';
-import { MenuBashComponent } from './menu/menu-bash/menu-bash.component';
+import {MenuCComponent} from './menu/menu-c/menu-c.component';
+import {MenuLinuxComponent} from './menu/menu-linux/menu-linux.component';
+import {MenuBashComponent} from './menu/menu-bash/menu-bash.component';
 import {
   KonzolaZoznamQuizCComponent
 } from "./admin/konzola/c/quiz/konzola-zoznam-quiz-c/konzola-zoznam-quiz-c.component";
@@ -77,9 +86,15 @@ import {
 import {
   KonzolaFormularQuizCComponent
 } from "./admin/konzola/c/quiz/konzola-formular-quiz-c/konzola-formular-quiz-c.component";
-import { KonzolaFormularQuizBashComponent } from './admin/konzola/bash/quiz/konzola-formular-quiz-bash/konzola-formular-quiz-bash.component';
-import { KonzolaZoznamQuizBashComponent } from './admin/konzola/bash/quiz/konzola-zoznam-quiz-bash/konzola-zoznam-quiz-bash.component';
-import { KonzolaStrankaQuizBashComponent } from './admin/konzola/bash/quiz/konzola-stranka-quiz-bash/konzola-stranka-quiz-bash.component';
+import {
+  KonzolaFormularQuizBashComponent
+} from './admin/konzola/bash/quiz/konzola-formular-quiz-bash/konzola-formular-quiz-bash.component';
+import {
+  KonzolaZoznamQuizBashComponent
+} from './admin/konzola/bash/quiz/konzola-zoznam-quiz-bash/konzola-zoznam-quiz-bash.component';
+import {
+  KonzolaStrankaQuizBashComponent
+} from './admin/konzola/bash/quiz/konzola-stranka-quiz-bash/konzola-stranka-quiz-bash.component';
 
 @NgModule({
   declarations: [
@@ -114,7 +129,6 @@ import { KonzolaStrankaQuizBashComponent } from './admin/konzola/bash/quiz/konzo
     KonzolaFormularBashComponent,
     KonzolaStrankaBashComponent,
     KonzolaZoznamBashComponent,
-    SkriptaPoznamkyComponent,
     KonzolaFormularSkriptyComponent,
     KonzolaZoznamSkriptyComponent,
     KonzolaStrankaSkriptyComponent,
@@ -136,7 +150,8 @@ import { KonzolaStrankaQuizBashComponent } from './admin/konzola/bash/quiz/konzo
     KonzolaStrankaQuizCComponent,
     KonzolaFormularQuizBashComponent,
     KonzolaZoznamQuizBashComponent,
-    KonzolaStrankaQuizBashComponent
+    KonzolaStrankaQuizBashComponent,
+
   ],
     imports: [
         BrowserModule,

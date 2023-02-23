@@ -1,14 +1,14 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {quiz, zoznamQuizovC} from "../../../../../models/quiz.model";
 import {QuizCService} from "../../../../../../Service/Quiz/quizC-service";
+import {quiz, zoznamQuizovBash} from "../../../../../models/quiz.model";
 
 @Component({
-  selector: 'app-konzola-stranka-quiz-c',
-  templateUrl: './konzola-stranka-quiz-c.component.html',
-  styleUrls: ['./konzola-stranka-quiz-c.component.css']
+  selector: 'app-konzola-stranka-quiz-bash',
+  templateUrl: './konzola-stranka-quiz-bash.component.html',
+  styleUrls: ['./konzola-stranka-quiz-bash.component.css']
 })
-export class KonzolaStrankaQuizCComponent implements OnInit {
+export class KonzolaStrankaQuizBashComponent implements OnInit {
 
   constructor(private router: Router, private quizService: QuizCService) { }
 
@@ -18,7 +18,7 @@ export class KonzolaStrankaQuizCComponent implements OnInit {
 
   //Admin konzola Quiz
   @Input()
-  quiz: zoznamQuizovC[] = [];
+  quiz: zoznamQuizovBash[] = [];
 
   quizNaUpravu?: quiz;
 

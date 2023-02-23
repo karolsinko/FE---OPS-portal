@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 
 enum MENU {   HOME, QUIZBASH,SKRIPTABASH, CVICENIABASH}
@@ -37,5 +37,9 @@ export class MenuBashComponent implements OnInit {
   }
 
   showFiller = false;
+
+  chodSpat(): void {
+    this.router.navigate(['']);
+  }
 
 }

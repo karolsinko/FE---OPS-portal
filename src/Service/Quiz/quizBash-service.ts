@@ -1,7 +1,7 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {quiz, zoznamQuizovBash, zoznamQuizovLinux} from "../../app/models/quiz.model";
+import {quiz, zoznamQuizovBash} from "../../app/models/quiz.model";
 
 @Injectable({
   providedIn: 'root'

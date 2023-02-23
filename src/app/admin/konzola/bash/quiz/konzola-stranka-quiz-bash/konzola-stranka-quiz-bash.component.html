@@ -1,0 +1,12 @@
+<app-konzola-formular-quiz
+  [quiz]="quizNaUpravu"
+  (pridajQuiz)="pridaj($event)"
+  (upravQuiz)="uprav($event)">
+
+</app-konzola-formular-quiz>
+<app-konzola-zoznam-quiz
+  [quiz]="quiz"
+  (upravQuizy)="upravZoZoznamu($event)"
+  (vymazQuizy)="zmazZoZoznamu($event)">
+
+</app-konzola-zoznam-quiz>

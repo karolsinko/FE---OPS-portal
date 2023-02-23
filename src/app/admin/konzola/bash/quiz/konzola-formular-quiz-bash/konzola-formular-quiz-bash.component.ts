@@ -1,17 +1,18 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {zoznamQuizovBash} from "../../../../../models/quiz.model";
 import {FormControl, FormGroup} from "@angular/forms";
-import {zoznamQuizovC} from "../../../../../models/quiz.model";
 
 @Component({
-  selector: 'app-konzola-formular-quiz-c',
-  templateUrl: './konzola-formular-quiz-c.component.html',
-  styleUrls: ['./konzola-formular-quiz-c.component.css']
+  selector: 'app-konzola-formular-quiz-bash',
+  templateUrl: './konzola-formular-quiz-bash.component.html',
+  styleUrls: ['./konzola-formular-quiz-bash.component.css']
 })
-export class KonzolaFormularQuizCComponent implements OnInit {
+export class KonzolaFormularQuizBashComponent implements OnInit {
+
 
 //Quiz
   @Input()
-  set quiz(data: zoznamQuizovC | undefined){
+  set quiz(data: zoznamQuizovBash | undefined){
     if (data) {
       this.fillForm(data);
     }
@@ -19,10 +20,10 @@ export class KonzolaFormularQuizCComponent implements OnInit {
   form: FormGroup;
 
   @Output()
-  pridajQuiz = new EventEmitter<zoznamQuizovC>();
+  pridajQuiz = new EventEmitter<zoznamQuizovBash>();
 
   @Output()
-  upravQuiz = new EventEmitter<zoznamQuizovC>();
+  upravQuiz = new EventEmitter<zoznamQuizovBash>();
 
   constructor() {
     this.form = new FormGroup({
@@ -36,7 +37,7 @@ export class KonzolaFormularQuizCComponent implements OnInit {
     });
   }
 
-  private fillForm(zoznamQuizov: zoznamQuizovC): void {
+  private fillForm(zoznamQuizov: zoznamQuizovBash): void {
     this.form.controls['id'].setValue(zoznamQuizov.id);
     this.form.controls['question'].setValue(zoznamQuizov.question);
     this.form.controls['solution'].setValue(zoznamQuizov.solution);

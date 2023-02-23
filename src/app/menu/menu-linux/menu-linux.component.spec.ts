@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { MenuLinuxComponent } from './menu-linux.component';
+import {MenuLinuxComponent} from './menu-linux.component';
 
 describe('MenuLinuxComponent', () => {
   let component: MenuLinuxComponent;

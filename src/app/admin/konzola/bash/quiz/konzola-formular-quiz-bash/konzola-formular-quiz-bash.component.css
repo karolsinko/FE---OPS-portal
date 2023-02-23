@@ -7,18 +7,16 @@ table{
   text-align: justify-all;
 }
 td{
+  border: 0;
   width: auto;
   color: white;
 }
 th{
-  color: white;
+  border:0;
   width: auto;
-  -webkit-transition: color 2s;
-  transition: color 2s;
+  color: white;
 }
-th:hover {
-  color: #D6C4EC;
-}
+
 
 /* STRANKA */
 :root {
@@ -224,13 +222,13 @@ h1, .h1 {
 /*   IKONY
 -----------------------------------------
  */
-.bi-question-circle{
+.bi-person{
   color: white;
   float:left;
   font-size: 50px;
   margin-top: -12px;
 }
-.bi-question-circle:hover{
+.bi-person:hover{
   color:#443ea2;
 }
 
@@ -296,32 +294,79 @@ button:hover span:before{
 button:active {
   transform: translateY(5px);
 }
-.step-indicator-container {
-  margin: 0 16px;
-  display: flex;
-  align-content: center;
+
+
+/* LAYOUT
+ --------------------------------------------
+*/
+
+.group        {
+  position:relative;
 }
 
-.step-indicator {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: #D8D8D8;
-  margin-right: 8px;
-}
-
-.step-indicator.active {
+textarea         {
+  display:block;
+  position: relative;
+  width:auto;
+  min-width: 200px;
+  height: auto;
+  border-bottom:1px solid white;
   background-color: #353084;
+  color: white;
 }
 
-.step-content {
-  display: none;
-}
-.step-content {
-  visibility: hidden;
+
+/* LABEL ======================================= */
+label          {
+  color: white;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
 }
 
-.step-content.active {
-  display: block;
-  visibility: visible;
+/* active state */
+textarea:focus ~ label, textarea:valid ~ label    {
+  top:-30px;
+  font-size:20px;
+  color:white;
+}
+
+
+/* active state */
+textarea:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  width:auto;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+textarea:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to  { width:0; background:transparent; }
 }

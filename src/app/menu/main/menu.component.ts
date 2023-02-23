@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {Router} from '@angular/router';
 
 //enum MENU {   HOME, QUIZ,SKRIPTA, CVICENIA, FAQ, ADMIN, C, LINUX,BASH}
-enum MAINMENU { HOME, C, LINUX,BASH, ADMIN}
+enum MAINMENU { HOME, C, LINUX,BASH, ADMIN, FAQ}
 
 @Component({
   selector: 'app-menu',
@@ -48,6 +48,8 @@ export class MenuComponent {
       this.router.navigate(['/bash']);
     }else if(m=== MAINMENU.ADMIN){
       this.router.navigate(['/admin']);
+    }else if(m=== MAINMENU.FAQ){
+      this.router.navigate(['/FAQ']);
     }
   }
 
