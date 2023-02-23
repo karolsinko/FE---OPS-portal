@@ -19,6 +19,7 @@ import {MenuLinuxComponent} from "./menu/menu-linux/menu-linux.component";
 import {MenuBashComponent} from "./menu/menu-bash/menu-bash.component";
 
 const routes: Routes = [
+  //FAQ
   {
     path: 'FAQ',
     component: FAQStrankaComponent
@@ -81,6 +82,8 @@ const routes: Routes = [
     path: 'linux',
     component: MenuLinuxComponent
   }
+  //Konzola
+  //Quizy
 ];
 
 

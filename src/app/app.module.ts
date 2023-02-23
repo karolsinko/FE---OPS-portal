@@ -31,30 +31,30 @@ import {CZoznamComponent} from './cvicenia/c/c-zoznam/c-zoznam.component';
 import {BashFormularComponent} from './cvicenia/bash/bash-formular/bash-formular.component';
 import {BashZoznamComponent} from './cvicenia/bash/bash-zoznam/bash-zoznam.component';
 import {AdminComponent} from './admin/admin.component';
-import {KonzolaComponent} from './admin/konzola/linux/konzola-stranka/konzola.component';
-import {KonzolaFormularComponent} from './admin/konzola/linux/konzola-formular/konzola-formular.component';
-import {KonzolaZoznamComponent} from './admin/konzola/linux/konzola-zoznam/konzola-zoznam.component';
+import {KonzolaComponent} from './admin/konzola/linux/cvicenia/konzola-stranka/konzola.component';
+import {KonzolaFormularComponent} from './admin/konzola/linux/cvicenia/konzola-formular/konzola-formular.component';
+import {KonzolaZoznamComponent} from './admin/konzola/linux/cvicenia/konzola-zoznam/konzola-zoznam.component';
 import {MenuKonzolaComponent} from './menu/menu-konzola/menu-konzola.component';
-import {KonzolaFormularCComponent} from './admin/konzola/c/konzola-formular-c/konzola-formular-c.component';
-import {KonzolaStrankaCComponent} from './admin/konzola/c/konzola-stranka-c/konzola-stranka-c.component';
-import {KonzolaZoznamCComponent} from './admin/konzola/c/konzola-zoznam-c/konzola-zoznam-c.component';
-import {KonzolaFormularBashComponent} from './admin/konzola/bash/konzola-formular-bash/konzola-formular-bash.component';
-import {KonzolaStrankaBashComponent} from './admin/konzola/bash/konzola-stranka-bash/konzola-stranka-bash.component';
-import {KonzolaZoznamBashComponent} from './admin/konzola/bash/konzola-zoznam-bash/konzola-zoznam-bash.component';
+import {KonzolaFormularCComponent} from './admin/konzola/c/cvicenia/konzola-formular-c/konzola-formular-c.component';
+import {KonzolaStrankaCComponent} from './admin/konzola/c/cvicenia/konzola-stranka-c/konzola-stranka-c.component';
+import {KonzolaZoznamCComponent} from './admin/konzola/c/cvicenia/konzola-zoznam-c/konzola-zoznam-c.component';
+import {KonzolaFormularBashComponent} from './admin/konzola/bash/cvicenia/konzola-formular-bash/konzola-formular-bash.component';
+import {KonzolaStrankaBashComponent} from './admin/konzola/bash/cvicenia/konzola-stranka-bash/konzola-stranka-bash.component';
+import {KonzolaZoznamBashComponent} from './admin/konzola/bash/cvicenia/konzola-zoznam-bash/konzola-zoznam-bash.component';
 import {SkriptaPoznamkyComponent} from './skripta/skripta-poznamky/skripta-poznamky.component';
 import {
   KonzolaFormularSkriptyComponent
-} from './admin/konzola/skripty/konzola-formular-skripty/konzola-formular-skripty.component';
+} from './admin/konzola/linux/skripty/konzola-formular-skripty/konzola-formular-skripty.component';
 import {
   KonzolaZoznamSkriptyComponent
-} from './admin/konzola/skripty/konzola-zoznam-skripty/konzola-zoznam-skripty.component';
+} from './admin/konzola/linux/skripty/konzola-zoznam-skripty/konzola-zoznam-skripty.component';
 import {
   KonzolaStrankaSkriptyComponent
-} from './admin/konzola/skripty/konzola-stranka-skripty/konzola-stranka-skripty.component';
+} from './admin/konzola/linux/skripty/konzola-stranka-skripty/konzola-stranka-skripty.component';
 import {EditorComponent} from './admin/konzola/editor/editor.component';
-import {KonzolaFormularQuizComponent} from './admin/konzola/quiz/konzola-formular-quiz/konzola-formular-quiz.component';
-import {KonzolaZoznamQuizComponent} from './admin/konzola/quiz/konzola-zoznam-quiz/konzola-zoznam-quiz.component';
-import {KonzolaStrankaQuizComponent} from './admin/konzola/quiz/konzola-stranka-quiz/konzola-stranka-quiz.component';
+import {KonzolaFormularQuizComponent} from './admin/konzola/linux/quiz/konzola-formular-quiz/konzola-formular-quiz.component';
+import {KonzolaZoznamQuizComponent} from './admin/konzola/linux/quiz/konzola-zoznam-quiz/konzola-zoznam-quiz.component';
+import {KonzolaStrankaQuizComponent} from './admin/konzola/linux/quiz/konzola-stranka-quiz/konzola-stranka-quiz.component';
 import {MatRadioModule} from "@angular/material/radio";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatDividerModule} from "@angular/material/divider";
@@ -68,6 +68,18 @@ import {QuizCStrankaComponent} from "./quiz/c/quiz-stranka/quiz-c-stranka.compon
 import { MenuCComponent } from './menu/menu-c/menu-c.component';
 import { MenuLinuxComponent } from './menu/menu-linux/menu-linux.component';
 import { MenuBashComponent } from './menu/menu-bash/menu-bash.component';
+import {
+  KonzolaZoznamQuizCComponent
+} from "./admin/konzola/c/quiz/konzola-zoznam-quiz-c/konzola-zoznam-quiz-c.component";
+import {
+  KonzolaStrankaQuizCComponent
+} from "./admin/konzola/c/quiz/konzola-stranka-quiz-c/konzola-stranka-quiz-c.component";
+import {
+  KonzolaFormularQuizCComponent
+} from "./admin/konzola/c/quiz/konzola-formular-quiz-c/konzola-formular-quiz-c.component";
+import { KonzolaFormularQuizBashComponent } from './admin/konzola/bash/quiz/konzola-formular-quiz-bash/konzola-formular-quiz-bash.component';
+import { KonzolaZoznamQuizBashComponent } from './admin/konzola/bash/quiz/konzola-zoznam-quiz-bash/konzola-zoznam-quiz-bash.component';
+import { KonzolaStrankaQuizBashComponent } from './admin/konzola/bash/quiz/konzola-stranka-quiz-bash/konzola-stranka-quiz-bash.component';
 
 @NgModule({
   declarations: [
@@ -119,7 +131,12 @@ import { MenuBashComponent } from './menu/menu-bash/menu-bash.component';
     MenuCComponent,
     MenuLinuxComponent,
     MenuBashComponent,
-
+    KonzolaZoznamQuizCComponent,
+    KonzolaFormularQuizCComponent,
+    KonzolaStrankaQuizCComponent,
+    KonzolaFormularQuizBashComponent,
+    KonzolaZoznamQuizBashComponent,
+    KonzolaStrankaQuizBashComponent
   ],
     imports: [
         BrowserModule,
