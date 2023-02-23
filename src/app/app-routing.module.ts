@@ -53,7 +53,7 @@ const routes: Routes = [
   },
   //SKRIPTA
   {
-    path: 'skripta',
+    path: 'skripta/linux',
     component: SkriptaStrankaComponent
   },
   //CVICENIA
