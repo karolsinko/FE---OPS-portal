@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 
-enum MENU { HOME, QUIZ,SKRIPTA, CVICENIA, FAQ, ADMIN,C, LINUX,BASH}
+enum MENU { HOME, QUIZC,SKRIPTAC, CVICENIAC, QUIZBASH,SKRIPTABASH, CVICENIABASH, QUIZLINUX,SKRIPTALINUX, CVICENIALINUX, }
 
 @Component({
   selector: 'app-menu-konzola',
@@ -24,23 +24,28 @@ export class MenuKonzolaComponent implements OnInit {
   public openMenu(m: MENU) {
     if (m === MENU.HOME) {
       this.router.navigate(['/']);
-    }else if(m=== MENU.QUIZ){
-      this.router.navigate(['/quiz']);
-    }else if(m=== MENU.SKRIPTA){
-      this.router.navigate(['/skripta']);
-    }else if(m=== MENU.CVICENIA){
-      this.router.navigate(['/cvicenia']);
-    }else if(m=== MENU.FAQ){
-      this.router.navigate(['/FAQ']);
-    }else if(m=== MENU.ADMIN){
-      this.router.navigate(['/admin']);
-    } else if (m === MENU.C) {
-      this.router.navigate(['/cvicenia/c']);
-    }else if(m=== MENU.LINUX){
-      this.router.navigate(['/cvicenia/linux']);
-    }else if(m=== MENU.BASH){
-      this.router.navigate(['/cvicenia/bash']);
+    }else if(m=== MENU.QUIZC){
+      this.router.navigate(['/admin/konzola/quiz/c']);
+    }else if(m=== MENU.SKRIPTAC){
+      this.router.navigate(['/admin/konzola/skripta/c']);
+    }else if(m=== MENU.CVICENIAC){
+      this.router.navigate(['/admin/konzola/cvicenia/c']);
+    }else if(m=== MENU.QUIZBASH){
+      this.router.navigate(['/admin/konzola/quiz/bash']);
+    }else if(m=== MENU.SKRIPTABASH){
+      this.router.navigate(['/admin/konzola/skripta/bash']);
+    } else if (m === MENU.CVICENIABASH) {
+      this.router.navigate(['/admin/konzola/cvicenia/bash']);
+    }else if(m=== MENU.QUIZLINUX){
+      this.router.navigate(['/admin/konzola/quiz/linux']);
+    }else if(m=== MENU.SKRIPTALINUX){
+      this.router.navigate(['/admin/konzola/skripta/linux']);
+    }else if(m=== MENU.CVICENIALINUX){
+      this.router.navigate(['/admin/konzola/cvicenia/linux']);
+    }
 
 }
-}
+  showFiller = false;
+  showFiller1 = false;
+  showFiller2 = false;
 }
