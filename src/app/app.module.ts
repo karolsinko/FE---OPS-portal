@@ -95,6 +95,12 @@ import {
 import {
   KonzolaStrankaQuizBashComponent
 } from './admin/konzola/bash/quiz/konzola-stranka-quiz-bash/konzola-stranka-quiz-bash.component';
+import { SkriptaFormularCComponent } from './skripta/c/skripta-formular-c/skripta-formular-c.component';
+import { SkriptaStrankaCComponent } from './skripta/c/skripta-stranka-c/skripta-stranka-c.component';
+import { SkriptaZoznamCComponent } from './skripta/c/skripta-zoznam-c/skripta-zoznam-c.component';
+import { SkriptaFormularBashComponent } from './skripta/bash/skripta-formular-bash/skripta-formular-bash.component';
+import { SkriptaZoznamBashComponent } from './skripta/bash/skripta-zoznam-bash/skripta-zoznam-bash.component';
+import { SkriptaStrankaBashComponent } from './skripta/bash/skripta-stranka-bash/skripta-stranka-bash.component';
 
 @NgModule({
   declarations: [
@@ -151,6 +157,12 @@ import {
     KonzolaFormularQuizBashComponent,
     KonzolaZoznamQuizBashComponent,
     KonzolaStrankaQuizBashComponent,
+    SkriptaFormularCComponent,
+    SkriptaStrankaCComponent,
+    SkriptaZoznamCComponent,
+    SkriptaFormularBashComponent,
+    SkriptaZoznamBashComponent,
+    SkriptaStrankaBashComponent,
 
   ],
     imports: [
