@@ -22,8 +22,6 @@ enum MENU {
 export class EditorComponent implements OnInit {
   menu = MENU;
   showFiller = false;
-  showFiller1 = false;
-  showFiller2 = false;
   //pager
   currentStepIndex = 0;
   stepsArray = Array(5).fill(0).map((x, i) => i);

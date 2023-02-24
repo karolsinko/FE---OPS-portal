@@ -15,7 +15,7 @@ export class KonzolaStrankaSkriptyBashComponent implements OnInit {
   skripta: zoznamSkriptBash[] = [];
   skriptNaUpravu?: skripta;
 
-  constructor(private router: Router, private skriptaService: SkriptaBashService) {
+  constructor(private router: Router, private skriptaBashService: SkriptaBashService) {
   }
 
   ngOnInit(): void {
@@ -23,35 +23,35 @@ export class KonzolaStrankaSkriptyBashComponent implements OnInit {
   }
 
   obnovitSkripta(): void {
-    this.skriptaService.getSkripta().subscribe(data => {
+    this.skriptaBashService.getSkripta().subscribe(data => {
       console.log('Prislo: ', data);
       this.skripta = data;
     });
   }
 
   pridaj(skripta: skripta): void {
-    this.skriptaService.createSkript(skripta).subscribe(() => {
+    this.skriptaBashService.createSkript(skripta).subscribe(() => {
       this.obnovitSkripta();
     });
   }
 
   uprav(skripta: skripta): void {
     if (skripta.id !== undefined) {
-      this.skriptaService.updateSkript(skripta.id, skripta).subscribe(() => {
+      this.skriptaBashService.updateSkript(skripta.id, skripta).subscribe(() => {
         this.obnovitSkripta();
       });
     }
   }
 
   upravZoZoznamu(id: number): void {
-    this.skriptaService.getSkriptPodlaId(id).subscribe(data => {
+    this.skriptaBashService.getSkriptPodlaId(id).subscribe(data => {
       this.skriptNaUpravu = data;
     });
   }
 
   zmazZoZoznamu(id: number): void {
     if (confirm('Naozaj chces zmazat?')) {
-      this.skriptaService.deleteSkript(id).subscribe(() => {
+      this.skriptaBashService.deleteSkript(id).subscribe(() => {
         this.obnovitSkripta();
       });
     }

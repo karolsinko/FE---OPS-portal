@@ -8,7 +8,6 @@ import {LinuxStrankaComponent} from "./cvicenia/linux/linux-stranka/linux-strank
 import {BashStrankaComponent} from "./cvicenia/bash/bash-stranka/bash-stranka.component";
 import {MenuComponent} from "./menu/main/menu.component";
 import {AdminComponent} from "./admin/admin.component";
-import {EditorComponent} from "./admin/konzola/editor/editor.component";
 import {MenuCComponent} from "./menu/menu-c/menu-c.component";
 import {QuizCStrankaComponent} from "./quiz/c/quiz-stranka/quiz-c-stranka.component";
 import {QuizBashStrankaComponent} from "./quiz/bash/quiz-stranka/quiz-bash-stranka.component";
@@ -39,6 +38,7 @@ import {
 import {
   KonzolaStrankaSkriptyBashComponent
 } from "./admin/konzola/bash/skripty/konzola-stranka-skripty-bash/konzola-stranka-skripty-bash.component";
+import {MenuKonzolaComponent} from "./menu/menu-konzola/menu-konzola.component";
 
 const routes: Routes = [
   //FAQ
@@ -90,11 +90,6 @@ const routes: Routes = [
     path: 'admin',
     component: AdminComponent
   },
-  {
-    path: 'admin/konzola',
-    component: EditorComponent,
-    canActivate: [AdminComponent]
-  },
   //MENU
   {
     path: '',
@@ -111,6 +106,11 @@ const routes: Routes = [
   {
     path: 'linux',
     component: MenuLinuxComponent
+  },
+  {
+    path: 'admin/konzola',
+    component: MenuKonzolaComponent,
+    canActivate: [AdminComponent]
   },
   //Konzola
   //Quizy

@@ -18,7 +18,7 @@ export class KonzolaZoznamSkriptyBashComponent implements OnInit {
   @Output()
   vymazSkripty: EventEmitter<number> = new EventEmitter<number>();
 
-  constructor(private router: Router, private skriptaService: SkriptaBashService) {
+  constructor(private router: Router, private skriptaBashService: SkriptaBashService) {
   }
 
   uprav(id?: number): void {
@@ -34,7 +34,7 @@ export class KonzolaZoznamSkriptyBashComponent implements OnInit {
   }
 
   obnovitSkripta(): void {
-    this.skriptaService.getSkripta().subscribe(data => {
+    this.skriptaBashService.getSkripta().subscribe(data => {
       this.skripty = data;
       data.sort();
     });
