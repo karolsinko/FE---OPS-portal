@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {zoznamSkriptBash, zoznamSkriptLinux} from "../../../models/skripta.model";
+import {zoznamSkriptBash} from "../../../models/skripta.model";
 
 @Component({
   selector: 'app-skripta-zoznam-bash',

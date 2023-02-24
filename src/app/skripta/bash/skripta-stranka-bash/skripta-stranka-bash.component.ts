@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {SkriptaLinuxService} from "../../../../Service/Skripta/skriptaLinux-service";
-import {zoznamSkriptBash, zoznamSkriptLinux} from "../../../models/skripta.model";
+import {zoznamSkriptBash} from "../../../models/skripta.model";
 
 @Component({
   selector: 'app-skripta-stranka-bash',

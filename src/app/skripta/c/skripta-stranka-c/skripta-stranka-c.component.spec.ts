@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SkriptaStrankaCComponent } from './skripta-stranka-c.component';
+import {SkriptaStrankaCComponent} from './skripta-stranka-c.component';
 
 describe('SkriptaStrankaCComponent', () => {
   let component: SkriptaStrankaCComponent;

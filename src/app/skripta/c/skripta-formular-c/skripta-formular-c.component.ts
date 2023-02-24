@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {zoznamSkriptC, zoznamSkriptLinux} from "../../../models/skripta.model";
+import {zoznamSkriptC} from "../../../models/skripta.model";
 
 @Component({
   selector: 'app-skripta-formular-c',

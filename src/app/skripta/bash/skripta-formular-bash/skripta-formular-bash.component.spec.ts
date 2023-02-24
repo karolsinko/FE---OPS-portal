@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SkriptaFormularBashComponent } from './skripta-formular-bash.component';
+import {SkriptaFormularBashComponent} from './skripta-formular-bash.component';
 
 describe('SkriptaFormularBashComponent', () => {
   let component: SkriptaFormularBashComponent;

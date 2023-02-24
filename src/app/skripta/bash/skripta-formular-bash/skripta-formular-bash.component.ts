@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {zoznamSkriptBash, zoznamSkriptLinux} from "../../../models/skripta.model";
+import {zoznamSkriptBash} from "../../../models/skripta.model";
 
 @Component({
   selector: 'app-skripta-formular-bash',
