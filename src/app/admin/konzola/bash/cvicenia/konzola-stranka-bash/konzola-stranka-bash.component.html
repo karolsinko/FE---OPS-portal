@@ -1,12 +1,38 @@
-<app-konzola-formular-bash
-  [cvicenieBash]="cvicenieNaUpravu"
-  (pridajBashCvicenie)="pridaj($event)"
-  (upravBashCvicenie)="uprav($event)">>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  <title></title>
+</head>
 
-</app-konzola-formular-bash>
-<app-konzola-zoznam-bash
-  [cvicenieBash]="cvicenieBash"
-  (upravBashCvicenie)="upravZoZoznamu($event)"
-  (vymazBashCvicenie)="zmazZoZoznamu($event)">
+<div class='dashboard-app'>
+  <div class='dashboard-nav'>
+    <app-menu-konzola>
+    </app-menu-konzola>
+  </div>
+  <div class='dashboard-content'>
+    <div class='container'>
+      <div class='card'>
+        <div class='card-header'>
+          <i class="bi bi-person"></i><h1>Admin panel - bash cvičenia</h1>
+          <button class="btn btn--action" (click)="chodSpat()"><i class="bi bi-house-door"></i><span> | Späť</span></button>
+          <button (click)="logout()"><i class="bi bi-arrow-bar-left"></i><span> | Logout</span></button>
+        </div>
+        <div class="stepper-container">
+          <div class="stepper-buttons-container">
+            <app-konzola-formular-bash
+              [cvicenieBash]="cvicenieNaUpravu"
+              (pridajBashCvicenie)="pridaj($event)"
+              (upravBashCvicenie)="uprav($event)">>
 
-</app-konzola-zoznam-bash>
+            </app-konzola-formular-bash>
+            <app-konzola-zoznam-bash
+              [cvicenieBash]="cvicenieBash"
+              (upravBashCvicenie)="upravZoZoznamu($event)"
+              (vymazBashCvicenie)="zmazZoZoznamu($event)">
+
+            </app-konzola-zoznam-bash>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
