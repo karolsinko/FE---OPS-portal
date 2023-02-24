@@ -25,6 +25,14 @@ export class MenuKonzolaComponent implements OnInit {
   showFiller1 = false;
   showFiller2 = false;
 
+  logout() {
+    // Vymažte uložený stav prihlásenia
+    localStorage.removeItem('isLoggedIn');
+
+    // Navigate to login page
+    this.router.navigate(['']);
+  }
+
   constructor(private router: Router) {
   }
 

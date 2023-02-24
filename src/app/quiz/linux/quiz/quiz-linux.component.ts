@@ -21,7 +21,6 @@ export class QuizLinuxComponent implements OnInit {
   userAnswer: string;
   koniec = 0;
   level = 0;
-
   constructor(private router: Router, private quizService: QuizLinuxService) {
     this.userAnswer = "";
   }
@@ -33,10 +32,10 @@ export class QuizLinuxComponent implements OnInit {
 
   obnovitQuizy(): void {
     this.quizService.getQuizy().subscribe(data => {
-      const dlzkaLevela = this.chunkArray(this.quiz, 5);
-      console.log(dlzkaLevela);
       this.quiz = data;
       this.koniec = data.length;
+      const dlzkaLevela = this.chunkArray(this.quiz, 5);
+      console.log(dlzkaLevela);
     });
   }
 
