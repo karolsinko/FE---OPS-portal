@@ -10,9 +10,10 @@
           <p>Pokusy : {{pocetPokusov}}</p>
           <p>Skóre : {{score}}</p>
           <p>Počet chýb : {{pocetChyb}}</p>
+          <p>Level : {{level}}</p>
           <p><span id="remarks"></span></p>
         </div>
-        <button (click)="closeScoreModal()"><i class="bi bi-send"></i><span>| Continue</span></button>
+        <button (click)="closeScoreModal()"><i class="bi bi-send"></i><span>| Ďalej</span></button>
       </div>
     </div>
     <div *ngIf="currentStepIndex === i">

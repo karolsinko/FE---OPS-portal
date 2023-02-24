@@ -20,6 +20,7 @@ export class QuizLinuxComponent implements OnInit {
   pocetChyb = 0;
   userAnswer: string;
   koniec = 0;
+  level = 0;
 
   constructor(private router: Router, private quizService: QuizLinuxService) {
     this.userAnswer = "";
@@ -32,6 +33,8 @@ export class QuizLinuxComponent implements OnInit {
 
   obnovitQuizy(): void {
     this.quizService.getQuizy().subscribe(data => {
+      const dlzkaLevela = this.chunkArray(this.quiz, 5);
+      console.log(dlzkaLevela);
       this.quiz = data;
       this.koniec = data.length;
     });
@@ -54,6 +57,7 @@ export class QuizLinuxComponent implements OnInit {
       correct = false;
       return;
     }
+
     console.log(`solution: ${this.quiz[this.currentStepIndex].solution}`);
     console.log(`userAnswer: ${this.userAnswer.trim()}`);
     console.log(`Your score is: ${this.score}`);
@@ -62,6 +66,7 @@ export class QuizLinuxComponent implements OnInit {
       const scoreModal = document.getElementById('score-modal');
       if (scoreModal) {
         scoreModal.style.display = "flex";
+        this.level++;
       }
     }
   }
@@ -72,6 +77,16 @@ export class QuizLinuxComponent implements OnInit {
       scoreModal.style.display = "none";
       this.resetQuiz();
     }
+  }
+
+  chunkArray<T>(arr: T[], chunkSize: number): T[][] {
+    const chunks = [];
+    let i = 0;
+    while (i < arr.length) {
+      chunks.push(arr.slice(i, i + chunkSize));
+      i += chunkSize;
+    }
+    return chunks;
   }
 
   resetQuiz() {
