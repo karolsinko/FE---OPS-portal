@@ -1,0 +1,46 @@
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  <title></title>
+</head>
+<form [formGroup]="form">
+  <table class="table">
+    <th>
+      <div class="group">
+        <textarea type="text" formControlName="content" required></textarea>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Príklad1: </label>
+      </div>
+      <div class="group">
+        <textarea type="text" formControlName="content1" required></textarea>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Príklad2: </label>
+      </div>
+      <div class="group">
+        <textarea type="text" formControlName="explain" required></textarea>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Vysvetlivky: </label>
+      </div>
+      <div class="group">
+        <textarea type="text" formControlName="scripts" required></textarea>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Skriptá: </label>
+      </div>
+      <div class="group">
+        <textarea type="text" formControlName="commands" required></textarea>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Príkazy: </label>
+      </div>
+
+      <div class="group">
+        <button class="btn btn--action" (click)="pridaj()" *ngIf="form.value.id === null"><i class="bi bi-folder-plus"></i><span class="pridaj"></span></button>
+        <button class="btn btn--action" (click)="uprav()" *ngIf="form.value.id !== null"><i class="bi bi-wrench"></i><span class="uprav"></span></button>
+        <button class="btn btn--action" (click)="zrus()"><i class="bi bi-folder-minus"></i><span class="vymaz"></span></button>
+      </div>
+    </th>
+  </table>
+</form>

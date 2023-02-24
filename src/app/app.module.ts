@@ -104,6 +104,9 @@ import {SkriptaStrankaBashComponent} from './skripta/bash/skripta-stranka-bash/s
 import { KonzolaStrankaSkriptyCComponent } from './admin/konzola/c/skripty/konzola-stranka-skripty-c/konzola-stranka-skripty-c.component';
 import { KonzolaFormularSkriptyCComponent } from './admin/konzola/c/skripty/konzola-formular-skripty-c/konzola-formular-skripty-c.component';
 import { KonzolaZoznamSkriptyCComponent } from './admin/konzola/c/skripty/konzola-zoznam-skripty-c/konzola-zoznam-skripty-c.component';
+import { KonzolaFormularSkriptyBashComponent } from './admin/konzola/bash/skripty/konzola-formular-skripty-bash/konzola-formular-skripty-bash.component';
+import { KonzolaStrankaSkriptyBashComponent } from './admin/konzola/bash/skripty/konzola-stranka-skripty-bash/konzola-stranka-skripty-bash.component';
+import { KonzolaZoznamSkriptyBashComponent } from './admin/konzola/bash/skripty/konzola-zoznam-skripty-bash/konzola-zoznam-skripty-bash.component';
 
 @NgModule({
   declarations: [
@@ -169,6 +172,9 @@ import { KonzolaZoznamSkriptyCComponent } from './admin/konzola/c/skripty/konzol
     KonzolaStrankaSkriptyCComponent,
     KonzolaFormularSkriptyCComponent,
     KonzolaZoznamSkriptyCComponent,
+    KonzolaFormularSkriptyBashComponent,
+    KonzolaStrankaSkriptyBashComponent,
+    KonzolaZoznamSkriptyBashComponent,
 
   ],
     imports: [

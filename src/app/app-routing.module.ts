@@ -36,6 +36,9 @@ import {SkriptaStrankaBashComponent} from "./skripta/bash/skripta-stranka-bash/s
 import {
   KonzolaStrankaSkriptyCComponent
 } from "./admin/konzola/c/skripty/konzola-stranka-skripty-c/konzola-stranka-skripty-c.component";
+import {
+  KonzolaStrankaSkriptyBashComponent
+} from "./admin/konzola/bash/skripty/konzola-stranka-skripty-bash/konzola-stranka-skripty-bash.component";
 
 const routes: Routes = [
   //FAQ
@@ -144,6 +147,10 @@ const routes: Routes = [
   {
     path: 'admin/konzola/skripta/c',
     component: KonzolaStrankaSkriptyCComponent
+  },
+  {
+    path: 'admin/konzola/skripta/bash',
+    component: KonzolaStrankaSkriptyBashComponent
   },
 ];
 
