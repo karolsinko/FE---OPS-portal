@@ -32,6 +32,10 @@ th {
   box-sizing: border-box;
 }
 
+textarea {
+  resize: both;
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;

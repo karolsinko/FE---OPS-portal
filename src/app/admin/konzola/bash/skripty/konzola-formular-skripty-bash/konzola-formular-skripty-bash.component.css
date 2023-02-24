@@ -154,7 +154,9 @@ button:active {
   transform: translateY(5px);
 }
 
-
+textarea {
+  resize: both;
+}
 /* LAYOUT
  --------------------------------------------
 */

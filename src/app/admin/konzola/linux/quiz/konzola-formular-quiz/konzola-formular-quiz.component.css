@@ -19,7 +19,9 @@ th {
   color: white;
 }
 
-
+textarea {
+  resize: both;
+}
 /* STRANKA */
 :root {
   --font-family-sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont,

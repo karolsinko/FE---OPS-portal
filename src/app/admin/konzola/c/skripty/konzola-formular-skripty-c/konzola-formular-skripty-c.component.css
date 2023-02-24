@@ -22,7 +22,9 @@
   -ms-flex-align: center;
   align-items: center;
 }
-
+textarea {
+  resize: both;
+}
 /*MOBILNY LAYOUT*/
 @media (min-width: 992px) {
   .dashboard-app {
