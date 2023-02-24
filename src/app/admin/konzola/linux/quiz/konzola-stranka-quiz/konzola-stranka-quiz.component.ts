@@ -56,4 +56,16 @@ export class KonzolaStrankaQuizComponent implements OnInit {
       });
     }
   }
+  chodSpat(): void {
+    this.router.navigate(['']);
+  }
+
+
+  logout() {
+    // Vymažte uložený stav prihlásenia
+    localStorage.removeItem('isLoggedIn');
+
+    // Navigate to login page
+    this.router.navigate(['/admin']);
+  }
 }
