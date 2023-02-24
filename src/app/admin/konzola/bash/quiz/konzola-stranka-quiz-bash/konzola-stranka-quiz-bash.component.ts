@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {QuizCService} from "../../../../../../Service/Quiz/quizC-service";
 import {quiz, zoznamQuizovBash} from "../../../../../models/quiz.model";
+import {QuizBashService} from "../../../../../../Service/Quiz/quizBash-service";
 
 @Component({
   selector: 'app-konzola-stranka-quiz-bash',
@@ -15,7 +15,7 @@ export class KonzolaStrankaQuizBashComponent implements OnInit {
   quiz: zoznamQuizovBash[] = [];
   quizNaUpravu?: quiz;
 
-  constructor(private router: Router, private quizService: QuizCService) {
+  constructor(private router: Router, private quizService: QuizBashService) {
   }
 
   ngOnInit(): void {

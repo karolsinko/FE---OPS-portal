@@ -20,18 +20,18 @@
         </div>
         <div class="stepper-container">
           <div class="stepper-buttons-container">
-            <app-konzola-formular-quiz
+            <app-konzola-formular-quiz-c
               (pridajQuiz)="pridaj($event)"
               (upravQuiz)="uprav($event)"
               [quiz]="quizNaUpravu">
 
-            </app-konzola-formular-quiz>
-            <app-konzola-zoznam-quiz
+            </app-konzola-formular-quiz-c>
+            <app-konzola-zoznam-quiz-c
               (upravQuizy)="upravZoZoznamu($event)"
               (vymazQuizy)="zmazZoZoznamu($event)"
               [quiz]="quiz">
 
-            </app-konzola-zoznam-quiz>
+            </app-konzola-zoznam-quiz-c>
           </div>
         </div>
       </div>
