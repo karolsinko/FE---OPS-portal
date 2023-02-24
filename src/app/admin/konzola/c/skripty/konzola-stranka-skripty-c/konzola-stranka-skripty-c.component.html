@@ -20,18 +20,18 @@
         </div>
         <div class="stepper-container">
           <div class="stepper-buttons-container">
-            <app-konzola-formular-skripty
+            <app-konzola-formular-skripty-c
               (pridajSkripty)="pridaj($event)"
               (upravSkripty)="uprav($event)"
               [skripty]="skriptNaUpravu">
 
-            </app-konzola-formular-skripty>
-            <app-konzola-zoznam-skripty
+            </app-konzola-formular-skripty-c>
+            <app-konzola-zoznam-skripty-c
               (upravSkripty)="upravZoZoznamu($event)"
               (vymazSkripty)="zmazZoZoznamu($event)"
               [skripty]="skripta">
 
-            </app-konzola-zoznam-skripty>
+            </app-konzola-zoznam-skripty-c>
           </div>
         </div>
       </div>

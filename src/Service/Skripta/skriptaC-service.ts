@@ -1,6 +1,6 @@
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {skripta, zoznamSkriptLinux} from "../../app/models/skripta.model";
+import {skripta, zoznamSkriptC} from "../../app/models/skripta.model";
 import {Injectable} from "@angular/core";
 
 @Injectable({
@@ -12,8 +12,8 @@ export class SkriptaCService {
   constructor(private http: HttpClient) {
   }
 
-  getSkripta(): Observable<zoznamSkriptLinux[]> {
-    return this.http.get<zoznamSkriptLinux[]>(`${this.apiUrl}`);
+  getSkripta(): Observable<zoznamSkriptC[]> {
+    return this.http.get<zoznamSkriptC[]>(`${this.apiUrl}`);
   }
 
   getSkriptPodlaId(id: number): Observable<skripta> {

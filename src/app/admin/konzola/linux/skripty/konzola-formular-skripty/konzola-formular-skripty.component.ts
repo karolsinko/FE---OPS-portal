@@ -20,8 +20,7 @@ export class KonzolaFormularSkriptyComponent implements OnInit {
       commands: new FormControl(null),
       content: new FormControl(null),
       content1: new FormControl(null),
-      explain: new FormControl(null),
-      scripts: new FormControl(null)
+      explain: new FormControl(null)
     });
   }
 

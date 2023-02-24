@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {SkriptaLinuxService} from "../../../../../../Service/Skripta/skriptaLinux-service";
 import {skripta, zoznamSkriptBash} from "../../../../../models/skripta.model";
+import {SkriptaBashService} from "../../../../../../Service/Skripta/skriptaBash-service";
 
 @Component({
   selector: 'app-konzola-stranka-skripty-bash',
@@ -15,7 +15,7 @@ export class KonzolaStrankaSkriptyBashComponent implements OnInit {
   skripta: zoznamSkriptBash[] = [];
   skriptNaUpravu?: skripta;
 
-  constructor(private router: Router, private skriptaService: SkriptaLinuxService) {
+  constructor(private router: Router, private skriptaService: SkriptaBashService) {
   }
 
   ngOnInit(): void {

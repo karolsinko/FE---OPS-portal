@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
-import {skripta, zoznamSkriptLinux} from "../../app/models/skripta.model";
+import {skripta, zoznamSkriptBash} from "../../app/models/skripta.model";
 import {Observable} from "rxjs";
 
 @Injectable({
@@ -12,8 +12,8 @@ export class SkriptaBashService {
   constructor(private http: HttpClient) {
   }
 
-  getSkripta(): Observable<zoznamSkriptLinux[]> {
-    return this.http.get<zoznamSkriptLinux[]>(`${this.apiUrl}`);
+  getSkripta(): Observable<zoznamSkriptBash[]> {
+    return this.http.get<zoznamSkriptBash[]>(`${this.apiUrl}`);
   }
 
   getSkriptPodlaId(id: number): Observable<skripta> {
