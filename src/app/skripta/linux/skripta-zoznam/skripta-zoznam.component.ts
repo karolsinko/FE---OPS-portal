@@ -9,13 +9,12 @@ import {zoznamSkriptLinux} from "../../../models/skripta.model";
 export class SkriptaZoznamComponent implements OnInit {
 
   currentStepIndex = 0;
+  @Input()
+  skripta: zoznamSkriptLinux[] = [];
 
   constructor() {
 
   }
-
-  @Input()
-  skripta: zoznamSkriptLinux[] = [];
 
   previousStep() {
     if (this.currentStepIndex > 0) {

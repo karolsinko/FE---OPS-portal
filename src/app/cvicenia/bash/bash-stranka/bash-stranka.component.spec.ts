@@ -8,9 +8,9 @@ describe('BashStrankaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BashStrankaComponent ]
+      declarations: [BashStrankaComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

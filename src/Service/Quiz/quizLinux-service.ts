@@ -9,13 +9,14 @@ import {quiz, zoznamQuizovLinux} from "../../app/models/quiz.model";
 export class QuizLinuxService {
   private apiUrl = 'http://localhost:8080/api/quiz/linux';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
   getQuizy(): Observable<zoznamQuizovLinux[]> {
     return this.http.get<zoznamQuizovLinux[]>(`${this.apiUrl}`);
   }
 
-  getQuizPodlaId(id : number): Observable<quiz> {
+  getQuizPodlaId(id: number): Observable<quiz> {
     return this.http.get<quiz>(`${this.apiUrl}/${id}`);
   }
 
@@ -23,11 +24,11 @@ export class QuizLinuxService {
     return this.http.post<quiz>(`${this.apiUrl}`, quiz);
   }
 
-  updateQuiz(id: number, quiz : quiz): Observable<quiz>{
+  updateQuiz(id: number, quiz: quiz): Observable<quiz> {
     return this.http.put<quiz>(`${this.apiUrl}/${id}`, quiz);
   }
 
-  deleteQuiz(id: number): Observable<void>{
+  deleteQuiz(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
 }

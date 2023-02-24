@@ -8,18 +8,16 @@ import {zoznamCviceniC} from "../../../../../models/cvicenie.model";
 })
 export class KonzolaZoznamCComponent implements OnInit {
 
-  constructor() {
-  }
-
   //C
   @Input()
   cvicenieC: zoznamCviceniC[] = [];
-
   @Output()
   upravCCvicenie: EventEmitter<number> = new EventEmitter<number>();
-
   @Output()
   vymazCCvicenie: EventEmitter<number> = new EventEmitter<number>();
+
+  constructor() {
+  }
 
   uprav(id?: number): void {
     this.upravCCvicenie.emit(id);

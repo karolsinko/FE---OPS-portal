@@ -1,55 +1,58 @@
 <head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
   <title></title>
 </head>
 <form [formGroup]="form">
   <table class="table">
     <th>
       <div class="group">
-        <textarea type="text" formControlName="option1" required></textarea>
+        <textarea formControlName="option1" required type="text"></textarea>
         <span class="highlight"></span>
         <span class="bar"></span>
         <label>1. možnosť: </label>
       </div>
 
       <div class="group">
-        <textarea type="text" formControlName="option2" required></textarea>
+        <textarea formControlName="option2" required type="text"></textarea>
         <span class="highlight"></span>
         <span class="bar"></span>
         <label>2. možnosť: </label>
       </div>
 
       <div class="group">
-        <textarea type="text" formControlName="option3" required></textarea>
+        <textarea formControlName="option3" required type="text"></textarea>
         <span class="highlight"></span>
         <span class="bar"></span>
         <label>3. možnosť: </label>
       </div>
 
       <div class="group">
-        <textarea type="text" formControlName="option4" required></textarea>
+        <textarea formControlName="option4" required type="text"></textarea>
         <span class="highlight"></span>
         <span class="bar"></span>
         <label>4. možnosť: </label>
       </div>
 
       <div class="group">
-        <textarea type="text" formControlName="question" required></textarea>
+        <textarea formControlName="question" required type="text"></textarea>
         <span class="highlight"></span>
         <span class="bar"></span>
         <label>Otázka: </label>
       </div>
 
       <div class="group">
-        <textarea type="text" formControlName="solution" required></textarea>
+        <textarea formControlName="solution" required type="text"></textarea>
         <span class="highlight"></span>
         <span class="bar"></span>
         <label>Odpoveď: </label>
       </div>
       <div class="group">
-        <button class="btn btn--action" (click)="pridaj()" *ngIf="form.value.id === null"><i class="bi bi-folder-plus"></i><span class="pridaj"></span></button>
-        <button class="btn btn--action" (click)="uprav()" *ngIf="form.value.id !== null"><i class="bi bi-wrench"></i><span class="uprav"></span></button>
-        <button class="btn btn--action" (click)="zrus()"><i class="bi bi-folder-minus"></i><span class="vymaz"></span></button>
+        <button (click)="pridaj()" *ngIf="form.value.id === null" class="btn btn--action"><i
+          class="bi bi-folder-plus"></i><span class="pridaj"></span></button>
+        <button (click)="uprav()" *ngIf="form.value.id !== null" class="btn btn--action"><i
+          class="bi bi-wrench"></i><span class="uprav"></span></button>
+        <button (click)="zrus()" class="btn btn--action"><i class="bi bi-folder-minus"></i><span class="vymaz"></span>
+        </button>
       </div>
     </th>
   </table>

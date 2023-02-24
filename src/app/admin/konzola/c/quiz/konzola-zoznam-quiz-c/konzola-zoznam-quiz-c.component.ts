@@ -7,18 +7,16 @@ import {zoznamQuizovC} from "../../../../../models/quiz.model";
   styleUrls: ['./konzola-zoznam-quiz-c.component.css']
 })
 export class KonzolaZoznamQuizCComponent implements OnInit {
-  constructor() {
-  }
-
   //Quizy
   @Input()
   quiz: zoznamQuizovC[] = [];
-
   @Output()
   upravQuizy: EventEmitter<number> = new EventEmitter<number>();
-
   @Output()
   vymazQuizy: EventEmitter<number> = new EventEmitter<number>();
+
+  constructor() {
+  }
 
   uprav(id?: number): void {
     this.upravQuizy.emit(id);

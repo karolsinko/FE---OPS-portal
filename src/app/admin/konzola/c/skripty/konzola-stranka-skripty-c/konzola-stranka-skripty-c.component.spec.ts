@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { KonzolaStrankaSkriptyCComponent } from './konzola-stranka-skripty-c.component';
+import {KonzolaStrankaSkriptyCComponent} from './konzola-stranka-skripty-c.component';
 
 describe('KonzolaStrankaSkriptyCComponent', () => {
   let component: KonzolaStrankaSkriptyCComponent;
@@ -8,9 +8,9 @@ describe('KonzolaStrankaSkriptyCComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ KonzolaStrankaSkriptyCComponent ]
+      declarations: [KonzolaStrankaSkriptyCComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

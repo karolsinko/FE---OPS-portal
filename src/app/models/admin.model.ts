@@ -1,7 +1,7 @@
-export class admin{
-   id?: number;
-   username: string;
-   password: string;
+export class admin {
+  id?: number;
+  username: string;
+  password: string;
 
 
   constructor(id: number, username: string, password: string) {
@@ -11,13 +11,13 @@ export class admin{
   }
 }
 
-export class zoznamAdminov{
-   id?: number;
-   username: string;
-   password: string;
+export class zoznamAdminov {
+  id?: number;
+  username: string;
+  password: string;
 
 
-  constructor(admin :zoznamAdminov) {
+  constructor(admin: zoznamAdminov) {
     this.id = admin.id;
     this.username = admin.username;
     this.password = admin.password;

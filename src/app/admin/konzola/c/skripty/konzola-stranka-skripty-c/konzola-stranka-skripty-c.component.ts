@@ -1,7 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {SkriptaLinuxService} from "../../../../../../Service/Skripta/skriptaLinux-service";
-import {skripta, zoznamSkriptC, zoznamSkriptLinux} from "../../../../../models/skripta.model";
+import {skripta, zoznamSkriptC} from "../../../../../models/skripta.model";
 import {SkriptaCService} from "../../../../../../Service/Skripta/skriptaC-service";
 
 @Component({
@@ -11,17 +10,17 @@ import {SkriptaCService} from "../../../../../../Service/Skripta/skriptaC-servic
 })
 export class KonzolaStrankaSkriptyCComponent implements OnInit {
 
-  constructor(private router: Router, private skriptaService: SkriptaCService) { }
+  //Admin konzola
+  @Input()
+  skripta: zoznamSkriptC[] = [];
+  skriptNaUpravu?: skripta;
+
+  constructor(private router: Router, private skriptaService: SkriptaCService) {
+  }
 
   ngOnInit(): void {
     this.obnovitSkripta();
   }
-
-  //Admin konzola
-  @Input()
-  skripta: zoznamSkriptC[] = [];
-
-  skriptNaUpravu?: skripta;
 
   obnovitSkripta(): void {
     this.skriptaService.getSkripta().subscribe(data => {
@@ -37,26 +36,27 @@ export class KonzolaStrankaSkriptyCComponent implements OnInit {
   }
 
   uprav(skripta: skripta): void {
-    if(skripta.id !== undefined){
-      this.skriptaService.updateSkript(skripta.id, skripta).subscribe(() =>{
+    if (skripta.id !== undefined) {
+      this.skriptaService.updateSkript(skripta.id, skripta).subscribe(() => {
         this.obnovitSkripta();
       });
     }
   }
 
   upravZoZoznamu(id: number): void {
-    this.skriptaService.getSkriptPodlaId(id).subscribe(data =>{
+    this.skriptaService.getSkriptPodlaId(id).subscribe(data => {
       this.skriptNaUpravu = data;
     });
   }
 
   zmazZoZoznamu(id: number): void {
-    if(confirm('Naozaj chces zmazat?')){
-      this.skriptaService.deleteSkript(id).subscribe(() =>{
+    if (confirm('Naozaj chces zmazat?')) {
+      this.skriptaService.deleteSkript(id).subscribe(() => {
         this.obnovitSkripta();
       });
     }
   }
+
   chodSpat(): void {
     this.router.navigate(['']);
   }

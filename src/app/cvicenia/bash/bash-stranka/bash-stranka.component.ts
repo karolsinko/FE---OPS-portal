@@ -12,7 +12,8 @@ export class BashStrankaComponent implements OnInit {
 
   cvicenie: zoznamCviceniBash[] = [];
 
-  constructor(private router: Router, private CvicenieBashService:cvicenieBashService) { }
+  constructor(private router: Router, private CvicenieBashService: cvicenieBashService) {
+  }
 
   ngOnInit(): void {
     this.obnovitUlohy();

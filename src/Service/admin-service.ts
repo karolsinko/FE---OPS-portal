@@ -6,16 +6,17 @@ import {catchError, tap} from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class AdminService{
+export class AdminService {
   private loginUrl = '/api/admin';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   login(username: string, password: string): Observable<any> {
     const httpOptions = {
-      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
     };
-    const credentials = { username, password };
+    const credentials = {username, password};
 
     return this.http.post<any>(this.loginUrl, credentials, httpOptions).pipe(
       tap((user) => console.log(`logged in as user with id=${user.id}`)),

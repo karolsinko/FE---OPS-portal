@@ -8,9 +8,9 @@ describe('KonzolaFormularComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ KonzolaFormularComponent ]
+      declarations: [KonzolaFormularComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

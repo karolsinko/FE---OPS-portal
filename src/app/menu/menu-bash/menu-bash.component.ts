@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 
-enum MENU {   HOME, QUIZBASH,SKRIPTABASH, CVICENIABASH}
+enum MENU { HOME, QUIZBASH, SKRIPTABASH, CVICENIABASH}
 
 @Component({
   selector: 'app-menu-bash',
@@ -10,23 +10,24 @@ enum MENU {   HOME, QUIZBASH,SKRIPTABASH, CVICENIABASH}
 })
 export class MenuBashComponent implements OnInit {
 
-  date=new Date();
+  date = new Date();
   menu = MENU;
+  showFiller = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+  }
 
   public openMenu(m: MENU) {
     if (m === MENU.HOME) {
       this.router.navigate(['/']);
-    }else if(m=== MENU.QUIZBASH){
+    } else if (m === MENU.QUIZBASH) {
       this.router.navigate(['/quiz/bash']);
-    }else if(m=== MENU.SKRIPTABASH){
+    } else if (m === MENU.SKRIPTABASH) {
       this.router.navigate(['/skripta/bash']);
-    }else if(m=== MENU.CVICENIABASH){
+    } else if (m === MENU.CVICENIABASH) {
       this.router.navigate(['/cvicenia/bash']);
     }
   }
-
 
   ngOnInit(): void {
     const token = localStorage.getItem("isAuthorized");
@@ -35,8 +36,6 @@ export class MenuBashComponent implements OnInit {
       // redirect to login page
     }
   }
-
-  showFiller = false;
 
   chodSpat(): void {
     this.router.navigate(['']);

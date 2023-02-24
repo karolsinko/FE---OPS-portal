@@ -9,18 +9,9 @@ import {zoznamQuizovC} from "../../../../../models/quiz.model";
 })
 export class KonzolaFormularQuizCComponent implements OnInit {
 
-//Quiz
-  @Input()
-  set quiz(data: zoznamQuizovC | undefined){
-    if (data) {
-      this.fillForm(data);
-    }
-  }
   form: FormGroup;
-
   @Output()
   pridajQuiz = new EventEmitter<zoznamQuizovC>();
-
   @Output()
   upravQuiz = new EventEmitter<zoznamQuizovC>();
 
@@ -36,14 +27,12 @@ export class KonzolaFormularQuizCComponent implements OnInit {
     });
   }
 
-  private fillForm(zoznamQuizov: zoznamQuizovC): void {
-    this.form.controls['id'].setValue(zoznamQuizov.id);
-    this.form.controls['question'].setValue(zoznamQuizov.question);
-    this.form.controls['solution'].setValue(zoznamQuizov.solution);
-    this.form.controls['option1'].setValue(zoznamQuizov.option1);
-    this.form.controls['option2'].setValue(zoznamQuizov.option2);
-    this.form.controls['option3'].setValue(zoznamQuizov.option3);
-    this.form.controls['option4'].setValue(zoznamQuizov.option4);
+//Quiz
+  @Input()
+  set quiz(data: zoznamQuizovC | undefined) {
+    if (data) {
+      this.fillForm(data);
+    }
   }
 
   public pridaj(): void {
@@ -62,5 +51,15 @@ export class KonzolaFormularQuizCComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  private fillForm(zoznamQuizov: zoznamQuizovC): void {
+    this.form.controls['id'].setValue(zoznamQuizov.id);
+    this.form.controls['question'].setValue(zoznamQuizov.question);
+    this.form.controls['solution'].setValue(zoznamQuizov.solution);
+    this.form.controls['option1'].setValue(zoznamQuizov.option1);
+    this.form.controls['option2'].setValue(zoznamQuizov.option2);
+    this.form.controls['option3'].setValue(zoznamQuizov.option3);
+    this.form.controls['option4'].setValue(zoznamQuizov.option4);
   }
 }

@@ -8,12 +8,20 @@
 
   <tbody *ngFor="let c of cvicenieC">
   <td>{{ c.id }}</td>
-  <td><div [innerHTML]="c.content"></div></td>
-  <td><div [innerHTML]="c.input"></div></td>
-  <td><div [innerHTML]="c.solution"></div></td>
   <td>
-    <button class="btn btn--action" (click)="uprav(c.id)"><i class="bi bi-wrench"></i><span class="uprav"></span></button>
-    <button class="btn btn--action" (click)="zmaz(c.id)"><i class="bi bi-folder-minus"></i><span class="vymaz"></span></button>
+    <div [innerHTML]="c.content"></div>
+  </td>
+  <td>
+    <div [innerHTML]="c.input"></div>
+  </td>
+  <td>
+    <div [innerHTML]="c.solution"></div>
+  </td>
+  <td>
+    <button (click)="uprav(c.id)" class="btn btn--action"><i class="bi bi-wrench"></i><span class="uprav"></span>
+    </button>
+    <button (click)="zmaz(c.id)" class="btn btn--action"><i class="bi bi-folder-minus"></i><span class="vymaz"></span>
+    </button>
   </td>
   </tbody>
 </table>

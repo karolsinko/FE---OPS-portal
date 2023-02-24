@@ -8,9 +8,9 @@ describe('FAQStrankaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FAQStrankaComponent ]
+      declarations: [FAQStrankaComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

@@ -11,8 +11,11 @@ import {cvicenieBashService} from "../../../../Service/Cvicenia/cvicenieBash-ser
 export class BashZoznamComponent implements OnInit {
   @Input()
   cvicenie: zoznamCviceniBash[] = [];
+  currentStepIndex = 0;
+  showElement = false
 
-  constructor(private router: Router, private cvicenieBashService: cvicenieBashService) { }
+  constructor(private router: Router, private cvicenieBashService: cvicenieBashService) {
+  }
 
   ngOnInit(): void {
   }
@@ -20,8 +23,6 @@ export class BashZoznamComponent implements OnInit {
   chodSpat(): void {
     this.router.navigate(['/cvicenia']);
   }
-
-  currentStepIndex = 0;
 
   previousStep() {
     if (this.currentStepIndex > 0) {
@@ -47,9 +48,8 @@ export class BashZoznamComponent implements OnInit {
       }
     });
   }
-  showElement = false
 
-  showSolution(){
+  showSolution() {
     this.showElement = !this.showElement;
   }
 }

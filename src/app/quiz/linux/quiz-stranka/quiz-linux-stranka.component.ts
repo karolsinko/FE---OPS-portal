@@ -10,9 +10,10 @@ import {zoznamQuizovLinux} from "../../../models/quiz.model";
 })
 export class QuizLinuxStrankaComponent implements OnInit {
 
-  constructor(private router: Router, private quizLinuxService: QuizLinuxService) { }
-
   quiz: zoznamQuizovLinux[] = [];
+
+  constructor(private router: Router, private quizLinuxService: QuizLinuxService) {
+  }
 
   chodSpat(): void {
     this.router.navigate(['']);

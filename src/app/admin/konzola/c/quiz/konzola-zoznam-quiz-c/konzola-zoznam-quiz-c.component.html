@@ -10,16 +10,30 @@
     <th>total count: {{quiz.length}}</th>
   </tr>
   <tbody *ngFor="let q of quiz">
-    <td>{{ q.id }}</td>
-    <td><div [innerHTML]="q.question"></div></td>
-    <td><div [innerHTML]="q.solution"></div></td>
-    <td><div [innerHTML]="q.option1"></div></td>
-    <td><div [innerHTML]="q.option2"></div></td>
-    <td><div [innerHTML]="q.option3"></div></td>
-    <td><div [innerHTML]="q.option4"></div></td>
-    <td>
-      <button class="btn btn--action" (click)="uprav(q.id)"><i class="bi bi-wrench"></i><span class="uprav"></span></button>
-      <button class="btn btn--action" (click)="zmaz(q.id)"><i class="bi bi-folder-minus"></i><span class="vymaz"></span></button>
-    </td>
+  <td>{{ q.id }}</td>
+  <td>
+    <div [innerHTML]="q.question"></div>
+  </td>
+  <td>
+    <div [innerHTML]="q.solution"></div>
+  </td>
+  <td>
+    <div [innerHTML]="q.option1"></div>
+  </td>
+  <td>
+    <div [innerHTML]="q.option2"></div>
+  </td>
+  <td>
+    <div [innerHTML]="q.option3"></div>
+  </td>
+  <td>
+    <div [innerHTML]="q.option4"></div>
+  </td>
+  <td>
+    <button (click)="uprav(q.id)" class="btn btn--action"><i class="bi bi-wrench"></i><span class="uprav"></span>
+    </button>
+    <button (click)="zmaz(q.id)" class="btn btn--action"><i class="bi bi-folder-minus"></i><span class="vymaz"></span>
+    </button>
+  </td>
   </tbody>
 </table>

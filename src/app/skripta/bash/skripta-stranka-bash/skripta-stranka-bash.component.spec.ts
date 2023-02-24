@@ -8,9 +8,9 @@ describe('SkriptaStrankaBashComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SkriptaStrankaBashComponent ]
+      declarations: [SkriptaStrankaBashComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

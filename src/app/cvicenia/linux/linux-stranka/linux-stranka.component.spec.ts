@@ -8,9 +8,9 @@ describe('LinuxStrankaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LinuxStrankaComponent ]
+      declarations: [LinuxStrankaComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

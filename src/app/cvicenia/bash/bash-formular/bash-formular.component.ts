@@ -21,11 +21,11 @@ export class BashFormularComponent implements OnInit {
     document.getElementById("here")?.appendChild(this.compilerBash);
   }
 
-  odstranCompilerBash(): void{
+  odstranCompilerBash(): void {
     document.getElementById("here")?.removeChild(this.compilerBash);
   }
 
-  ngOnInit(): void{
+  ngOnInit(): void {
 
   }
 }

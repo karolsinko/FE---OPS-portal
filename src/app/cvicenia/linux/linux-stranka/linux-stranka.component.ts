@@ -12,7 +12,8 @@ export class LinuxStrankaComponent implements OnInit {
 
   cvicenie: zoznamCviceniLinux[] = [];
 
-  constructor(private router: Router, private cvicenieLinuxService: cvicenieLinuxService) { }
+  constructor(private router: Router, private cvicenieLinuxService: cvicenieLinuxService) {
+  }
 
   ngOnInit(): void {
     this.obnovitUlohy();

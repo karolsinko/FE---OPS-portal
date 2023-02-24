@@ -8,9 +8,9 @@ describe('CStrankaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CStrankaComponent ]
+      declarations: [CStrankaComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

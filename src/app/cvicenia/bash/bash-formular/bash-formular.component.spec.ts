@@ -8,9 +8,9 @@ describe('BashFormularComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BashFormularComponent ]
+      declarations: [BashFormularComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

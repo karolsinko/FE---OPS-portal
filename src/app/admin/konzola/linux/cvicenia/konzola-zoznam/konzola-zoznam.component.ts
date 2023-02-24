@@ -8,18 +8,16 @@ import {zoznamCviceniLinux} from "../../../../../models/cvicenie.model";
 })
 export class KonzolaZoznamComponent implements OnInit {
 
-  constructor() {
-  }
-
   //LINUX
   @Input()
   cvicenieLinux: zoznamCviceniLinux[] = [];
-
   @Output()
   upravLinuxCvicenie: EventEmitter<number> = new EventEmitter<number>();
-
   @Output()
   vymazLinuxCvicenie: EventEmitter<number> = new EventEmitter<number>();
+
+  constructor() {
+  }
 
   uprav(id?: number): void {
     this.upravLinuxCvicenie.emit(id);

@@ -10,17 +10,17 @@ import {cvicenieBashService} from "../../../../../../Service/Cvicenia/cvicenieBa
 })
 export class KonzolaStrankaBashComponent implements OnInit {
 
-  constructor(private router: Router, private cvicenieBashService: cvicenieBashService) { }
+  //Admin konzola
+  @Input()
+  cvicenieBash: zoznamCviceniBash[] = [];
+  cvicenieNaUpravu?: cvicenie;
+
+  constructor(private router: Router, private cvicenieBashService: cvicenieBashService) {
+  }
 
   ngOnInit(): void {
     this.obnovitCvicenia();
   }
-
-  //Admin konzola
-  @Input()
-  cvicenieBash: zoznamCviceniBash[] = [];
-
-  cvicenieNaUpravu?: cvicenie;
 
   obnovitCvicenia(): void {
     this.cvicenieBashService.getCvicenia().subscribe(data => {
@@ -36,26 +36,27 @@ export class KonzolaStrankaBashComponent implements OnInit {
   }
 
   uprav(cvicenie: cvicenie): void {
-    if(cvicenie.id !== undefined){
-      this.cvicenieBashService.updateCvicenie(cvicenie.id, cvicenie).subscribe(() =>{
+    if (cvicenie.id !== undefined) {
+      this.cvicenieBashService.updateCvicenie(cvicenie.id, cvicenie).subscribe(() => {
         this.obnovitCvicenia();
       });
     }
   }
 
   upravZoZoznamu(id: number): void {
-    this.cvicenieBashService.getCviceniePodlaId(id).subscribe(data =>{
+    this.cvicenieBashService.getCviceniePodlaId(id).subscribe(data => {
       this.cvicenieNaUpravu = data;
     });
   }
 
   zmazZoZoznamu(id: number): void {
-    if(confirm('Naozaj chces zmazat?')){
-      this.cvicenieBashService.deleteCvicenie(id).subscribe(() =>{
+    if (confirm('Naozaj chces zmazat?')) {
+      this.cvicenieBashService.deleteCvicenie(id).subscribe(() => {
         this.obnovitCvicenia();
       });
     }
   }
+
   chodSpat(): void {
     this.router.navigate(['']);
   }

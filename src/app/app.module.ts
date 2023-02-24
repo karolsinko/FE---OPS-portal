@@ -101,12 +101,24 @@ import {SkriptaZoznamCComponent} from './skripta/c/skripta-zoznam-c/skripta-zozn
 import {SkriptaFormularBashComponent} from './skripta/bash/skripta-formular-bash/skripta-formular-bash.component';
 import {SkriptaZoznamBashComponent} from './skripta/bash/skripta-zoznam-bash/skripta-zoznam-bash.component';
 import {SkriptaStrankaBashComponent} from './skripta/bash/skripta-stranka-bash/skripta-stranka-bash.component';
-import { KonzolaStrankaSkriptyCComponent } from './admin/konzola/c/skripty/konzola-stranka-skripty-c/konzola-stranka-skripty-c.component';
-import { KonzolaFormularSkriptyCComponent } from './admin/konzola/c/skripty/konzola-formular-skripty-c/konzola-formular-skripty-c.component';
-import { KonzolaZoznamSkriptyCComponent } from './admin/konzola/c/skripty/konzola-zoznam-skripty-c/konzola-zoznam-skripty-c.component';
-import { KonzolaFormularSkriptyBashComponent } from './admin/konzola/bash/skripty/konzola-formular-skripty-bash/konzola-formular-skripty-bash.component';
-import { KonzolaStrankaSkriptyBashComponent } from './admin/konzola/bash/skripty/konzola-stranka-skripty-bash/konzola-stranka-skripty-bash.component';
-import { KonzolaZoznamSkriptyBashComponent } from './admin/konzola/bash/skripty/konzola-zoznam-skripty-bash/konzola-zoznam-skripty-bash.component';
+import {
+  KonzolaStrankaSkriptyCComponent
+} from './admin/konzola/c/skripty/konzola-stranka-skripty-c/konzola-stranka-skripty-c.component';
+import {
+  KonzolaFormularSkriptyCComponent
+} from './admin/konzola/c/skripty/konzola-formular-skripty-c/konzola-formular-skripty-c.component';
+import {
+  KonzolaZoznamSkriptyCComponent
+} from './admin/konzola/c/skripty/konzola-zoznam-skripty-c/konzola-zoznam-skripty-c.component';
+import {
+  KonzolaFormularSkriptyBashComponent
+} from './admin/konzola/bash/skripty/konzola-formular-skripty-bash/konzola-formular-skripty-bash.component';
+import {
+  KonzolaStrankaSkriptyBashComponent
+} from './admin/konzola/bash/skripty/konzola-stranka-skripty-bash/konzola-stranka-skripty-bash.component';
+import {
+  KonzolaZoznamSkriptyBashComponent
+} from './admin/konzola/bash/skripty/konzola-zoznam-skripty-bash/konzola-zoznam-skripty-bash.component';
 
 @NgModule({
   declarations: [
@@ -177,29 +189,29 @@ import { KonzolaZoznamSkriptyBashComponent } from './admin/konzola/bash/skripty/
     KonzolaZoznamSkriptyBashComponent,
 
   ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        FormsModule,
-        ReactiveFormsModule,
-        RouterModule,
-        AppRoutingModule,
-        HttpClientModule,
-        MatPaginatorModule,
-        MatStepperModule,
-        MatIconModule,
-        MatButtonModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatTableModule,
-        MatCardModule,
-        MatRadioModule,
-        MatSidenavModule,
-        MatDividerModule,
-        MatExpansionModule,
-        MatMenuModule,
-        MatSortModule
-    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
+    AppRoutingModule,
+    HttpClientModule,
+    MatPaginatorModule,
+    MatStepperModule,
+    MatIconModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTableModule,
+    MatCardModule,
+    MatRadioModule,
+    MatSidenavModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatMenuModule,
+    MatSortModule
+  ],
   providers: [
     AdminComponent
   ],

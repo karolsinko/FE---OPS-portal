@@ -10,9 +10,10 @@ import {QuizBashService} from "../../../../Service/Quiz/quizBash-service";
 })
 export class QuizBashStrankaComponent implements OnInit {
 
-  constructor(private router: Router, private quizBashService: QuizBashService) { }
-
   quiz: zoznamQuizovBash[] = [];
+
+  constructor(private router: Router, private quizBashService: QuizBashService) {
+  }
 
   chodSpat(): void {
     this.router.navigate(['']);

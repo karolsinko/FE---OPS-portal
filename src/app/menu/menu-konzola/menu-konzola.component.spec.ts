@@ -8,9 +8,9 @@ describe('MenuKonzolaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MenuKonzolaComponent ]
+      declarations: [MenuKonzolaComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

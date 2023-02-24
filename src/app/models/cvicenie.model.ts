@@ -1,4 +1,4 @@
-export class cvicenie{
+export class cvicenie {
 
   id?: number;
   content: string;
@@ -13,7 +13,7 @@ export class cvicenie{
   }
 }
 
-export class zoznamCviceni{
+export class zoznamCviceni {
 
   id?: number;
   content: string;
@@ -28,7 +28,7 @@ export class zoznamCviceni{
   }
 }
 
-export class zoznamCviceniLinux{
+export class zoznamCviceniLinux {
 
   id?: number;
   content: string;
@@ -43,7 +43,7 @@ export class zoznamCviceniLinux{
   }
 }
 
-export class zoznamCviceniBash{
+export class zoznamCviceniBash {
 
   id?: number;
   content: string;
@@ -58,7 +58,7 @@ export class zoznamCviceniBash{
   }
 }
 
-export class zoznamCviceniC{
+export class zoznamCviceniC {
 
   id?: number;
   content: string;

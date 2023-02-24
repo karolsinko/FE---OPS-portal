@@ -1,31 +1,41 @@
 <head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
   <title></title>
 </head>
-<a class='dashboard-toolbar' mat-icon-button (click)="drawer.toggle()"><h1 class="bi bi-list"></h1></a>
+<a (click)="drawer.toggle()" class='dashboard-toolbar' mat-icon-button><h1 class="bi bi-list"></h1></a>
 <mat-drawer-container autosize>
-  <mat-drawer #drawer mode="side" class="dashboard-nav" opened>
-    <header >
-      <a (click)="openMenu(menu.HOME)" class="brand-logo"><i class="bi bi-journal-code"></i><span>| Operačné systémy 1 </span></a>
+  <mat-drawer #drawer class="dashboard-nav" mode="side" opened>
+    <header>
+      <a (click)="openMenu(menu.HOME)" class="brand-logo"><i
+        class="bi bi-journal-code"></i><span>| Operačné systémy 1 </span></a>
     </header>
     <nav class="dashboard-nav-list">
       <div *ngIf="showFiller" class="nav-item-divider"></div>
-      <a (click)="showFiller = !showFiller" class="dashboard-nav-item"><i class="bi bi-code-square"></i> |  C</a>
-        <a *ngIf="showFiller" (click)="openMenu(menu.QUIZC)" class="dashboard-nav-item"><i class="bi bi-wrench"></i> |  Quiz </a>
-        <a *ngIf="showFiller" (click)="openMenu(menu.CVICENIAC)" class="dashboard-nav-item"><i class="bi bi-wrench"></i> |  Cvičenia </a>
-        <a *ngIf="showFiller" (click)="openMenu(menu.SKRIPTAC)" class="dashboard-nav-item"><i class="bi bi-wrench"></i> |  Skriptá</a>
+      <a (click)="showFiller = !showFiller" class="dashboard-nav-item"><i class="bi bi-code-square"></i> | C</a>
+      <a (click)="openMenu(menu.QUIZC)" *ngIf="showFiller" class="dashboard-nav-item"><i class="bi bi-wrench"></i> |
+        Quiz </a>
+      <a (click)="openMenu(menu.CVICENIAC)" *ngIf="showFiller" class="dashboard-nav-item"><i class="bi bi-wrench"></i> |
+        Cvičenia </a>
+      <a (click)="openMenu(menu.SKRIPTAC)" *ngIf="showFiller" class="dashboard-nav-item"><i class="bi bi-wrench"></i> |
+        Skriptá</a>
       <div *ngIf="showFiller" class="nav-item-divider"></div>
       <div *ngIf="showFiller1" class="nav-item-divider"></div>
-      <a (click)="showFiller1 = !showFiller1" class="dashboard-nav-item"><i class="bi bi-code-square"></i> |  Bash</a>
-        <a *ngIf="showFiller1" (click)="openMenu(menu.QUIZBASH)" class="dashboard-nav-item"><i class="bi bi-wrench"></i>|  Quiz</a>
-        <a *ngIf="showFiller1" (click)="openMenu(menu.CVICENIABASH)" class="dashboard-nav-item"><i class="bi bi-wrench"></i> |  Cvičenia</a>
-        <a *ngIf="showFiller1" (click)="openMenu(menu.SKRIPTABASH)" class="dashboard-nav-item"><i class="bi bi-wrench"></i>|  Skriptá</a>
+      <a (click)="showFiller1 = !showFiller1" class="dashboard-nav-item"><i class="bi bi-code-square"></i> | Bash</a>
+      <a (click)="openMenu(menu.QUIZBASH)" *ngIf="showFiller1" class="dashboard-nav-item"><i class="bi bi-wrench"></i>|
+        Quiz</a>
+      <a (click)="openMenu(menu.CVICENIABASH)" *ngIf="showFiller1" class="dashboard-nav-item"><i
+        class="bi bi-wrench"></i> | Cvičenia</a>
+      <a (click)="openMenu(menu.SKRIPTABASH)" *ngIf="showFiller1" class="dashboard-nav-item"><i
+        class="bi bi-wrench"></i>| Skriptá</a>
       <div *ngIf="showFiller1" class="nav-item-divider"></div>
       <div *ngIf="showFiller2" class="nav-item-divider"></div>
-      <a (click)="showFiller2 = !showFiller2" class="dashboard-nav-item"><i class="bi bi-code-square"></i> |  Linux</a>
-        <a *ngIf="showFiller2" (click)="openMenu(menu.QUIZLINUX)" class="dashboard-nav-item"><i class="bi bi-wrench"></i>|  Quiz</a>
-        <a *ngIf="showFiller2" (click)="openMenu(menu.CVICENIALINUX)" class="dashboard-nav-item"><i class="bi bi-wrench"></i>|  Cvičenia</a>
-        <a *ngIf="showFiller2" (click)="openMenu(menu.SKRIPTALINUX)" class="dashboard-nav-item"><i class="bi bi-wrench"></i>|  Skriptá</a>
+      <a (click)="showFiller2 = !showFiller2" class="dashboard-nav-item"><i class="bi bi-code-square"></i> | Linux</a>
+      <a (click)="openMenu(menu.QUIZLINUX)" *ngIf="showFiller2" class="dashboard-nav-item"><i class="bi bi-wrench"></i>|
+        Quiz</a>
+      <a (click)="openMenu(menu.CVICENIALINUX)" *ngIf="showFiller2" class="dashboard-nav-item"><i
+        class="bi bi-wrench"></i>| Cvičenia</a>
+      <a (click)="openMenu(menu.SKRIPTALINUX)" *ngIf="showFiller2" class="dashboard-nav-item"><i
+        class="bi bi-wrench"></i>| Skriptá</a>
       <div *ngIf="showFiller2" class="nav-item-divider"></div>
     </nav>
   </mat-drawer>

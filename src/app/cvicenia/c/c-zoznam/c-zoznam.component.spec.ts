@@ -8,9 +8,9 @@ describe('CZoznamComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CZoznamComponent ]
+      declarations: [CZoznamComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

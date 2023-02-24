@@ -10,13 +10,12 @@ import {zoznamSkriptBash} from "../../../models/skripta.model";
 export class SkriptaFormularBashComponent implements OnInit {
 
   currentStepIndex = 0;
+  @Input()
+  skripta: zoznamSkriptBash[] = [];
 
   constructor(private router: Router) {
 
   }
-
-  @Input()
-  skripta: zoznamSkriptBash[] = [];
 
   chodSpat(): void {
     this.router.navigate(['']);

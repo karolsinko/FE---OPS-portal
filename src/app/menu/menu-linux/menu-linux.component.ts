@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 
-enum MENU {   HOME, QUIZLINUX,SKRIPTALINUX, CVICENIALINUX}
+enum MENU { HOME, QUIZLINUX, SKRIPTALINUX, CVICENIALINUX}
 
 @Component({
   selector: 'app-menu-linux',
@@ -10,23 +10,24 @@ enum MENU {   HOME, QUIZLINUX,SKRIPTALINUX, CVICENIALINUX}
 })
 export class MenuLinuxComponent implements OnInit {
 
-  date=new Date();
+  date = new Date();
   menu = MENU;
+  showFiller = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+  }
 
   public openMenu(m: MENU) {
     if (m === MENU.HOME) {
       this.router.navigate(['/']);
-    }else if(m=== MENU.QUIZLINUX){
+    } else if (m === MENU.QUIZLINUX) {
       this.router.navigate(['/quiz/linux']);
-    }else if(m=== MENU.SKRIPTALINUX){
+    } else if (m === MENU.SKRIPTALINUX) {
       this.router.navigate(['/skripta/linux']);
-    }else if(m=== MENU.CVICENIALINUX){
+    } else if (m === MENU.CVICENIALINUX) {
       this.router.navigate(['/cvicenia/linux']);
     }
   }
-
 
   ngOnInit(): void {
     const token = localStorage.getItem("isAuthorized");
@@ -35,7 +36,5 @@ export class MenuLinuxComponent implements OnInit {
       // redirect to login page
     }
   }
-
-  showFiller = false;
 
 }

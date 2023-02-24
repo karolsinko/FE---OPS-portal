@@ -1,5 +1,5 @@
 <head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
   <title></title>
 
 </head>
@@ -7,8 +7,10 @@
   <div class="card-body">
     <table>
       <tr>
-        <button class="btn btn--action" (click)="pridajCompilerBash()"><i class="bi bi-plus-circle-fill"></i><span> | Pridaj Compiler pre Bash</span></button>
-        <button class="btn btn--action" (click)="odstranCompilerBash()"><i class="bi bi-x-circle-fill"></i><span>   | Odstran Compiler pre Bash</span></button>
+        <button (click)="pridajCompilerBash()" class="btn btn--action"><i class="bi bi-plus-circle-fill"></i><span> | Pridaj Compiler pre Bash</span>
+        </button>
+        <button (click)="odstranCompilerBash()" class="btn btn--action"><i class="bi bi-x-circle-fill"></i><span>   | Odstran Compiler pre Bash</span>
+        </button>
       </tr>
     </table>
     <div class="card" id="here">

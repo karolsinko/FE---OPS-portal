@@ -9,18 +9,10 @@ import {FormControl, FormGroup} from "@angular/forms";
 })
 export class KonzolaFormularComponent implements OnInit {
 
-  //LINUX
-  @Input()
-  set cvicenieLinux(data: zoznamCviceniLinux | undefined){
-    if (data) {
-      this.fillForm(data);
-    }
-  }
   form: FormGroup;
   contentHTML = '';
   @Output()
   pridajLinuxCvicenie = new EventEmitter<zoznamCviceniLinux>();
-
   @Output()
   upravLinuxCvicenie = new EventEmitter<zoznamCviceniLinux>();
 
@@ -33,11 +25,12 @@ export class KonzolaFormularComponent implements OnInit {
     });
   }
 
-  private fillForm(zoznamCviceniLinux: zoznamCviceniLinux): void {
-    this.form.controls['id'].setValue(zoznamCviceniLinux.id);
-    this.form.controls['content'].setValue(zoznamCviceniLinux.content);
-    this.form.controls['input'].setValue(zoznamCviceniLinux.input);
-    this.form.controls['solution'].setValue(zoznamCviceniLinux.solution);
+  //LINUX
+  @Input()
+  set cvicenieLinux(data: zoznamCviceniLinux | undefined) {
+    if (data) {
+      this.fillForm(data);
+    }
   }
 
   public pridaj(): void {
@@ -56,5 +49,12 @@ export class KonzolaFormularComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  private fillForm(zoznamCviceniLinux: zoznamCviceniLinux): void {
+    this.form.controls['id'].setValue(zoznamCviceniLinux.id);
+    this.form.controls['content'].setValue(zoznamCviceniLinux.content);
+    this.form.controls['input'].setValue(zoznamCviceniLinux.input);
+    this.form.controls['solution'].setValue(zoznamCviceniLinux.solution);
   }
 }

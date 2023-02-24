@@ -1,24 +1,29 @@
 <head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
+  <script crossorigin="anonymous"
+          integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+          src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script crossorigin="anonymous"
+          integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <title></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
 
 </head>
 
-<a class='dashboard-toolbar' mat-icon-button (click)="drawer.toggle()"><h1 class="bi bi-list"></h1></a>
+<a (click)="drawer.toggle()" class='dashboard-toolbar' mat-icon-button><h1 class="bi bi-list"></h1></a>
 <mat-drawer-container autosize>
-  <mat-drawer #drawer mode="side" class="dashboard-nav" opened>
-    <header >
-      <a (click)="openMenu(menu.HOME)" class="brand-logo"><i class="bi bi-journal-code"></i><span>| Operačné systémy 1 </span></a>
+  <mat-drawer #drawer class="dashboard-nav" mode="side" opened>
+    <header>
+      <a (click)="openMenu(menu.HOME)" class="brand-logo"><i
+        class="bi bi-journal-code"></i><span>| Operačné systémy 1 </span></a>
     </header>
-    <a (click)="openMenu(menu.QUIZLINUX)" class="dashboard-nav-item"><i class="bi bi-question-circle"></i> |  Quiz</a>
-    <a (click)="openMenu(menu.CVICENIALINUX)" class="dashboard-nav-item"><i class="bi bi-archive"></i> |  Cvičenia</a>
-    <a (click)="openMenu(menu.SKRIPTALINUX)" class="dashboard-nav-item"><i class="bi bi-info-circle"></i>|  Skriptá</a>
+    <a (click)="openMenu(menu.QUIZLINUX)" class="dashboard-nav-item"><i class="bi bi-question-circle"></i> | Quiz</a>
+    <a (click)="openMenu(menu.CVICENIALINUX)" class="dashboard-nav-item"><i class="bi bi-archive"></i> | Cvičenia</a>
+    <a (click)="openMenu(menu.SKRIPTALINUX)" class="dashboard-nav-item"><i class="bi bi-info-circle"></i>| Skriptá</a>
     <div class="nav-item-divider"></div>
-    <a (click)="openMenu(menu.HOME)" class="dashboard-nav-item"><i class="bi bi-house-door"></i>|  Späť</a>
+    <a (click)="openMenu(menu.HOME)" class="dashboard-nav-item"><i class="bi bi-house-door"></i>| Späť</a>
     <div class="date">
       {{date| date:'dd.MM.yyyy'}}
     </div>

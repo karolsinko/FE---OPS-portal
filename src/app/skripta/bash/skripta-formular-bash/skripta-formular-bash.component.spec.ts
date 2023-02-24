@@ -8,9 +8,9 @@ describe('SkriptaFormularBashComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SkriptaFormularBashComponent ]
+      declarations: [SkriptaFormularBashComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

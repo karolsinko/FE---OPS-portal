@@ -19,6 +19,7 @@ export class QuizBashComponent implements OnInit {
   pocetChyb = 0;
   userAnswer: string;
   koniec = 0;
+
   constructor(private router: Router, private quizBashService: QuizBashService) {
     this.userAnswer = "";
   }
@@ -44,7 +45,7 @@ export class QuizBashComponent implements OnInit {
       this.score++;
       this.pocetPokusov++;
       correct = true;
-    }else {
+    } else {
       alert(`Zlá odpoveď, správna odpoveď je: "${(this.quiz[this.currentStepIndex].solution)}"`);
       this.score--;
       this.pocetPokusov++;
@@ -63,6 +64,7 @@ export class QuizBashComponent implements OnInit {
       }
     }
   }
+
   closeScoreModal() {
     const scoreModal = document.getElementById('score-modal');
     if (scoreModal) {

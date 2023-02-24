@@ -12,7 +12,8 @@ export class CStrankaComponent implements OnInit {
 
   cvicenie: zoznamCviceniC[] = [];
 
-  constructor(private router: Router, private cvicenieCService: CvicenieCService) { }
+  constructor(private router: Router, private cvicenieCService: CvicenieCService) {
+  }
 
   ngOnInit(): void {
     this.obnovitUlohy();

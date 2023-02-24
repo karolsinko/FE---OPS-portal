@@ -8,7 +8,10 @@ import {Router} from "@angular/router";
 })
 export class FAQStrankaComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  panelOpenState = false;
+
+  constructor(private router: Router) {
+  }
 
   ngOnInit(): void {
   }
@@ -16,6 +19,4 @@ export class FAQStrankaComponent implements OnInit {
   chodSpat(): void {
     this.router.navigate(['']);
   }
-
-  panelOpenState = false;
 }

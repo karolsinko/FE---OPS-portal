@@ -8,9 +8,9 @@ describe('LinuxFormularComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LinuxFormularComponent ]
+      declarations: [LinuxFormularComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

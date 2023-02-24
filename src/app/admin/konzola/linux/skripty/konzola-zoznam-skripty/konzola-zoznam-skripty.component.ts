@@ -10,18 +10,16 @@ import {SkriptaLinuxService} from "../../../../../../Service/Skripta/skriptaLinu
 })
 export class KonzolaZoznamSkriptyComponent implements OnInit {
 
-  constructor(private router: Router, private skriptaService: SkriptaLinuxService) {
-  }
-
   //Skripty
   @Input()
   skripty: zoznamSkriptLinux[] = [];
-
   @Output()
   upravSkripty: EventEmitter<number> = new EventEmitter<number>();
-
   @Output()
   vymazSkripty: EventEmitter<number> = new EventEmitter<number>();
+
+  constructor(private router: Router, private skriptaService: SkriptaLinuxService) {
+  }
 
   uprav(id?: number): void {
     this.upravSkripty.emit(id);

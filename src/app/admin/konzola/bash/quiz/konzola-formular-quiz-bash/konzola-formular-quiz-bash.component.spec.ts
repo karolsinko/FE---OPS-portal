@@ -8,9 +8,9 @@ describe('KonzolaFormularQuizBashComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ KonzolaFormularQuizBashComponent ]
+      declarations: [KonzolaFormularQuizBashComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

@@ -1,4 +1,4 @@
-export class quiz{
+export class quiz {
 
   id?: number;
   solution: string;
@@ -9,7 +9,7 @@ export class quiz{
   option4: string;
 
 
-  constructor(id: number, solution: string, question: string, option1: string, option2: string, option3: string,   option4: string) {
+  constructor(id: number, solution: string, question: string, option1: string, option2: string, option3: string, option4: string) {
     this.id = id;
     this.solution = solution;
     this.question = question;
@@ -41,7 +41,7 @@ export class zoznamQuizovLinux {
   }
 }
 
-export class zoznamQuizovC{
+export class zoznamQuizovC {
 
   id?: number;
   solution: string;

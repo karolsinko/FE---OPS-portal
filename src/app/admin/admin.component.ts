@@ -11,13 +11,9 @@ import {FormControl, FormGroup} from "@angular/forms";
 })
 export class AdminComponent implements CanActivate {
 
-  @Input()
-  set admin(data: admin | undefined){
-    if (data) {
-      this.fillForm(data);
-    }
-  }
   form: FormGroup;
+  username = '';
+  password = '';
 
   constructor(private router: Router) {
     this.form = new FormGroup({
@@ -27,13 +23,12 @@ export class AdminComponent implements CanActivate {
     })
   }
 
-  private fillForm(admin: zoznamAdminov): void {
-    this.form.controls['id'].setValue(admin.id);
-    this.form.controls['username'].setValue(admin.username);
-    this.form.controls['password'].setValue(admin.password);
+  @Input()
+  set admin(data: admin | undefined) {
+    if (data) {
+      this.fillForm(data);
+    }
   }
-  username = '';
-  password = '';
 
   login() {
     if (this.username === 'user' && this.password === 'kajojepan') {
@@ -63,6 +58,12 @@ export class AdminComponent implements CanActivate {
 
     // Ak je používateľ prihlásený, povoľte prístup k cieľovej stránke
     return true;
+  }
+
+  private fillForm(admin: zoznamAdminov): void {
+    this.form.controls['id'].setValue(admin.id);
+    this.form.controls['username'].setValue(admin.username);
+    this.form.controls['password'].setValue(admin.password);
   }
 }
 

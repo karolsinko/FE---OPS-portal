@@ -10,13 +10,12 @@ import {zoznamSkriptLinux} from "../../../models/skripta.model";
 export class SkriptaFormularComponent implements OnInit {
 
   currentStepIndex = 0;
+  @Input()
+  skripta: zoznamSkriptLinux[] = [];
 
   constructor(private router: Router) {
 
   }
-
-  @Input()
-  skripta: zoznamSkriptLinux[] = [];
 
   chodSpat(): void {
     this.router.navigate(['']);

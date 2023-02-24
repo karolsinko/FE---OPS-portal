@@ -10,17 +10,17 @@ import {SkriptaLinuxService} from "../../../../../../Service/Skripta/skriptaLinu
 })
 export class KonzolaStrankaSkriptyComponent implements OnInit {
 
-  constructor(private router: Router, private skriptaService: SkriptaLinuxService) { }
+  //Admin konzola
+  @Input()
+  skripta: zoznamSkriptLinux[] = [];
+  skriptNaUpravu?: skripta;
+
+  constructor(private router: Router, private skriptaService: SkriptaLinuxService) {
+  }
 
   ngOnInit(): void {
     this.obnovitSkripta();
   }
-
-  //Admin konzola
-  @Input()
-  skripta: zoznamSkriptLinux[] = [];
-
-  skriptNaUpravu?: skripta;
 
   obnovitSkripta(): void {
     this.skriptaService.getSkripta().subscribe(data => {
@@ -36,26 +36,27 @@ export class KonzolaStrankaSkriptyComponent implements OnInit {
   }
 
   uprav(skripta: skripta): void {
-    if(skripta.id !== undefined){
-      this.skriptaService.updateSkript(skripta.id, skripta).subscribe(() =>{
+    if (skripta.id !== undefined) {
+      this.skriptaService.updateSkript(skripta.id, skripta).subscribe(() => {
         this.obnovitSkripta();
       });
     }
   }
 
   upravZoZoznamu(id: number): void {
-    this.skriptaService.getSkriptPodlaId(id).subscribe(data =>{
+    this.skriptaService.getSkriptPodlaId(id).subscribe(data => {
       this.skriptNaUpravu = data;
     });
   }
 
   zmazZoZoznamu(id: number): void {
-    if(confirm('Naozaj chces zmazat?')){
-      this.skriptaService.deleteSkript(id).subscribe(() =>{
+    if (confirm('Naozaj chces zmazat?')) {
+      this.skriptaService.deleteSkript(id).subscribe(() => {
         this.obnovitSkripta();
       });
     }
   }
+
   chodSpat(): void {
     this.router.navigate(['']);
   }

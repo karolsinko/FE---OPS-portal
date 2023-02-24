@@ -8,9 +8,9 @@ describe('BashZoznamComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BashZoznamComponent ]
+      declarations: [BashZoznamComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

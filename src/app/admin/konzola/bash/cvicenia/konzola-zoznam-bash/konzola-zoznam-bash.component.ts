@@ -8,17 +8,16 @@ import {zoznamCviceniBash} from "../../../../../models/cvicenie.model";
 })
 export class KonzolaZoznamBashComponent implements OnInit {
 
-  constructor() {
-  }
   //BASH
   @Input()
   cvicenieBash: zoznamCviceniBash[] = [];
-
   @Output()
   upravBashCvicenie: EventEmitter<number> = new EventEmitter<number>();
-
   @Output()
   vymazBashCvicenie: EventEmitter<number> = new EventEmitter<number>();
+
+  constructor() {
+  }
 
   uprav(id?: number): void {
     this.upravBashCvicenie.emit(id);

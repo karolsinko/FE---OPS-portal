@@ -1,4 +1,4 @@
-export class skripta{
+export class skripta {
 
   id?: number;
   content: string;

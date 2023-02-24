@@ -25,7 +25,7 @@ export class CFormularComponent implements OnInit {
     document.getElementById("here")?.removeChild(this.compilerC);
   }
 
-  ngOnInit(): void{
+  ngOnInit(): void {
 
   }
 }

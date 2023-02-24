@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 
-enum MENU {   HOME, QUIZC,SKRIPTAC, CVICENIAC}
+enum MENU { HOME, QUIZC, SKRIPTAC, CVICENIAC}
 
 
 @Component({
@@ -11,23 +11,24 @@ enum MENU {   HOME, QUIZC,SKRIPTAC, CVICENIAC}
 })
 export class MenuCComponent implements OnInit {
 
-  date=new Date();
+  date = new Date();
   menu = MENU;
+  showFiller = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+  }
 
   public openMenu(m: MENU) {
     if (m === MENU.HOME) {
       this.router.navigate(['/']);
-    }else if(m=== MENU.QUIZC){
+    } else if (m === MENU.QUIZC) {
       this.router.navigate(['/quiz/c']);
-    }else if(m=== MENU.SKRIPTAC){
+    } else if (m === MENU.SKRIPTAC) {
       this.router.navigate(['/skripta/c']);
-    }else if(m=== MENU.CVICENIAC){
+    } else if (m === MENU.CVICENIAC) {
       this.router.navigate(['/cvicenia/c']);
     }
   }
-
 
   ngOnInit(): void {
     const token = localStorage.getItem("isAuthorized");
@@ -36,6 +37,4 @@ export class MenuCComponent implements OnInit {
       // redirect to login page
     }
   }
-
-  showFiller = false;
 }

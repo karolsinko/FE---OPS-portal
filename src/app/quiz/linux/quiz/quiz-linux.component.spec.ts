@@ -8,9 +8,9 @@ describe('QuizZoznamComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ QuizLinuxComponent ]
+      declarations: [QuizLinuxComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

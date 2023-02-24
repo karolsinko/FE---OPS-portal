@@ -1,7 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Router} from "@angular/router";
-import {SkriptaLinuxService} from "../../../../../../Service/Skripta/skriptaLinux-service";
-import {zoznamSkriptC, zoznamSkriptLinux} from "../../../../../models/skripta.model";
+import {zoznamSkriptC} from "../../../../../models/skripta.model";
 import {SkriptaCService} from "../../../../../../Service/Skripta/skriptaC-service";
 
 @Component({
@@ -10,18 +9,16 @@ import {SkriptaCService} from "../../../../../../Service/Skripta/skriptaC-servic
   styleUrls: ['./konzola-zoznam-skripty-c.component.css']
 })
 export class KonzolaZoznamSkriptyCComponent implements OnInit {
-  constructor(private router: Router, private skriptaService: SkriptaCService) {
-  }
-
   //Skripty
   @Input()
   skripty: zoznamSkriptC[] = [];
-
   @Output()
   upravSkripty: EventEmitter<number> = new EventEmitter<number>();
-
   @Output()
   vymazSkripty: EventEmitter<number> = new EventEmitter<number>();
+
+  constructor(private router: Router, private skriptaService: SkriptaCService) {
+  }
 
   uprav(id?: number): void {
     this.upravSkripty.emit(id);

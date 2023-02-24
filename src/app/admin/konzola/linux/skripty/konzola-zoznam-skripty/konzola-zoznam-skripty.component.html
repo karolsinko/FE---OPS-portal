@@ -1,24 +1,33 @@
-
 <table class="table">
 
-    <th>id</th>
-    <th>príklad1</th>
-    <th>príklad2</th>
-    <th>vysvetlivky</th>
-    <th>skripty</th>
-    <th>príkazy</th>
-    <th>total count: {{skripty.length}}</th>
+  <th>id</th>
+  <th>príklad1</th>
+  <th>príklad2</th>
+  <th>vysvetlivky</th>
+  <th>skripty</th>
+  <th>príkazy</th>
+  <th>total count: {{skripty.length}}</th>
 
   <tbody *ngFor="let s of skripty">
-    <td>{{ s.id }}</td>
-    <td><div [innerHTML]="s.content"></div></td>
-    <td><div [innerHTML]="s.content1"></div></td>
-    <td><div [innerHTML]="s.explain"></div></td>
-    <td><div [innerHTML]="s.commands"></div></td>
-    <td>
-      <button class="btn btn--action" (click)="uprav(s.id)"><i class="bi bi-wrench"></i><span class="uprav"></span></button>
-      <button class="btn btn--action" (click)="zmaz(s.id)"><i class="bi bi-folder-minus"></i><span class="vymaz"></span></button>
-    </td>
+  <td>{{ s.id }}</td>
+  <td>
+    <div [innerHTML]="s.content"></div>
+  </td>
+  <td>
+    <div [innerHTML]="s.content1"></div>
+  </td>
+  <td>
+    <div [innerHTML]="s.explain"></div>
+  </td>
+  <td>
+    <div [innerHTML]="s.commands"></div>
+  </td>
+  <td>
+    <button (click)="uprav(s.id)" class="btn btn--action"><i class="bi bi-wrench"></i><span class="uprav"></span>
+    </button>
+    <button (click)="zmaz(s.id)" class="btn btn--action"><i class="bi bi-folder-minus"></i><span class="vymaz"></span>
+    </button>
+  </td>
   </tbody>
 </table>
 

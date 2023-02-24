@@ -10,9 +10,10 @@ import {QuizCService} from "../../../../Service/Quiz/quizC-service";
 })
 export class QuizCStrankaComponent implements OnInit {
 
-  constructor(private router: Router, private quizCService: QuizCService) { }
-
   quiz: zoznamQuizovC[] = [];
+
+  constructor(private router: Router, private quizCService: QuizCService) {
+  }
 
   chodSpat(): void {
     this.router.navigate(['']);

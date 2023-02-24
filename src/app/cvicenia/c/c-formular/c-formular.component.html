@@ -1,14 +1,16 @@
 <head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
   <title></title>
 
 </head>
 
-  <div class="card-body">
-    <table>
-        <button class="btn btn--action" (click)="pridajCompilerC()"><i class="bi bi-plus-circle-fill"></i><span> | Pridaj Compiler pre C</span></button>
-        <button class="btn btn--action" (click)="odstranCompilerC()"><i class="bi bi-x-circle-fill"></i><span> | Odstran Compiler pre C</span></button>
-    </table>
-    <div class="card" id="here">
-    </div>
+<div class="card-body">
+  <table>
+    <button (click)="pridajCompilerC()" class="btn btn--action"><i class="bi bi-plus-circle-fill"></i><span> | Pridaj Compiler pre C</span>
+    </button>
+    <button (click)="odstranCompilerC()" class="btn btn--action"><i class="bi bi-x-circle-fill"></i><span> | Odstran Compiler pre C</span>
+    </button>
+  </table>
+  <div class="card" id="here">
   </div>
+</div>

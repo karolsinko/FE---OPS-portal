@@ -8,9 +8,9 @@ describe('SkriptaZoznamComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SkriptaZoznamComponent ]
+      declarations: [SkriptaZoznamComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

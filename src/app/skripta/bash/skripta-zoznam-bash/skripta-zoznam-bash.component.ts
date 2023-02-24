@@ -9,13 +9,12 @@ import {zoznamSkriptBash} from "../../../models/skripta.model";
 export class SkriptaZoznamBashComponent implements OnInit {
 
   currentStepIndex = 0;
+  @Input()
+  skripta: zoznamSkriptBash[] = [];
 
   constructor() {
 
   }
-
-  @Input()
-  skripta: zoznamSkriptBash[] = [];
 
   previousStep() {
     if (this.currentStepIndex > 0) {

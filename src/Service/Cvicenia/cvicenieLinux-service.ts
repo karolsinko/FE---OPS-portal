@@ -6,16 +6,17 @@ import {Injectable} from "@angular/core";
 @Injectable({
   providedIn: 'root'
 })
-export class cvicenieLinuxService{
+export class cvicenieLinuxService {
   private apiUrl = 'http://localhost:8080/api/cvicenia/linux';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
   getCvicenia(): Observable<zoznamCviceniLinux[]> {
     return this.http.get<zoznamCviceniLinux[]>(`${this.apiUrl}`);
   }
 
-  getCviceniePodlaId(id : number): Observable<zoznamCviceniLinux> {
+  getCviceniePodlaId(id: number): Observable<zoznamCviceniLinux> {
     return this.http.get<zoznamCviceniLinux>(`${this.apiUrl}/${id}`);
   }
 
@@ -23,11 +24,11 @@ export class cvicenieLinuxService{
     return this.http.post<zoznamCviceniLinux>(`${this.apiUrl}`, zoznamCviceniLinux);
   }
 
-  updateCvicenie(id: number, zoznamCviceniLinux : zoznamCviceniLinux): Observable<zoznamCviceniLinux>{
+  updateCvicenie(id: number, zoznamCviceniLinux: zoznamCviceniLinux): Observable<zoznamCviceniLinux> {
     return this.http.put<zoznamCviceniLinux>(`${this.apiUrl}/${id}`, zoznamCviceniLinux);
   }
 
-  deleteCvicenie(id: number): Observable<void>{
+  deleteCvicenie(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
 }

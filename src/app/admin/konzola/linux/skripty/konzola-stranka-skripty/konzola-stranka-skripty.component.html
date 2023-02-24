@@ -1,7 +1,5 @@
-
-
 <head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
   <title></title>
 </head>
 
@@ -14,22 +12,24 @@
     <div class='container'>
       <div class='card'>
         <div class='card-header'>
-          <i class="bi bi-person"></i><h1>Admin panel - linux skripty</h1>
-          <button class="btn btn--action" (click)="chodSpat()"><i class="bi bi-house-door"></i><span> | Späť</span></button>
+          <i class="bi bi-person"></i>
+          <h1>Admin panel - linux skripty</h1>
+          <button (click)="chodSpat()" class="btn btn--action"><i class="bi bi-house-door"></i><span> | Späť</span>
+          </button>
           <button (click)="logout()"><i class="bi bi-arrow-bar-left"></i><span> | Logout</span></button>
         </div>
         <div class="stepper-container">
           <div class="stepper-buttons-container">
             <app-konzola-formular-skripty
-              [skripty]="skriptNaUpravu"
               (pridajSkripty)="pridaj($event)"
-              (upravSkripty)="uprav($event)">
+              (upravSkripty)="uprav($event)"
+              [skripty]="skriptNaUpravu">
 
             </app-konzola-formular-skripty>
             <app-konzola-zoznam-skripty
-              [skripty]="skripta"
               (upravSkripty)="upravZoZoznamu($event)"
-              (vymazSkripty)="zmazZoZoznamu($event)">
+              (vymazSkripty)="zmazZoZoznamu($event)"
+              [skripty]="skripta">
 
             </app-konzola-zoznam-skripty>
           </div>

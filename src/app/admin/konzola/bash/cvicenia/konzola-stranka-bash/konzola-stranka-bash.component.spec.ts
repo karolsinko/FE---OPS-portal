@@ -8,9 +8,9 @@ describe('KonzolaStrankaBashComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ KonzolaStrankaBashComponent ]
+      declarations: [KonzolaStrankaBashComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

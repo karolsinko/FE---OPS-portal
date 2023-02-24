@@ -1,5 +1,5 @@
 <head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
   <title></title>
 </head>
 
@@ -12,22 +12,24 @@
     <div class='container'>
       <div class='card'>
         <div class='card-header'>
-          <i class="bi bi-person"></i><h1>Admin panel - bash quiz</h1>
-          <button class="btn btn--action" (click)="chodSpat()"><i class="bi bi-house-door"></i><span> | Späť</span></button>
+          <i class="bi bi-person"></i>
+          <h1>Admin panel - bash quiz</h1>
+          <button (click)="chodSpat()" class="btn btn--action"><i class="bi bi-house-door"></i><span> | Späť</span>
+          </button>
           <button (click)="logout()"><i class="bi bi-arrow-bar-left"></i><span> | Logout</span></button>
         </div>
         <div class="stepper-container">
           <div class="stepper-buttons-container">
             <app-konzola-formular-quiz
-              [quiz]="quizNaUpravu"
               (pridajQuiz)="pridaj($event)"
-              (upravQuiz)="uprav($event)">
+              (upravQuiz)="uprav($event)"
+              [quiz]="quizNaUpravu">
 
             </app-konzola-formular-quiz>
             <app-konzola-zoznam-quiz
-              [quiz]="quiz"
               (upravQuizy)="upravZoZoznamu($event)"
-              (vymazQuizy)="zmazZoZoznamu($event)">
+              (vymazQuizy)="zmazZoZoznamu($event)"
+              [quiz]="quiz">
 
             </app-konzola-zoznam-quiz>
           </div>

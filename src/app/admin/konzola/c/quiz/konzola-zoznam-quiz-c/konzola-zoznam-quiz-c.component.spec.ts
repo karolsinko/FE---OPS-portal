@@ -8,9 +8,9 @@ describe('KonzolaZoznamQuizComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ KonzolaZoznamQuizCComponent ]
+      declarations: [KonzolaZoznamQuizCComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

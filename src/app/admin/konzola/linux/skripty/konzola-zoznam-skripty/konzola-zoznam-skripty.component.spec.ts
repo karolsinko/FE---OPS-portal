@@ -8,9 +8,9 @@ describe('KonzolaZoznamSkriptyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ KonzolaZoznamSkriptyComponent ]
+      declarations: [KonzolaZoznamSkriptyComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

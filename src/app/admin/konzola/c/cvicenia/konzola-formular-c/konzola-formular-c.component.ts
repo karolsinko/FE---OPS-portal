@@ -9,18 +9,9 @@ import {FormControl, FormGroup} from "@angular/forms";
 })
 export class KonzolaFormularCComponent implements OnInit {
 
-  //C
-  @Input()
-  set cvicenieC(data: zoznamCviceniC | undefined){
-    if (data) {
-      this.fillForm(data);
-    }
-  }
   form: FormGroup;
-
   @Output()
   pridajCCvicenie = new EventEmitter<zoznamCviceniC>();
-
   @Output()
   upravCCvicenie = new EventEmitter<zoznamCviceniC>();
 
@@ -33,11 +24,12 @@ export class KonzolaFormularCComponent implements OnInit {
     });
   }
 
-  private fillForm(zoznamCviceniC: zoznamCviceniC): void {
-    this.form.controls['id'].setValue(zoznamCviceniC.id);
-    this.form.controls['content'].setValue(zoznamCviceniC.content);
-    this.form.controls['input'].setValue(zoznamCviceniC.input);
-    this.form.controls['solution'].setValue(zoznamCviceniC.solution);
+  //C
+  @Input()
+  set cvicenieC(data: zoznamCviceniC | undefined) {
+    if (data) {
+      this.fillForm(data);
+    }
   }
 
   public pridaj(): void {
@@ -56,6 +48,13 @@ export class KonzolaFormularCComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  private fillForm(zoznamCviceniC: zoznamCviceniC): void {
+    this.form.controls['id'].setValue(zoznamCviceniC.id);
+    this.form.controls['content'].setValue(zoznamCviceniC.content);
+    this.form.controls['input'].setValue(zoznamCviceniC.input);
+    this.form.controls['solution'].setValue(zoznamCviceniC.solution);
   }
 
 }

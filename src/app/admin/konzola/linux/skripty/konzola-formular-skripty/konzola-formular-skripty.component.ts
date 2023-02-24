@@ -8,18 +8,9 @@ import {zoznamSkriptLinux} from "../../../../../models/skripta.model";
   styleUrls: ['./konzola-formular-skripty.component.css']
 })
 export class KonzolaFormularSkriptyComponent implements OnInit {
-//Skripty
-  @Input()
-  set skripty(data: zoznamSkriptLinux | undefined){
-    if (data) {
-      this.fillForm(data);
-    }
-  }
   form: FormGroup;
-
   @Output()
   pridajSkripty = new EventEmitter<zoznamSkriptLinux>();
-
   @Output()
   upravSkripty = new EventEmitter<zoznamSkriptLinux>();
 
@@ -34,12 +25,12 @@ export class KonzolaFormularSkriptyComponent implements OnInit {
     });
   }
 
-  private fillForm(zoznamSkript: zoznamSkriptLinux): void {
-    this.form.controls['id'].setValue(zoznamSkript.id);
-    this.form.controls['commands'].setValue(zoznamSkript.commands);
-    this.form.controls['content'].setValue(zoznamSkript.content);
-    this.form.controls['content1'].setValue(zoznamSkript.content1);
-    this.form.controls['explain'].setValue(zoznamSkript.explain);
+//Skripty
+  @Input()
+  set skripty(data: zoznamSkriptLinux | undefined) {
+    if (data) {
+      this.fillForm(data);
+    }
   }
 
   public pridaj(): void {
@@ -58,5 +49,13 @@ export class KonzolaFormularSkriptyComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  private fillForm(zoznamSkript: zoznamSkriptLinux): void {
+    this.form.controls['id'].setValue(zoznamSkript.id);
+    this.form.controls['commands'].setValue(zoznamSkript.commands);
+    this.form.controls['content'].setValue(zoznamSkript.content);
+    this.form.controls['content1'].setValue(zoznamSkript.content1);
+    this.form.controls['explain'].setValue(zoznamSkript.explain);
   }
 }

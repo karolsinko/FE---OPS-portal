@@ -8,18 +8,16 @@ import {zoznamQuizovBash} from "../../../../../models/quiz.model";
 })
 export class KonzolaZoznamQuizBashComponent implements OnInit {
 
-  constructor() {
-  }
-
   //Quizy
   @Input()
   quiz: zoznamQuizovBash[] = [];
-
   @Output()
   upravQuizy: EventEmitter<number> = new EventEmitter<number>();
-
   @Output()
   vymazQuizy: EventEmitter<number> = new EventEmitter<number>();
+
+  constructor() {
+  }
 
   uprav(id?: number): void {
     this.upravQuizy.emit(id);

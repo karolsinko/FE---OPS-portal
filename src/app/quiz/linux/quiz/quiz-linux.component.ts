@@ -20,6 +20,7 @@ export class QuizLinuxComponent implements OnInit {
   pocetChyb = 0;
   userAnswer: string;
   koniec = 0;
+
   constructor(private router: Router, private quizService: QuizLinuxService) {
     this.userAnswer = "";
   }
@@ -41,21 +42,21 @@ export class QuizLinuxComponent implements OnInit {
     if (!this.quiz || !this.quiz[this.currentStepIndex]) {
       return;
     }
-      if (this.userAnswer.trim() === this.quiz[this.currentStepIndex].solution) {
-        this.score++;
-        this.pocetPokusov++;
-        correct = true;
-      }else {
-        alert(`Zlá odpoveď, správna odpoveď je: "${(this.quiz[this.currentStepIndex].solution)}"`);
-        this.score--;
-        this.pocetPokusov++;
-        this.pocetChyb++;
-        correct = false;
-        return;
-      }
-      console.log(`solution: ${this.quiz[this.currentStepIndex].solution}`);
-      console.log(`userAnswer: ${this.userAnswer.trim()}`);
-      console.log(`Your score is: ${this.score}`);
+    if (this.userAnswer.trim() === this.quiz[this.currentStepIndex].solution) {
+      this.score++;
+      this.pocetPokusov++;
+      correct = true;
+    } else {
+      alert(`Zlá odpoveď, správna odpoveď je: "${(this.quiz[this.currentStepIndex].solution)}"`);
+      this.score--;
+      this.pocetPokusov++;
+      this.pocetChyb++;
+      correct = false;
+      return;
+    }
+    console.log(`solution: ${this.quiz[this.currentStepIndex].solution}`);
+    console.log(`userAnswer: ${this.userAnswer.trim()}`);
+    console.log(`Your score is: ${this.score}`);
     this.currentStepIndex++;
     if (this.currentStepIndex === this.quiz.length) {
       const scoreModal = document.getElementById('score-modal');
@@ -64,6 +65,7 @@ export class QuizLinuxComponent implements OnInit {
       }
     }
   }
+
   closeScoreModal() {
     const scoreModal = document.getElementById('score-modal');
     if (scoreModal) {

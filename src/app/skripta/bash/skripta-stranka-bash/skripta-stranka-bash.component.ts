@@ -11,15 +11,14 @@ import {zoznamSkriptBash} from "../../../models/skripta.model";
 export class SkriptaStrankaBashComponent implements OnInit {
 
   pdf: HTMLIFrameElement;
+  skripta: zoznamSkriptBash[] = [];
 
-  constructor(private router: Router,private skriptaService: SkriptaLinuxService) {
+  constructor(private router: Router, private skriptaService: SkriptaLinuxService) {
     this.pdf = document.createElement("iframe");
     this.pdf.src = "https://www.ramstery.sk/user/documents/upload/OPSY1.pdf";
     this.pdf.height = "auto";
     this.pdf.width = "auto";
   }
-
-  skripta: zoznamSkriptBash[] = [];
 
   chodSpat(): void {
     this.router.navigate(['']);

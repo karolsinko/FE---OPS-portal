@@ -10,17 +10,17 @@ import {cvicenieLinuxService} from "../../../../../../Service/Cvicenia/cvicenieL
 })
 export class KonzolaComponent implements OnInit {
 
-  constructor(private router: Router, private cvicenieLinuxService: cvicenieLinuxService) { }
+  //Admin konzola
+  @Input()
+  cvicenieLinux: zoznamCviceniLinux[] = [];
+  cvicenieNaUpravu?: cvicenie;
+
+  constructor(private router: Router, private cvicenieLinuxService: cvicenieLinuxService) {
+  }
 
   ngOnInit(): void {
     this.obnovitCvicenia();
   }
-
-  //Admin konzola
-  @Input()
-  cvicenieLinux: zoznamCviceniLinux[] = [];
-
-  cvicenieNaUpravu?: cvicenie;
 
   obnovitCvicenia(): void {
     this.cvicenieLinuxService.getCvicenia().subscribe(data => {
@@ -36,22 +36,22 @@ export class KonzolaComponent implements OnInit {
   }
 
   uprav(cvicenie: cvicenie): void {
-    if(cvicenie.id !== undefined){
-      this.cvicenieLinuxService.updateCvicenie(cvicenie.id, cvicenie).subscribe(() =>{
+    if (cvicenie.id !== undefined) {
+      this.cvicenieLinuxService.updateCvicenie(cvicenie.id, cvicenie).subscribe(() => {
         this.obnovitCvicenia();
       });
     }
   }
 
   upravZoZoznamu(id: number): void {
-    this.cvicenieLinuxService.getCviceniePodlaId(id).subscribe(data =>{
+    this.cvicenieLinuxService.getCviceniePodlaId(id).subscribe(data => {
       this.cvicenieNaUpravu = data;
     });
   }
 
   zmazZoZoznamu(id: number): void {
-    if(confirm('Naozaj chces zmazat?')){
-      this.cvicenieLinuxService.deleteCvicenie(id).subscribe(() =>{
+    if (confirm('Naozaj chces zmazat?')) {
+      this.cvicenieLinuxService.deleteCvicenie(id).subscribe(() => {
         this.obnovitCvicenia();
       });
     }

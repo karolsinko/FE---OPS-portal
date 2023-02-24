@@ -8,9 +8,9 @@ describe('LinuxZoznamComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LinuxZoznamComponent ]
+      declarations: [LinuxZoznamComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

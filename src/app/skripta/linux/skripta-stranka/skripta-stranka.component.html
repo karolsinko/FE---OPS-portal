@@ -1,5 +1,5 @@
 <head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
   <title></title>
 </head>
 <div class='dashboard-app'>
@@ -10,17 +10,19 @@
     <div class='container'>
       <div class='card'>
         <div class='card-header'>
-          <i class="bi bi-person"></i><h1>Operačné systémy 1</h1>
+          <i class="bi bi-person"></i>
+          <h1>Operačné systémy 1</h1>
           <!--<button class="btn btn--action" (click)="pridajPDF()"><i class="bi bi-plus-circle-fill"></i><span> | Pridaj PDF</span></button>-->
-          <button class="btn btn--action" (click)="chodSpat()"><i class="bi bi-house-door"></i><span> | Späť</span></button>
+          <button (click)="chodSpat()" class="btn btn--action"><i class="bi bi-house-door"></i><span> | Späť</span>
+          </button>
         </div>
         <div class='card-body'>
-<!--
-          <app-skripta-poznamky
-            [skripta]="skripta">
+          <!--
+                    <app-skripta-poznamky
+                      [skripta]="skripta">
 
-          </app-skripta-poznamky>
--->
+                    </app-skripta-poznamky>
+          -->
 
           <app-skripta-formular
             [skripta]="skripta"
@@ -28,7 +30,7 @@
 
           </app-skripta-formular>
           <app-skripta-zoznam
-          [skripta]="skripta"
+            [skripta]="skripta"
           >
 
           </app-skripta-zoznam>

@@ -8,18 +8,9 @@ import {FormControl, FormGroup} from "@angular/forms";
   styleUrls: ['./konzola-formular-bash.component.css']
 })
 export class KonzolaFormularBashComponent implements OnInit {
-  //Bash
-  @Input()
-  set cvicenieBash(data: zoznamCviceniBash | undefined){
-    if (data) {
-      this.fillForm(data);
-    }
-  }
   form: FormGroup;
-
   @Output()
   pridajBashCvicenie = new EventEmitter<zoznamCviceniBash>();
-
   @Output()
   upravBashCvicenie = new EventEmitter<zoznamCviceniBash>();
 
@@ -32,11 +23,12 @@ export class KonzolaFormularBashComponent implements OnInit {
     });
   }
 
-  private fillForm(zoznamCviceniBash: zoznamCviceniBash): void {
-    this.form.controls['id'].setValue(zoznamCviceniBash.id);
-    this.form.controls['content'].setValue(zoznamCviceniBash.content);
-    this.form.controls['input'].setValue(zoznamCviceniBash.input);
-    this.form.controls['solution'].setValue(zoznamCviceniBash.solution);
+  //Bash
+  @Input()
+  set cvicenieBash(data: zoznamCviceniBash | undefined) {
+    if (data) {
+      this.fillForm(data);
+    }
   }
 
   public pridaj(): void {
@@ -55,5 +47,12 @@ export class KonzolaFormularBashComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  private fillForm(zoznamCviceniBash: zoznamCviceniBash): void {
+    this.form.controls['id'].setValue(zoznamCviceniBash.id);
+    this.form.controls['content'].setValue(zoznamCviceniBash.content);
+    this.form.controls['input'].setValue(zoznamCviceniBash.input);
+    this.form.controls['solution'].setValue(zoznamCviceniBash.solution);
   }
 }

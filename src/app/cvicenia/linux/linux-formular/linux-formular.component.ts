@@ -24,7 +24,8 @@ export class LinuxFormularComponent implements OnInit {
   odstranCompilerLinux(): void {
     document.getElementById("here")?.removeChild(this.compilerLinux);
   }
-  ngOnInit(): void{
+
+  ngOnInit(): void {
 
   }
 }

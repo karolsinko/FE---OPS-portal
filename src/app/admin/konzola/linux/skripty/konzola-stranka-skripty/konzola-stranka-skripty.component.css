@@ -1,18 +1,20 @@
 /* TABULKY
  --------------------------------------------
 */
-table{
+table {
   margin-left: auto;
   margin-right: auto;
   text-align: justify-all;
 }
-td{
+
+td {
   border: 0;
   width: auto;
   color: white;
 }
-th{
-  border:0;
+
+th {
+  border: 0;
   width: auto;
   color: white;
 }
@@ -221,14 +223,15 @@ h1, .h1 {
 /*   IKONY
 -----------------------------------------
  */
-.bi-person{
+.bi-person {
   color: white;
-  float:left;
+  float: left;
   font-size: 50px;
   margin-top: -12px;
 }
-.bi-person:hover{
-  color:#443ea2;
+
+.bi-person:hover {
+  color: #443ea2;
 }
 
 .center {
@@ -238,7 +241,7 @@ h1, .h1 {
 /* TLACIDLA
  --------------------------------------------
 */
-button{
+button {
   display: block;
   font-weight: 700;
   font-size: 18px;
@@ -252,16 +255,18 @@ button{
   border: black solid 1px;
 }
 
-button:hover{
+button:hover {
   box-shadow: 0 3px white;
 }
-span, i{
+
+span, i {
   display: inline-block;
-  color:white;
+  color: white;
   position: relative;
   transition: all .5s ease;
 }
-span::before{
+
+span::before {
   color: #443ea2;
   font-weight: 900;
   font-size: 20px;
@@ -272,7 +277,7 @@ span::before{
   transition: all .1s ease 0s;
 }
 
-button:hover span:before{
+button:hover span:before {
   left: 0;
   opacity: 1;
 }
@@ -281,11 +286,11 @@ button:active {
   transform: translateY(5px);
 }
 
-button:hover span{
+button:hover span {
   padding-left: 2rem;
 }
 
-button:hover span:before{
+button:hover span:before {
   left: 0;
   opacity: 1;
 }
@@ -299,95 +304,114 @@ button:active {
  --------------------------------------------
 */
 
-.group        {
-  position:relative;
+.group {
+  position: relative;
 }
 
-textarea         {
-  font-size:18px;
-  padding:10px 10px 10px 5px;
-  display:block;
-  width:auto;
-  border-bottom:1px solid white;
+textarea {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: auto;
+  border-bottom: 1px solid white;
   background-color: #353084;
   color: white;
 }
 
 
 /* LABEL ======================================= */
-label          {
+label {
   color: white;
-  font-size:18px;
-  font-weight:normal;
-  position:absolute;
-  pointer-events:none;
-  left:5px;
-  top:10px;
-  transition:0.2s ease all;
-  -moz-transition:0.2s ease all;
-  -webkit-transition:0.2s ease all;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
 }
 
 /* active state */
-textarea:focus ~ label, textarea:valid ~ label    {
-  top:-30px;
-  font-size:20px;
-  color:white;
+textarea:focus ~ label, textarea:valid ~ label {
+  top: -30px;
+  font-size: 20px;
+  color: white;
 }
 
 /* BOTTOM BARS ================================= */
 
-.bar:before, .bar:after   {
-  content:'';
-  height:3px;
-  width:0;
-  bottom:1px;
-  position:absolute;
-  background:navajowhite;
-  transition:0.2s ease all;
-  -moz-transition:0.2s ease all;
-  -webkit-transition:0.2s ease all;
+.bar:before, .bar:after {
+  content: '';
+  height: 3px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: navajowhite;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
 }
+
 .bar:before {
-  left:50%;
+  left: 50%;
 }
+
 .bar:after {
-  right:50%;
+  right: 50%;
 }
 
 /* active state */
 textarea:focus ~ .bar:before, input:focus ~ .bar:after {
-  width:50%;
+  width: 50%;
 }
 
 /* HIGHLIGHTER ================================== */
 .highlight {
-  position:absolute;
-  height:60%;
-  width:auto;
-  top:25%;
-  left:0;
-  pointer-events:none;
-  opacity:0.5;
+  position: absolute;
+  height: 60%;
+  width: auto;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 /* active state */
 textarea:focus ~ .highlight {
-  -webkit-animation:inputHighlighter 0.3s ease;
-  -moz-animation:inputHighlighter 0.3s ease;
-  animation:inputHighlighter 0.3s ease;
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
 }
 
 /* ANIMATIONS ================ */
 @-webkit-keyframes inputHighlighter {
-  from { background:#5264AE; }
-  to  { width:0; background:transparent; }
+  from {
+    background: #5264AE;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
 }
+
 @-moz-keyframes inputHighlighter {
-  from { background:#5264AE; }
-  to  { width:0; background:transparent; }
+  from {
+    background: #5264AE;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
 }
+
 @keyframes inputHighlighter {
-  from { background:#5264AE; }
-  to  { width:0; background:transparent; }
+  from {
+    background: #5264AE;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
 }

@@ -1,33 +1,36 @@
 <head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
   <title></title>
 </head>
-    <form [formGroup]="form">
-      <table class="table">
-      <th>
-          <div class="group">
-            <textarea type="text" formControlName="content" required></textarea>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>content</label>
-          </div>
-          <div class="group">
-            <textarea  type="text" formControlName="input" required></textarea>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>input</label>
-          </div>
-          <div class="group">
-            <textarea  type="text" formControlName="solution" required></textarea>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>solution</label>
-          </div>
-        <div class="group">
-        <button class="btn btn--action" (click)="pridaj()" *ngIf="form.value.id === null"><i class="bi bi-folder-plus"></i><span class="pridaj"></span></button>
-        <button class="btn btn--action" (click)="uprav()" *ngIf="form.value.id !== null"><i class="bi bi-wrench"></i><span class="uprav"></span></button>
-        <button class="btn btn--action" (click)="zrus()"><i class="bi bi-folder-minus"></i><span class="vymaz"></span></button>
-        </div>
-      </th>
-      </table>
-    </form>
+<form [formGroup]="form">
+  <table class="table">
+    <th>
+      <div class="group">
+        <textarea formControlName="content" required type="text"></textarea>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>content</label>
+      </div>
+      <div class="group">
+        <textarea formControlName="input" required type="text"></textarea>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>input</label>
+      </div>
+      <div class="group">
+        <textarea formControlName="solution" required type="text"></textarea>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>solution</label>
+      </div>
+      <div class="group">
+        <button (click)="pridaj()" *ngIf="form.value.id === null" class="btn btn--action"><i
+          class="bi bi-folder-plus"></i><span class="pridaj"></span></button>
+        <button (click)="uprav()" *ngIf="form.value.id !== null" class="btn btn--action"><i
+          class="bi bi-wrench"></i><span class="uprav"></span></button>
+        <button (click)="zrus()" class="btn btn--action"><i class="bi bi-folder-minus"></i><span class="vymaz"></span>
+        </button>
+      </div>
+    </th>
+  </table>
+</form>

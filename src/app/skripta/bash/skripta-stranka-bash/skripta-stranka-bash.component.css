@@ -1,22 +1,25 @@
 /* TABULKY
  --------------------------------------------
 */
-table{
+table {
   margin-left: auto;
   margin-right: auto;
   text-align: justify-all;
 }
-td{
+
+td {
   border-bottom: #F5F5F5 1px solid;
   width: auto;
   color: white;
 }
-th{
+
+th {
   color: white;
   width: auto;
   -webkit-transition: color 2s;
   transition: color 2s;
 }
+
 th:hover {
   color: #D6C4EC;
 }
@@ -225,14 +228,15 @@ h1, .h1 {
 /*   IKONY
 -----------------------------------------
  */
-.bi-person{
+.bi-person {
   color: white;
-  float:left;
+  float: left;
   font-size: 50px;
   margin-top: -12px;
 }
-.bi-person:hover{
-  color:#443ea2;
+
+.bi-person:hover {
+  color: #443ea2;
 }
 
 .center {
@@ -242,7 +246,7 @@ h1, .h1 {
 /* TLACIDLA
  --------------------------------------------
 */
-button{
+button {
   display: block;
   font-weight: 700;
   font-size: 18px;
@@ -256,16 +260,18 @@ button{
   border: black solid 1px;
 }
 
-button:hover{
+button:hover {
   box-shadow: 0 3px white;
 }
-span, i{
+
+span, i {
   display: inline-block;
-  color:white;
+  color: white;
   position: relative;
   transition: all .5s ease;
 }
-span::before{
+
+span::before {
   color: #443ea2;
   font-weight: 900;
   font-size: 20px;
@@ -276,7 +282,7 @@ span::before{
   transition: all .1s ease 0s;
 }
 
-button:hover span:before{
+button:hover span:before {
   left: 0;
   opacity: 1;
 }
@@ -285,11 +291,11 @@ button:active {
   transform: translateY(5px);
 }
 
-button:hover span{
+button:hover span {
   padding-left: 2rem;
 }
 
-button:hover span:before{
+button:hover span:before {
   left: 0;
   opacity: 1;
 }
@@ -297,6 +303,7 @@ button:hover span:before{
 button:active {
   transform: translateY(5px);
 }
+
 .step-indicator-container {
   margin: 0 16px;
   display: flex;
@@ -318,6 +325,7 @@ button:active {
 .step-content {
   display: none;
 }
+
 .step-content {
   visibility: hidden;
 }

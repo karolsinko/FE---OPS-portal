@@ -8,9 +8,9 @@ describe('SkriptaZoznamBashComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SkriptaZoznamBashComponent ]
+      declarations: [SkriptaZoznamBashComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

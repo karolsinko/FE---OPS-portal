@@ -8,9 +8,9 @@ describe('CFormularComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CFormularComponent ]
+      declarations: [CFormularComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

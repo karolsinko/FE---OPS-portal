@@ -10,7 +10,7 @@
           <p>Pokusy : {{pocetPokusov}}</p>
           <p>Skóre : {{score}}</p>
           <p>Počet chýb : {{pocetChyb}}</p>
-          <p ><span id="remarks"></span></p>
+          <p><span id="remarks"></span></p>
         </div>
         <button (click)="closeScoreModal()"><i class="bi bi-send"></i><span>| Continue</span></button>
       </div>
@@ -31,31 +31,32 @@
         <div class="game-options-container">
 
         <span>
-        <input id="option-one" [(ngModel)]="userAnswer" name="userAnswer" type="radio" [value]="quiz.option1">
-          <label for="option-one" class="option" id="option-one-label">{{quiz.option1}}
+        <input [(ngModel)]="userAnswer" [value]="quiz.option1" id="option-one" name="userAnswer" type="radio">
+          <label class="option" for="option-one" id="option-one-label">{{quiz.option1}}
         </label>
         </span>
 
           <span>
-        <input id="option-two" [(ngModel)]="userAnswer" name="userAnswer" type="radio" [value]="quiz.option2">
-          <label for="option-two" class="option" id="option-two-label">{{quiz.option2}}
+        <input [(ngModel)]="userAnswer" [value]="quiz.option2" id="option-two" name="userAnswer" type="radio">
+          <label class="option" for="option-two" id="option-two-label">{{quiz.option2}}
         </label>
           </span>
 
           <span>
-        <input id="option-three" [(ngModel)]="userAnswer" name="userAnswer" type="radio" [value]="quiz.option3">
-          <label for="option-three" class="option" id="option-three-label">{{quiz.option3}}
+        <input [(ngModel)]="userAnswer" [value]="quiz.option3" id="option-three" name="userAnswer" type="radio">
+          <label class="option" for="option-three" id="option-three-label">{{quiz.option3}}
         </label>
           </span>
 
           <span>
-        <input id="option-four" [(ngModel)]="userAnswer" name="userAnswer" type="radio" [value]="quiz.option4">
-          <label for="option-four" class="option" id="option-four-label">{{quiz.option4}}
+        <input [(ngModel)]="userAnswer" [value]="quiz.option4" id="option-four" name="userAnswer" type="radio">
+          <label class="option" for="option-four" id="option-four-label">{{quiz.option4}}
         </label>
           </span>
         </div>
 
-        <button id="submit-answers" (click)="submitAnswers()"><i class="bi bi-send"></i><span>| Potvrď odpoveď</span></button>
+        <button (click)="submitAnswers()" id="submit-answers"><i class="bi bi-send"></i><span>| Potvrď odpoveď</span>
+        </button>
 
       </div>
     </div>

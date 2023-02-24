@@ -10,15 +10,14 @@ import {SkriptaLinuxService} from "../../../../Service/Skripta/skriptaLinux-serv
 })
 export class SkriptaStrankaComponent implements OnInit {
   pdf: HTMLIFrameElement;
+  skripta: zoznamSkriptLinux[] = [];
 
-  constructor(private router: Router,private skriptaService: SkriptaLinuxService) {
+  constructor(private router: Router, private skriptaService: SkriptaLinuxService) {
     this.pdf = document.createElement("iframe");
     this.pdf.src = "https://www.ramstery.sk/user/documents/upload/OPSY1.pdf";
     this.pdf.height = "auto";
     this.pdf.width = "auto";
   }
-
-  skripta: zoznamSkriptLinux[] = [];
 
   chodSpat(): void {
     this.router.navigate(['']);
