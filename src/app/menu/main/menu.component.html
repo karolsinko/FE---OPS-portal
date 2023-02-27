@@ -42,15 +42,15 @@
     <header>
       <a (click)="openMainMenu(menu.HOME)" class="brand-logo"><i class="bi bi-journal-code"></i><span>| Operačné systémy 1 </span></a>
     </header>
-    <a (click)="openMainMenu(menu.C)" class="dashboard-nav-item"><i class="bi bi-question-circle"></i> | C</a>
-    <a (click)="openMainMenu(menu.BASH)" class="dashboard-nav-item"><i class="bi bi-archive"></i> | Bash</a>
-    <a (click)="openMainMenu(menu.LINUX)" class="dashboard-nav-item"><i class="bi bi-info-circle"></i>| Linux</a>
+    <a (click)="openMainMenu(menu.C)" class="dashboard-nav-item"><i class="bi bi-code-square"></i> | C</a>
+    <a (click)="openMainMenu(menu.BASH)" class="dashboard-nav-item"><i class="bi bi-code-square"></i> | Bash</a>
+    <a (click)="openMainMenu(menu.LINUX)" class="dashboard-nav-item"><i class="bi bi-code-square"></i> | Linux</a>
     <div class="nav-item-divider"></div>
     <a (click)="openMainMenu(menu.FAQ)" class="dashboard-nav-item"><i class="bi bi-person-circle"></i>| FAQ</a>
     <a (click)="openMainMenu(menu.ADMIN)" class="dashboard-nav-item"><i class="bi bi-person-circle"></i>| Admin</a>
 
     <div class="date">
-      {{date| date:'dd.MM.yyyy'}}
+      <a><i class="bi bi-calendar3"></i> {{date| date:'dd.MM.yyyy'}}</a>
     </div>
   </mat-drawer>
 

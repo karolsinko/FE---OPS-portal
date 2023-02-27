@@ -41,13 +41,13 @@
       <a (click)="openMenu(menu.HOME)" class="brand-logo"><i
         class="bi bi-journal-code"></i><span>| Operačné systémy 1 </span></a>
     </header>
-    <a (click)="openMenu(menu.QUIZBASH)" class="dashboard-nav-item"><i class="bi bi-question-circle"></i> | Quiz</a>
-    <a (click)="openMenu(menu.CVICENIABASH)" class="dashboard-nav-item"><i class="bi bi-archive"></i> | Cvičenia</a>
-    <a (click)="openMenu(menu.SKRIPTABASH)" class="dashboard-nav-item"><i class="bi bi-info-circle"></i>| Skriptá</a>
+    <a (click)="openMenu(menu.QUIZBASH)" class="dashboard-nav-item"><i class="bi bi-question-circle"></i> | Bash - Quiz</a>
+    <a (click)="openMenu(menu.CVICENIABASH)" class="dashboard-nav-item"><i class="bi bi-archive"></i> | Bash - Cvičenia</a>
+    <a (click)="openMenu(menu.SKRIPTABASH)" class="dashboard-nav-item"><i class="bi bi-info-circle"></i>| Bash - Skriptá</a>
     <div class="nav-item-divider"></div>
     <a (click)="openMenu(menu.HOME)" class="dashboard-nav-item"><i class="bi bi-house-door"></i>| Späť</a>
     <div class="date">
-      {{date| date:'dd.MM.yyyy'}}
+      <a><i class="bi bi-calendar3"></i> {{date| date:'dd.MM.yyyy'}}</a>
     </div>
   </mat-drawer>
 

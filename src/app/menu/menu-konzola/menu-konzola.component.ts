@@ -68,4 +68,5 @@ export class MenuKonzolaComponent implements OnInit {
     }
 
   }
+  date = new Date();
 }

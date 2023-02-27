@@ -40,6 +40,9 @@
       <div class="nav-item-divider"></div>
       <a (click)="logout()" class="dashboard-nav-item"><i class="bi bi-arrow-bar-left"></i> | Logout</a>
     </nav>
+    <div class="date">
+      <a><i class="bi bi-calendar3"></i> {{date| date:'dd.MM.yyyy'}}</a>
+    </div>
   </mat-drawer>
 
 </mat-drawer-container>
