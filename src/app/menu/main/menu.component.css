@@ -294,18 +294,6 @@ h1, .h1 {
   font-size: 12px;
 }
 
-@media (max-width: 768px) {
-  .dashboard-content {
-    padding: 15px 0;
-  }
-}
-
-@media (max-width: 992px) {
-  .dashboard-nav.mobile-show {
-    display: block;
-  }
-}
-
 .date {
   position: absolute;
   bottom: 0;
