@@ -7,7 +7,7 @@ import {Observable} from "rxjs";
   providedIn: 'root'
 })
 export class SkriptaBashService {
-  private apiUrl = 'http://localhost:8080/api/skripta/bash';
+  private apiUrl = 'http://localhost:8082/api/skripta/bash';
 
   constructor(private http: HttpClient) {
   }

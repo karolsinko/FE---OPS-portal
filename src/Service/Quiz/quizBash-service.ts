@@ -7,7 +7,7 @@ import {quiz, zoznamQuizovBash} from "../../app/models/quiz.model";
   providedIn: 'root'
 })
 export class QuizBashService {
-  private apiUrl = 'http://localhost:8080/api/quiz/bash';
+  private apiUrl = 'http://localhost:8082/api/quiz/bash';
 
   constructor(private http: HttpClient) {
   }

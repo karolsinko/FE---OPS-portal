@@ -7,7 +7,7 @@ import {skripta, zoznamSkriptLinux} from "../../app/models/skripta.model";
   providedIn: 'root'
 })
 export class SkriptaLinuxService {
-  private apiUrl = 'http://localhost:8080/api/skripta/linux';
+  private apiUrl = 'http://localhost:8082/api/skripta/linux';
 
   constructor(private http: HttpClient) {
   }

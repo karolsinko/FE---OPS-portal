@@ -7,7 +7,7 @@ import {quiz, zoznamQuizovLinux} from "../../app/models/quiz.model";
   providedIn: 'root'
 })
 export class QuizLinuxService {
-  private apiUrl = 'http://localhost:8080/api/quiz/linux';
+  private apiUrl = 'http://localhost:8082/api/quiz/linux';
 
   constructor(private http: HttpClient) {
   }
