@@ -2,7 +2,7 @@ import {Component, Input} from '@angular/core';
 import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree} from "@angular/router";
 import {Observable} from "rxjs";
 import {admin, zoznamAdminov} from "../models/admin.model";
-import {FormControl, FormGroup} from "@angular/forms";
+import {UntypedFormControl, UntypedFormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-admin',
@@ -11,15 +11,15 @@ import {FormControl, FormGroup} from "@angular/forms";
 })
 export class AdminComponent implements CanActivate {
 
-  form: FormGroup;
+  form: UntypedFormGroup;
   username = '';
   password = '';
 
   constructor(private router: Router) {
-    this.form = new FormGroup({
-      id: new FormControl(null),
-      username: new FormControl(null),
-      password: new FormControl(null)
+    this.form = new UntypedFormGroup({
+      id: new UntypedFormControl(null),
+      username: new UntypedFormControl(null),
+      password: new UntypedFormControl(null)
     })
   }
 

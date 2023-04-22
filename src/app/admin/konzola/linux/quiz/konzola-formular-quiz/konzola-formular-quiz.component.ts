@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
+import {UntypedFormControl, UntypedFormGroup} from "@angular/forms";
 import {zoznamQuizovLinux} from "../../../../../models/quiz.model";
 
 @Component({
@@ -9,21 +9,21 @@ import {zoznamQuizovLinux} from "../../../../../models/quiz.model";
 })
 export class KonzolaFormularQuizComponent implements OnInit {
 
-  form: FormGroup;
+  form: UntypedFormGroup;
   @Output()
   pridajQuiz = new EventEmitter<zoznamQuizovLinux>();
   @Output()
   upravQuiz = new EventEmitter<zoznamQuizovLinux>();
 
   constructor() {
-    this.form = new FormGroup({
-      id: new FormControl(null),
-      question: new FormControl(null),
-      solution: new FormControl(null),
-      option1: new FormControl(null),
-      option2: new FormControl(null),
-      option3: new FormControl(null),
-      option4: new FormControl(null)
+    this.form = new UntypedFormGroup({
+      id: new UntypedFormControl(null),
+      question: new UntypedFormControl(null),
+      solution: new UntypedFormControl(null),
+      option1: new UntypedFormControl(null),
+      option2: new UntypedFormControl(null),
+      option3: new UntypedFormControl(null),
+      option4: new UntypedFormControl(null)
     });
   }
 

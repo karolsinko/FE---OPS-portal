@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {zoznamQuizovBash} from "../../../../../models/quiz.model";
-import {FormControl, FormGroup} from "@angular/forms";
+import {UntypedFormControl, UntypedFormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-konzola-formular-quiz-bash',
@@ -10,21 +10,21 @@ import {FormControl, FormGroup} from "@angular/forms";
 export class KonzolaFormularQuizBashComponent implements OnInit {
 
 
-  form: FormGroup;
+  form: UntypedFormGroup;
   @Output()
   pridajQuiz = new EventEmitter<zoznamQuizovBash>();
   @Output()
   upravQuiz = new EventEmitter<zoznamQuizovBash>();
 
   constructor() {
-    this.form = new FormGroup({
-      id: new FormControl(null),
-      question: new FormControl(null),
-      solution: new FormControl(null),
-      option1: new FormControl(null),
-      option2: new FormControl(null),
-      option3: new FormControl(null),
-      option4: new FormControl(null)
+    this.form = new UntypedFormGroup({
+      id: new UntypedFormControl(null),
+      question: new UntypedFormControl(null),
+      solution: new UntypedFormControl(null),
+      option1: new UntypedFormControl(null),
+      option2: new UntypedFormControl(null),
+      option3: new UntypedFormControl(null),
+      option4: new UntypedFormControl(null)
     });
   }
 

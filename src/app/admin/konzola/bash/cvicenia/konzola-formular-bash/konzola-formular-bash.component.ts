@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {zoznamCviceniBash} from "../../../../../models/cvicenie.model";
-import {FormControl, FormGroup} from "@angular/forms";
+import {UntypedFormControl, UntypedFormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-konzola-formular-bash',
@@ -8,18 +8,18 @@ import {FormControl, FormGroup} from "@angular/forms";
   styleUrls: ['./konzola-formular-bash.component.css']
 })
 export class KonzolaFormularBashComponent implements OnInit {
-  form: FormGroup;
+  form: UntypedFormGroup;
   @Output()
   pridajBashCvicenie = new EventEmitter<zoznamCviceniBash>();
   @Output()
   upravBashCvicenie = new EventEmitter<zoznamCviceniBash>();
 
   constructor() {
-    this.form = new FormGroup({
-      id: new FormControl(null),
-      content: new FormControl(null),
-      input: new FormControl(null),
-      solution: new FormControl(null)
+    this.form = new UntypedFormGroup({
+      id: new UntypedFormControl(null),
+      content: new UntypedFormControl(null),
+      input: new UntypedFormControl(null),
+      solution: new UntypedFormControl(null)
     });
   }
 

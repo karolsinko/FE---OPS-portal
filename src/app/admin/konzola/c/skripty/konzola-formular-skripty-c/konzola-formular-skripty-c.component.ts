@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {zoznamSkriptC} from "../../../../../models/skripta.model";
-import {FormControl, FormGroup} from "@angular/forms";
+import {UntypedFormControl, UntypedFormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-konzola-formular-skripty-c',
@@ -9,19 +9,19 @@ import {FormControl, FormGroup} from "@angular/forms";
 })
 export class KonzolaFormularSkriptyCComponent implements OnInit {
 
-  form: FormGroup;
+  form: UntypedFormGroup;
   @Output()
   pridajSkripty = new EventEmitter<zoznamSkriptC>();
   @Output()
   upravSkripty = new EventEmitter<zoznamSkriptC>();
 
   constructor() {
-    this.form = new FormGroup({
-      id: new FormControl(null),
-      commands: new FormControl(null),
-      content: new FormControl(null),
-      content1: new FormControl(null),
-      explain: new FormControl(null)
+    this.form = new UntypedFormGroup({
+      id: new UntypedFormControl(null),
+      commands: new UntypedFormControl(null),
+      content: new UntypedFormControl(null),
+      content1: new UntypedFormControl(null),
+      explain: new UntypedFormControl(null)
     });
   }
 

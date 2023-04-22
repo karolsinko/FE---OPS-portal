@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {zoznamCviceniLinux} from "../../../../../models/cvicenie.model";
-import {FormControl, FormGroup} from "@angular/forms";
+import {UntypedFormControl, UntypedFormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-konzola-formular',
@@ -9,7 +9,7 @@ import {FormControl, FormGroup} from "@angular/forms";
 })
 export class KonzolaFormularComponent implements OnInit {
 
-  form: FormGroup;
+  form: UntypedFormGroup;
   contentHTML = '';
   @Output()
   pridajLinuxCvicenie = new EventEmitter<zoznamCviceniLinux>();
@@ -17,11 +17,11 @@ export class KonzolaFormularComponent implements OnInit {
   upravLinuxCvicenie = new EventEmitter<zoznamCviceniLinux>();
 
   constructor() {
-    this.form = new FormGroup({
-      id: new FormControl(null),
-      content: new FormControl(null),
-      input: new FormControl(null),
-      solution: new FormControl(null)
+    this.form = new UntypedFormGroup({
+      id: new UntypedFormControl(null),
+      content: new UntypedFormControl(null),
+      input: new UntypedFormControl(null),
+      solution: new UntypedFormControl(null)
     });
   }
 

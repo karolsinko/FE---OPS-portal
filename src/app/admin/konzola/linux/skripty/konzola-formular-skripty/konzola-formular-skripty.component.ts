@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
+import {UntypedFormControl, UntypedFormGroup} from "@angular/forms";
 import {zoznamSkriptLinux} from "../../../../../models/skripta.model";
 
 @Component({
@@ -8,19 +8,19 @@ import {zoznamSkriptLinux} from "../../../../../models/skripta.model";
   styleUrls: ['./konzola-formular-skripty.component.css']
 })
 export class KonzolaFormularSkriptyComponent implements OnInit {
-  form: FormGroup;
+  form: UntypedFormGroup;
   @Output()
   pridajSkripty = new EventEmitter<zoznamSkriptLinux>();
   @Output()
   upravSkripty = new EventEmitter<zoznamSkriptLinux>();
 
   constructor() {
-    this.form = new FormGroup({
-      id: new FormControl(null),
-      commands: new FormControl(null),
-      content: new FormControl(null),
-      content1: new FormControl(null),
-      explain: new FormControl(null)
+    this.form = new UntypedFormGroup({
+      id: new UntypedFormControl(null),
+      commands: new UntypedFormControl(null),
+      content: new UntypedFormControl(null),
+      content1: new UntypedFormControl(null),
+      explain: new UntypedFormControl(null)
     });
   }
 
