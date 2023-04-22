@@ -25,7 +25,6 @@ export class QuizCStrankaComponent implements OnInit {
 
   obnovitQuizy(): void {
     this.quizCService.getQuizy().subscribe(data => {
-      console.log('Prislo: ', data);
       this.quiz = data;
     });
   }

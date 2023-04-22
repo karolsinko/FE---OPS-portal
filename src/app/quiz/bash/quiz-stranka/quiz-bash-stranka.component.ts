@@ -25,9 +25,7 @@ export class QuizBashStrankaComponent implements OnInit {
 
   obnovitQuizy(): void {
     this.quizBashService.getQuizy().subscribe(data => {
-      console.log('Prislo: ', data);
       this.quiz = data;
     });
   }
-
 }

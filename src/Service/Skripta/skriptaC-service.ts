@@ -7,7 +7,7 @@ import {Injectable} from "@angular/core";
   providedIn: 'root'
 })
 export class SkriptaCService {
-  private apiUrl = 'http://localhost:8082/api/skripta/c';
+  private apiUrl = 'http://labs.fpv.umb.sk:8082/api/skripta/c';
 
   constructor(private http: HttpClient) {
   }

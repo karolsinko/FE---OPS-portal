@@ -1,20 +1,24 @@
-<table class="table">
-  <div *ngFor="let quiz of quiz; let i = index">
-    <div class="modal-container" id="score-modal">
+<mat-horizontal-stepper [linear]="false">
+  <table class="table">
+    <div *ngFor="let quiz of quiz; let i = index">
 
-      <div class="modal-content-container">
+      <div class="modal-container" id="score-modal">
 
-        <h1>Gratulujem, dokončil si quiz</h1>
+        <div class="modal-content-container">
 
-        <div class="grade-details">
-          <p>Pokusy : {{pocetPokusov}}</p>
-          <p>Skóre : {{score}}</p>
-          <p>Počet chýb : {{pocetChyb}}</p>
-          <p><span id="remarks"></span></p>
+          <h1>Gratulujem, dokončil si quiz</h1>
+
+          <div class="grade-details">
+            <p>Pokusy : {{pocetPokusov}}</p>
+            <p>Skóre : {{score}}</p>
+            <p>Počet chýb : {{pocetChyb}}</p>
+            <p><span id="remarks"></span></p>
+          </div>
+          <button (click)="closeScoreModal()"><i class="bi bi-send"></i><span>| Continue</span></button>
         </div>
-        <button (click)="closeScoreModal()"><i class="bi bi-send"></i><span>| Continue</span></button>
       </div>
-    </div>
+  <mat-step>
+    <ng-template ><p>. Level</p></ng-template>
     <div *ngIf="currentStepIndex === i">
 
       <div class="game-quiz-container">
@@ -60,5 +64,29 @@
 
       </div>
     </div>
-  </div>
-</table>
+    <div>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template ><p>Fill out your address</p></ng-template>
+
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template ><p>Done</p></ng-template>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+    </div>
+  </mat-step>
+    </div>
+  </table>
+</mat-horizontal-stepper>
+
+
+
+
+

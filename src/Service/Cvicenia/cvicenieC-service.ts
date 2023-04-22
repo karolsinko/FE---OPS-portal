@@ -7,7 +7,7 @@ import {zoznamCviceniC} from "../../app/models/cvicenie.model";
   providedIn: 'root'
 })
 export class CvicenieCService {
-  private apiUrl = 'http://localhost:8082/api/cvicenia/c';
+  private apiUrl = 'http://labs.fpv.umb.sk:8082/api/cvicenia/c';
 
   constructor(private http: HttpClient) {
   }

@@ -7,7 +7,7 @@ import {zoznamCviceniBash} from "../../app/models/cvicenie.model";
   providedIn: 'root'
 })
 export class cvicenieBashService {
-  private apiUrl = 'http://localhost:8082/api/cvicenia/bash';
+  private apiUrl = 'http://labs.fpv.umb.sk:8082/api/cvicenia/bash';
 
   constructor(private http: HttpClient) {
   }

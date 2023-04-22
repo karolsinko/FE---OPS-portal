@@ -25,7 +25,6 @@ export class QuizLinuxStrankaComponent implements OnInit {
 
   obnovitQuizy(): void {
     this.quizLinuxService.getQuizy().subscribe(data => {
-      console.log('Prislo: ', data);
       this.quiz = data;
     });
   }

@@ -7,7 +7,7 @@ import {quiz, zoznamQuizovC} from "../../app/models/quiz.model";
   providedIn: 'root'
 })
 export class QuizCService {
-  private apiUrl = 'http://localhost:8082/api/quiz/c';
+  private apiUrl = 'http://labs.fpv.umb.sk:8082/api/quiz/c';
 
   constructor(private http: HttpClient) {
   }

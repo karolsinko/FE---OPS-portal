@@ -34,8 +34,6 @@ export class QuizLinuxComponent implements OnInit {
     this.quizService.getQuizy().subscribe(data => {
       this.quiz = data;
       this.koniec = data.length;
-      const dlzkaLevela = this.chunkArray(this.quiz, 5);
-      console.log(dlzkaLevela);
     });
   }
 
@@ -56,10 +54,6 @@ export class QuizLinuxComponent implements OnInit {
       correct = false;
       return;
     }
-
-    console.log(`solution: ${this.quiz[this.currentStepIndex].solution}`);
-    console.log(`userAnswer: ${this.userAnswer.trim()}`);
-    console.log(`Your score is: ${this.score}`);
     this.currentStepIndex++;
     if (this.currentStepIndex === this.quiz.length) {
       const scoreModal = document.getElementById('score-modal');
@@ -76,16 +70,6 @@ export class QuizLinuxComponent implements OnInit {
       scoreModal.style.display = "none";
       this.resetQuiz();
     }
-  }
-
-  chunkArray<T>(arr: T[], chunkSize: number): T[][] {
-    const chunks = [];
-    let i = 0;
-    while (i < arr.length) {
-      chunks.push(arr.slice(i, i + chunkSize));
-      i += chunkSize;
-    }
-    return chunks;
   }
 
   resetQuiz() {
